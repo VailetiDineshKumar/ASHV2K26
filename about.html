@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashv 2k26 - The race of talent</title>
+    <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/res-style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/pre-loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .social-item {
+            text-align: center;
+            margin: 0 var(--mb-2);
+        }
+
+        .skills-icon {
+            width: 10%;
+            /* Adjust according to your preference */
+        }
+
+        .event-hover,
+        .sub-menu {
+            z-index: 100;
+        }
+
+        #about {
+            text-decoration: underline;
+        }
+
+        .social-name {
+            font-size: 1rem;
+            color: #041b78;
+        }
+
+        /* Base styles */
+        .imagesclg {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .team-member {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            max-width: 100%;
+            border-radius: 10px;
+            border: 1px solid #041B78;
+            background: linear-gradient(100deg, #F5F5DC 0.23%, #FFD700 99.99%);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+        }
+
+        .team-member img {
+            width: 100%;
+            height: auto;
+
+        }
+
+        #nan {
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        #nann {
+            color: #003366;
+            font-size: 20px;
+        }
+
+        #imgg {
+            width: 150px;
+            height: 150px;
+            min-height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        #b {
+            font-weight: 900;
+        }
+
+        .main-nav .nav li {
+            display: inline-block;
+        }
+
+        .main-nav img {
+            position: absolute !important;
+        }
+
+        #imgOne {
+            left: 3rem;
+            top: 0.5rem !important;
+            margin-top: 0 !important;
+            width: auto;
+            height: 4rem;
+            margin-top: .5rem;
+        }
+
+        #imgTwo {
+            left: 13rem;
+            top: 0.5rem !important;
+            margin-top: 0 !important;
+            width: auto;
+            height: 4rem;
+            margin-top: 0.5rem;
+        }
+
+        .main-con {
+            background: #d3b06460;
+            margin: 5%;
+            padding: 5%;
+            border-radius: 1%;
+        }
+
+        .main-con h2 {
+            font-family: poppins;
+            color: #bd9308;
+        }
+
+        .main-con p {
+            font-family: poppins;
+            color: #041B78;
+        }
+
+        @media screen and (max-width:768px) {
+            .main-nav img {
+                position: absolute;
+            }
+
+            #imgOne {
+                left: 1rem;
+                top: 1rem;
+                margin-top: 0;
+            }
+
+            #imgTwo {
+                left: 12rem;
+            }
+
+            .sir img {
+                margin-left: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .team-member {
+                display: flex;
+                flex-direction: column !important;
+                align-items: center;
+                padding-right: 50px;
+            }
+
+            #nan {
+                width: 100%;
+            }
+
+            #imgg {
+                padding-left: 0;
+                margin-bottom: 10px;
+                max-height: 25px;
+                border-radius: 50%;
+                object-position: top;
+            }
+
+            .row {
+                margin-left: 0.3rem;
+            }
+
+        }
+
+        @media screen and (max-width:768px) {
+            .logo-container {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 10px;
+            }
+
+            .logo-container img {
+                margin-right: 10px;
+            }
+
+            .footer-social {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .skills-icon {
+                width: 35%;
+
+            }
+
+            .social-item {
+                margin: 0;
+                margin-bottom: 0;
+            }
+
+            #phone-footer {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .social-item span {
+                display: none;
+            }
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+            /* Allows vertical scrolling */
+            background-color: #D8CBFF;
+            background-attachment: fixed;
+            color: #fafafa;
+            scroll-behavior: smooth;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .herosec {
+            background: url('/assets/img/MITS_bg.jpg') center center / cover no-repeat,
+                linear-gradient(#003366, #8304CB);
+            min-height: 100vh;
+
+        }
+
+        .ashv-logo-container {
+            position: absolute;
+            width: 100%;
+            margin-top: 80px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .ashv-logo {
+            width: 350px;
+            height: auto;
+            margin: 200px 0px;
+        }
+
+        .aboutclg {
+            background-color: #fff4ba;
+            width: 100%;
+            margin: auto;
+        }
+
+        .container1 {
+            margin: auto;
+            padding: 20px;
+        }
+
+        .containers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* padding: 75px 50px;
+            width: 80%; */
+            margin: auto;
+        }
+
+        p {
+            display: block;
+            /* margin-block-start: 1em;
+            margin-block-end: 1em; */
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+            color: #333;
+            width: 90%;
+            margin: auto;
+        }
+
+        .texts1 {
+            position: relative;
+            line-height: 25px;
+            font-weight: 300;
+            font-size: 14px;
+            text-align: justify;
+            margin: auto;
+            width: 75%;
+            padding: 0px 0 20px 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .texts1 {
+                width: 100%;
+            }
+        }
+
+        .paragraphs,
+        .paragraph1,
+        .paragraph2 {
+            margin: auto;
+            width: 100%;
+            display: flex;
+            color: #003366;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: justify;
+            padding: 10px 0;
+            box-sizing: border-box;
+            line-height: 36px;
+            font-weight: 800;
+            /* padding: 0 50px; */
+            margin: auto;
+        }
+
+        .separator {
+            border-top: 1px solid rgba(4, 27, 120, 0.5);
+            box-sizing: border-box;
+            width: 100%;
+            height: 1px;
+            margin: 20px 0;
+        }
+
+        .headings {
+            font-size: 30px;
+            font-weight: 800;
+            text-align: center;
+            color: #261d8a;
+            margin: 60px 0 16px 0;
+        }
+
+        .headings-sub {
+            font-size: 30px;
+            font-weight: 800;
+            color: #261d8a;
+            margin: 20px 0 16px 0;
+            text-align: center;
+        }
+
+        .main {
+            background-color: #D8CBFF;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 40px;
+        }
+
+        .section {
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 0px;
+            margin-top: 18px;
+        }
+
+        .comit {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 0px;
+            margin-top: 18px;
+
+        }
+
+        .dropdown {
+            width: 100%;
+            padding: 15px;
+            background-color: #003366;
+            color: yellow;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 0px;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 15px;
+            /* background-color: rgb(242, 242, 136); */
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 0px 0px 10px 10px;
+            border: 1px solid #041B78;
+            background: linear-gradient(100deg, #F5F5DC 0.23%, #FFD700 99.99%);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+        }
+
+
+        .dropdown-content .text {
+            flex: 3;
+            text-align: center;
+        }
+
+        .dropdown-content h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: black;
+        }
+
+        .dropdown-content h1 {
+            font-size: 14px;
+            color: #a0a6a4;
+        }
+
+        .dropdown-content p {
+            margin: 5px 0;
+            color: #333333;
+        }
+
+        .dropdown-content blockquote {
+            font-style: italic;
+            color: #000000;
+            margin: 10px 0;
+        }
+
+        .dropdown.active {
+            background-color: #00509E;
+        }
+
+        .dropdown::after {
+            content: '\25BC';
+            font-size: 14px;
+        }
+
+        .dropdown.active::after {
+            content: '\25B2';
+        }
+
+
+        .dropdown-content img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            flex-shrink: 0;
+            order: 2;
+        }
+
+        .dropdown-content .text {
+            flex: 3;
+            text-align: center;
+        }
+
+        .dropdown-content h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: black;
+        }
+
+        .dropdown-content h1 {
+            font-size: 14px;
+            color: #a0a6a4;
+        }
+
+        .dropdown-content p {
+            margin: 5px 0;
+            color: #333333;
+        }
+
+        .dropdown-content blockquote {
+            font-style: italic;
+            color: #000000;
+            margin: 10px 0;
+        }
+
+        .dropdown.active {
+            background-color: #00509E;
+        }
+
+        .dropdown::after {
+            content: '\25BC';
+            font-size: 14px;
+        }
+
+        .dropdown.active::after {
+            content: '\25B2';
+        }
+
+        .name-role {
+            font-size: 16px;
+        }
+
+        .name-role .name {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .name-role .role {
+            color: #696d6c;
+        }
+
+        @media (max-width: 600px) {
+            .dropdown-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dropdown-content img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .dropdown {
+                font-size: 14px;
+            }
+
+            .dropdown-content h3 {
+                font-size: 16px;
+            }
+        }
+
+        body {
+            margin: 0;
+            background-color: lightblue;
+        }
+
+
+
+        .name-role {
+            font-size: 16px;
+        }
+
+        .name-role .name {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .name-role .role {
+            color: #696d6c;
+        }
+
+        @media (max-width: 600px) {
+            .dropdown-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dropdown-content img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .dropdown {
+                font-size: 14px;
+            }
+
+            .dropdown-content h3 {
+                font-size: 16px;
+            }
+        }
+
+        .footer p {
+            color: white;
+        }
+
+        header {
+            z-index: 100 !important;
+        }
+
+        main {
+            z-index: 1;
+        }
+
+        .ashv-logo {
+            z-index: 1;
+        }
+
+        .mits-logo-png {
+            height: 80px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader">
+        <div id="preloader-container">
+            <div id="preloader_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="mits-logo" style="height: 100%;">
+            <div class="logo"
+                style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+                <img src="assets/img/MITS.png" alt="" loading="eager">
+                <a href="https://www.mits.ac.in/"
+                    style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
+            </div>
+            <div class="title">
+                <div class="upper">MITS</div>
+                <hr>
+                <div class="lower">MADANAPALLE</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html" class="selected">About Us</a></li>
+                <li><a href="committee.html">Committee</a></li>
+                <li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" style="font-weight: 700;" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></a>
+                    <ul class="sub-menu">
+                        <li><a href="eventTiles.html#technical">Technical</a></li>
+                        <li><a href="eventTiles.html#theatre">Theatre</a></li>
+                        <li><a href="eventTiles.html#cultural">Cultural</a></li>
+                        <li><a href="eventTiles.html#sports">Sports</a></li>
+                        <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+                    </ul>
+                </li>
+                <li><a href="registrations.html">Registrations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div style="height: 100%; display: flex;">
+            <div class="two6-years-logo"
+                style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                <img src="assets/27years.png" alt="" class="year-logo" style="height: 100%; scale: 1.5;"
+                    loading="eager">
+                <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px;">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-105%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
+                    class="title-sponser">Title<br>
+                    Sponsor</a>
+                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateX(15%) translateY(90%); color: #FFD700;right: 0; text-decoration: none;">Co-Title<br>
+                    Sponsor</a> -->
+            </div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+            id="hamburger">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </svg>
+    </header>
+    <main class="main">
+        <section class="herosec">
+            <div class="ashv-logo-container">
+                <img src="assets/img/ashv-theraceoftalent.png" alt="Ashv Logo" class="ashv-logo">
+            </div>
+        </section>
+
+        <section class="aboutclg">
+            <div class="containers">
+                <div class="containers1">
+                    <div class="headings">
+                        <div class="about-the-college">About the college</div>
+                    </div>
+                    <div class="paragraphs" style="margin: 0;
+                    padding: 0; width: 100%;">
+                        <div class="texts1">
+                            <p>
+                                Madanapalle Institute of Technology & Science is established in 1998 in the picturesque
+                                and pleasant environs of Madanapalle and is ideally located on a
+                                sprawling 26.17 acre campus on Madanapalle - Anantapur Highway (NH-205) near Angallu,
+                                about 10km away from Madanapalle.
+                                <br><br>
+                                MITS, originated under the auspices of Ratakonda Ranga Reddy Educational Academy under
+                                the proactive leadership of Late Sri. N. Krishna Kumar M.S. (U.S.A),
+                                the then President and Dr. N. Vijaya Bhaskar Choudary, Ph.D., Secretary & Correspondent
+                                of the Academy.
+                                <br><br>
+                                MITS is governed by a progressive management that never rests on laurels and has been
+                                striving conscientiously to develop it as one of the best centers of
+                                Academic Excellence in India. The Institution's profile is firmly based on strategies
+                                and action plans that match changing demands of the nation and the
+                                student’s fraternity. MITS enjoys constant support and patronage of NRI's with
+                                distinguished academic traditions and vast experience in Engineering &
+                                Technology.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="headings-sub">
+                        <div class="about-the-college">Vision</div>
+                    </div>
+                    <div class="texts1">
+                        <p>To become a globally recognized research and academic institution and thereby contribute to
+                            technological and socio-economic development of the nation.</p>
+                    </div>
+                </div>
+                <div class="headings-sub">
+                    <div class="about-the-college">Mission</div>
+                </div>
+                <div class="texts1">
+                    <p>
+                        To foster a culture of excellence in research, innovation, entrepreneurship, rational thinking
+                        and civility by providing necessary resources for generation, dissemination and utilization of
+                        knowledge and in the process create an ambience for practice-based learning to the youth for
+                        success in their careers.</p>
+                </div>
+            </div>
+            </div>
+            <div class="separator">
+            </div>
+            <div class="headings">
+                <div class="about-the-college">About the Event</div>
+            </div>
+            <div class="paragraphs">
+                <div class="texts1">
+                    <p>
+                        Arts and Culture definitely makes a student stay connected with societal issues. When
+                        students perceive society through artistic and creative lenses, they
+                        develop their insights and become worthy human beings. The Institution has been encouraging
+                        arts and culture, so that students remain committed for a
+                        constructive development. Prosperity of a student community is certain when an organization
+                        kindles their hidden skills & talents. Arts and culture is one such platform that pushes a
+                        student towards perfection and glorification of self. The Institute, without any hesitation
+                        is working hard to make all such provisions for the students. Ashv - The
+                        Race of Talent is one such amazing Techno-Cultural-Sports fest which manifests the enormous
+                        talent of our students in different categories. It has the potential
+                        to nourish and refine the students’ talents. and refined.
+                    </p>
+                </div>
+            </div>
+            <div class="paragraphs" style="padding-bottom: 5rem;">
+                <div class="texts1">
+                    <p>
+                        Students are versatile and Ashv pools them on a single track to extract their extraordinary
+                        skills in different arena. MITS is the gateway to encourage students in
+                        every respect. It provides an opportunity to the interested graduates to compete in various
+                        technical, cultural and sports events. It is one embellishment that
+                        has been organized every year since 2015 at MITS. Ashv - The Race of Talent is a celebration
+                        that brings ecstasy in students, as they showcase their talents and compete with
+                        multicultural students. It is a Techno-
+                        Cultural-Sports Fest that demonstrates technical prowess through workshops, Paper
+                        Presentation, Project Expo, Poster and Quiz, Cultural aspects through
+                        Singing, Dancing, Painting and Theatre and Sportive excellence through Cricket, Throw Ball,
+                        Volley Ball, Tennikoit, Table Tennis, Kabaddi, and Shuttle badminton events.
+                    </p>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- <section class="committee1">
+            <div class="about-upcoming-shows">
+                <div class="container">
+                    <div class="section-title">
+                        <h2> Insights from Our Esteemed Leaders</h2>
+                    </div>
+                    <div class="row" style="width: 100%; margin-bottom: 2%;">
+                        <div class="imagesclg">
+                            <div class="team-member">
+                                <div class="sir">
+                                    <img src="old/assets/images/correspondentsir.jpg" alt="correspondent" id="imgg">
+                                    <strong class="comit"><br>&emsp;&emsp; Chief Patron</strong>
+                                </div>
+                                <div id="nan">
+                                    <h3 id="nann">Dr. N. Vijaya Bhaskar Choudary, Ph.D</h3><br>
+                                    <p>Secretary & Correspondent</p>
+                                    <p style="text-align: center;"> <b style="font-weight: 700;">“The arts and culture
+                                            play a vital role in society, shaping our understanding of the world around
+                                            us
+                                            and bringing communities together.” </b></p><br>
+                                    <p style="text-align: justify;">
+                                        Arts and cultural events play a crucial role in enriching the college experience
+                                        for
+                                        students.
+                                        Beyond academics, these events offer unique opportunities for personal growth,
+                                        creativity, and
+                                        social engagement. Exposure to different forms of art can broaden students'
+                                        perspectives,
+                                        foster critical thinking skills, and enhance their emotional intelligence.
+                                        Additionally,
+                                        participating in cultural events can help students develop a greater
+                                        appreciation for
+                                        diversity
+                                        and inclusion. On that note, I believe that Ashv - The Race of Talent has the
+                                        potential
+                                        to
+                                        ensure a well-rounded education that nurtures intellect, creativity, empathy,
+                                        and
+                                        resilience.
+                                        <br><br>
+
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="team-member">
+                                <div class="sir">
+                                    <img src="old/assets/images/keerthimam.jpg" alt="" id="imgg">
+                                    <strong class="comit"><br>&emsp;&emsp; Patron</strong>
+                                </div>
+                                <div id="nan">
+                                    <h3 id="nann">Mrs. Keerthi Nadella</h3><br>
+
+                                    <p>Executive Director </p>
+                                    <p style="text-align: center;"><b style="font-weight: 700;">“Arts and culture are
+                                            not simply
+                                            a form of
+                                            entertainment or embellishment in society; they are the very essence of what
+                                            makes
+                                            us human.”
+                                        </b></p>
+                                    <p style="text-align: justify;">
+                                        Cultural ambiance is an excellent trait of an educational organization which
+                                        provides a
+                                        wonderful
+                                        opportunity for the students to blossom with dynamic participation both in
+                                        curricular
+                                        and
+                                        extracurricular streams. Arts enable them for wide ranging debates, innovative
+                                        funding
+                                        models,
+                                        decision making, leadership training and so on. Ultimately the stream of arts
+                                        and
+                                        culture is very
+                                        creative which enhances students’ fundamental integrity and practical
+                                        discourses. On
+                                        this occasion,
+                                        I extend my deep heart appreciation for setting the stage where students can
+                                        flourish
+                                        with holistic
+                                        growth.
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="sir">
+                                    <img src="old/assets/images/dwarakasir.jpg" alt="president" id="imgg">
+                                    <strong class="comit"><br>&emsp;&emsp; Patron</strong>
+                                </div>
+                                <div id="nan">
+                                    <h3 id="nann">Mr. N. Dwarakanath</h3><br>
+                                    <p>President - RRR Educational Academy</p>
+                                    <p style="font-weight:700;"> “Art is considered as a noble field which should be
+                                        used to
+                                        promote all that is
+                                        good and noble” </p>
+                                    <p style="text-align: justify;">
+                                        The importance of arts and culture for engineering students cannot be
+                                        overstated.
+                                        Engaging with the arts
+                                        enables students to develop their creative thinking, problem-solving skills, and
+                                        communication abilities,
+                                        all of which are essential qualities for successful engineers. By exploring
+                                        different
+                                        forms of artistic
+                                        expression, such as visual arts, music, literature, and theatre, students are
+                                        able to
+                                        broaden their
+                                        perspectives and approach problems from diverse angles. Ultimately, integrating
+                                        arts and
+                                        culture into
+                                        engineering education not only enhances students' technical skills but also
+                                        fosters a
+                                        well-rounded education
+                                        that prepares them to be innovative and empathetic professionals in their field.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="team-member">
+                                <div class="sir">
+                                    <img src="old/assets/images/principal.jpg" alt="principal" id="imgg">
+                                    <strong class="comit"><br>&emsp;&emsp; Chief</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Coordinator</strong>
+                                </div>
+                                <div id="nan">
+                                    <h3 id="nann">Dr. C. Yuvaraj, Ph.D</h3><br>
+                                    <p>Principal</p>
+                                    <p style="text-align: center;"> <b style="font-weight: 700;">“MITS fosters student
+                                            versatility, preserving
+                                            cultural heritage through Ashv events” </b></p><br>
+                                    <p style="text-align: justify;">
+                                        The Techno-Cultural-Sports event known as Ashv, which has been held annually
+                                        since 2015
+                                        at the
+                                        Madanapalle Institute of Technology and Science (MITS), has garnered a
+                                        reputation for
+                                        being one of
+                                        the most popular and anticipated events on campus. Combining technology, art,
+                                        and
+                                        sports, Ashv provides
+                                        students with a platform to showcase their talents and skills in a competitive
+                                        yet
+                                        collaborative
+                                        environment. The event features a wide range of activities including coding
+                                        competitions, robotics
+                                        exhibitions, cultural performances, and sports tournaments. With participants
+                                        from
+                                        various colleges
+                                        across the region, ashv fosters creativity, innovation, and teamwork among
+                                        students.
+                                        Through its diverse
+                                        range of events, workshops, and seminars, Ashv plays a significant role in
+                                        promoting
+                                        holistic development
+                                        fostering a spirit of camaraderie among participants. The success and growth of
+                                        Ashv
+                                        over the years
+                                        its status as a flagship event at MITS that continues to evolve and inspire
+                                        future
+                                        generations of
+                                        students.<br>
+                                        Best wishes for all the participants and I look forward to have the festivity
+                                        delicious
+                                        with your
+                                        incredible presence.<br>
+                                        Thank you…. <br> </p>
+                                </div>
+                            </div>
+
+                            <div class="team-member">
+                                <div class="sir">
+                                    <img src="old/assets/images/bashasir.JPG" alt="basha sir" id="imgg">
+                                    <strong class="comit"><br>&emsp;&emsp; Convener</strong>
+                                </div><br>
+                                <div id="nan">
+                                    <h3 id="nann">Dr. C. Kamal Basha</h3><br>
+                                    <p>Vice Principal - Administration</p>
+                                    <p style="text-align: center;font-weight: 700;">
+                                        "The arts and culture sector plays a crucial role in shaping our society,
+                                        fostering
+                                        creativity, and
+                                        preserving our collective history."
+                                    </p>
+
+                                    <p style="text-align: justify;">
+                                        The Techno-Cultural-Sports fest-Ashv is a highly anticipated annual gathering
+                                        that
+                                        showcases a
+                                        blend of technological innovation, cultural diversity, and sporting talent. This
+                                        event
+                                        provides
+                                        students with a platform to showcase their skills in various fields such as
+                                        robotics,
+                                        coding,
+                                        dance, music, drama, and sports. With a focus on promoting creativity, teamwork,
+                                        and
+                                        leadership among
+                                        participants, Ashv attracts thousands of students from different colleges and
+                                        universities across the
+                                        region. MITS spares no effort in ensuring that the event is well-organized and
+                                        successful through
+                                        meticulous planning and execution. The wide range of competitions, workshops,
+                                        and
+                                        performances offered
+                                        during Ashv make it an enriching experience for all attendees while also
+                                        fostering a
+                                        sense of camaraderie
+                                        within the participating community.<br>
+                                    </p>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <!-- <div class="dropdown">Co-Conveners</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">Dr.C.Damodharan,</span> <span
+                                        class="role">Physical Director</span></p>
+                                <p class="name-role"><span class="name">Y.Pradeep Kumar,</span> <span
+                                        class="role">Asst.Professor-ECE</span></p>
+                                <p class="name-role"><span class="name">Mr.V.Naveen,</span> <span class="role">Asst.
+                                        Professor-CST</span></p>
+                                <p class="name-role"><span class="name">Mrs.M.Sri Lakshmi Preethi,</span> <span
+                                        class="role">Asst. Professor-CSC</span></p>
+                                <p class="name-role"><span class="name">Mr.B.S.H Shayeez Ahamed,</span> <span
+                                        class="role">Asst. Professor-AI&ML</span></p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">Faculty Advisors</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">Dr.P.Ramanathan,</span> <span class="role">Vice
+                                        Principal-Academics</span></p>
+                                <p class="name-role"><span class="name">Dr.R.Kalpana,</span> <span class="role">Vice
+                                        Principal-PG Programmes</span></p>
+                                <p class="name-role"><span class="name">Prof.Goutam Chakraborty,</span> <span
+                                        class="role">Dean-CSE</span></p>
+                                <p class="name-role"><span class="name">Dr.Basabi Chakraborty,</span> <span
+                                        class="role">Dean-CST</span></p>
+                                <p class="name-role"><span class="name">Dr.Sremmant Basu,</span> <span
+                                        class="role">Dean-Admin & IRO</span></p>
+                                <p class="name-role"><span class="name">Mrs.M.Prathibha,</span> <span class="role">
+                                        Sr.Administrative Officer(G.A.D)</span></p>
+                                <p class="name-role"><span class="name">Dr.P.Athahar,</span> <span
+                                        class="role">Sr.Administrative Officer(Students Welfare)</span></p>
+                                <p class="name-role"><span class="name">Dr.B.V.Krishna Roa,</span> <span
+                                        class="role">Advisor-Academics</span></p>
+                                <p class="name-role"><span class="name">Mr.Sathish Hegde,</span> <span
+                                        class="role">Advisor</span></p>
+                                <p class="name-role"><span class="name">Dr.R.Thulasiram Naidu,</span> <span
+                                        class="role">Advisor R&D</span></p>
+                                <p class="name-role"><span class="name">Mr.D.Venugopal Chowdary,</span> <span
+                                        class="role">Head-T & P</span></p>
+                                <p class="name-role"><span class="name">Dr.Dipankar Roy,</span> <span
+                                        class="role">HOD-Civil</span></p>
+                                <p class="name-role"><span class="name">Dr.M.Sreedevi,</span> <span
+                                        class="role">HOD-CSE</span></p>
+                                <p class="name-role"><span class="name">Dr.K.Dinesh,</span> <span
+                                        class="role">HOD-CST</span></p>
+                                <p class="name-role"><span class="name">Dr.K.Chokkanathan,</span> <span
+                                        class="role">HOD-AI</span></p>
+                                <p class="name-role"><span class="name">Dr.S.Kusuma,</span> <span
+                                        class="role">HOD-DS</span></p>
+                                <p class="name-role"><span class="name">Dr.S V S Gangadevi,</span> <span
+                                        class="role">HOD-CSE-CS</span></p>
+                                <p class="name-role"><span class="name">Dr.S.Rajasekaran,</span> <span
+                                        class="role">HOD-ECE</span></p>
+                                <p class="name-role"><span class="name">Dr.A.V.Pavan Kumar,</span> <span
+                                        class="role">HOD-EEE</span></p>
+                                <p class="name-role"><span class="name">Dr.S.Baskaran,</span> <span
+                                        class="role">HOD-ME</span></p>
+                                <p class="name-role"><span class="name">Dr. S. Padma,</span> <span
+                                        class="role">HOD-AIML</span></p>
+                                <p class="name-role"><span class="name">Dr.N.Naveen Kumar,</span> <span
+                                        class="role">HOD-MCA</span></p>
+                                <p class="name-role"><span class="name">Dr.K.V.Geetha Devi,</span> <span
+                                        class="role">HOD-MBA</span></p>
+                                <p class="name-role"><span class="name">Dr.P.Ramesh Reddy,</span> <span
+                                        class="role">HOD-Maths</span></p>
+                                <p class="name-role"><span class="name">Dr.M.Chandra Sekhar,</span> <span
+                                        class="role">HOD-Physics</span></p>
+                                <p class="name-role"><span class="name">Dr.Renjith Bhaskaran,</span> <span
+                                        class="role">HOD-Chemistry</span></p>
+                                <p class="name-role"><span class="name">Dr.P.Athahar,</span> <span
+                                        class="role">HOD-English & Foreign Lang</span></p>
+                                <p class="name-role"><span class="name">Mr.V.Maruthi Prasad,</span> <span
+                                        class="role">SMC</span></p>
+                                <p class="name-role"><span class="name">Mrs.M.Prathiba,</span> <span
+                                        class="role">SAO-Admin (GEN)</span></p>
+                            </div>
+                        </div> -->
+
+        <!-- <div class="dropdown">Ashv 2K25 Student Committee</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">B.Jagan Mohan Reddy,</span> <span
+                                        class="role">President</span></p>
+                                <p class="name-role"><span class="name">R.Pavan,</span> <span class="role">Vice
+                                        President</span></p>
+                                <p class="name-role"><span class="name">K.S.Harika,</span> <span
+                                        class="role">Secretary</span></p>
+                            </div>
+                        </div>
+                        <div class="dropdown">Student Advisors</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">K.Vamsidhar Reddy,</span> <span
+                                        class="role">ECE</span></p>
+                                <p class="name-role"><span class="name">D.Gnana Teja,</span> <span
+                                        class="role">CSD</span></p>
+                                <p class="name-role"><span class="name">P.Sai Kiran,</span> <span
+                                        class="role">CST</span></p>
+                                <p class="name-role"><span class="name">D.Prajwal,</span> <span class="role">CST</span>
+                                </p>
+                                <p class="name-role"><span class="name">P.Jaya Prakash,</span> <span
+                                        class="role">CAI</span></p>
+                                <p class="name-role"><span class="name">T.Sushanth Reddy,</span> <span
+                                        class="role">CSC</span></p>
+                                <p class="name-role"><span class="name">G.Lepakshi,</span> <span class="role">CSE</span>
+                                </p>
+                                <p class="name-role"><span class="name">V.Udaya Sree,</span> <span
+                                        class="role">CSE</span></p>
+                                <p class="name-role"><span class="name">P.Abubakar Siddiq Khan,</span> <span
+                                        class="role">CE</span></p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">Vice Presidents</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">V.Mahesh Kumar,</span> <span
+                                        class="role">CSE</span></p>
+                                <p class="name-role"><span class="name">N.Nihanth Kumar,</span> <span
+                                        class="role">EEE</span></p>
+                                <p class="name-role"><span class="name">P.Nithin,</span> <span class="role">CE</span>
+                                </p>
+                                <p class="name-role"><span class="name">G.Thonooj,</span> <span class="role">ECE</span>
+                                </p>
+                                <p class="name-role"><span class="name">P.Arshad,</span> <span class="role">CST</span>
+                                </p>
+                                <p class="name-role"><span class="name">P.vamsi Prasad,</span> <span
+                                        class="role">CSD</span></p>
+                                <p class="name-role"><span class="name">P.Revanth Naidu,</span> <span
+                                        class="role">CST</span></p>
+                                <p class="name-role"><span class="name">N.Sai Kumar,</span> <span
+                                        class="role">CAI</span></p>
+                                <p class="name-role"><span class="name">S.Chaitanya,</span> <span class="role">ME</span>
+                                </p>
+                                <p class="name-role"><span class="name">M.Mohan Krishna,</span> <span
+                                        class="role">CSM</span></p>
+                                <p class="name-role"><span class="name">T.Devendra Reddy,</span> <span
+                                        class="role">CSN</span></p>
+                                <p class="name-role"><span class="name">P.Sai Kumar,</span> <span
+                                        class="role">MBA</span></p>
+                                <p class="name-role"><span class="name">L.Mounika,</span> <span class="role">MCA</span>
+                                </p>
+                                <p class="name-role"><span class="name">D.Navya,</span> <span class="role">CST</span>
+                                </p>
+                                <p class="name-role"><span class="name">K.Varsha,</span> <span class="role">EEE</span>
+                                </p>
+                                <p class="name-role"><span class="name">B.Gayathri,</span> <span class="role">CSC</span>
+                                </p>
+                                <p class="name-role"><span class="name">Y.Shourika,</span> <span class="role">CSE</span>
+                                </p>
+                                <p class="name-role"><span class="name">K.Ishwarya,</span> <span class="role">ECE</span>
+                                </p>
+                            </div>
+                        </div> -->
+        </div>
+        </div>
+        </div>
+
+        <!-- <script>
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', () => {
+
+                    const content = dropdown.nextElementSibling;
+                    const isActive = dropdown.classList.contains('active');
+                    dropdown.classList.toggle('active');
+                    content.style.display = isActive ? 'flex' : 'none';
+                });
+            });
+        </script> -->
+        </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <h2 class="footer-heading">Contact Us!</h2>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="social-and-contacts">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://fb.me/e/wH5oN1IyV">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/919398983918">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+
+                   <div class="technical-contacts">
+                        <p><strong>Technical: </strong>8867462790</p>
+                        <p><strong>Cultural: </strong> 8143767320</p>
+                        <p><strong>Sports: </strong> 8247432448</p>
+                        <p><strong>Theatre: </strong>6309713619</p>
+                        <p><strong>Bonus Bonanza: </strong> 7013005304</p>
+                        <p><strong>Registrations: </strong> 6304038756</p>
+                    </div>
+                </div>
+
+                <button onclick="document.location='creators.html'" class="cta-button">
+                    Meet the Creators <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+
+            <!-- Map and Reach Us (visible only on desktop) -->
+            <div class="map-and-reach-us">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31865.074342890974!2d78.49422682941045!3d13.617042201220594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2677c83886ad7%3A0xad73159e2bddda33!2sMadanapalle%20institute%20of%20technology%20and%20Sciences!5e0!3m2!1sen!2sin!4v1735365545296!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="reach-us">
+                    <h3>Reach Us</h3>
+                    <p>Madanapalle Institute of Technology & Science <br>(Deemed to be University)</p>
+                    <p>Post Box No: 14, Kadiri Road</p>
+                    <p>Angallu (V), Madanapalle-517325</p>
+                    <p>Annamayya District, Andhra Pradesh, India.</p>
+                </div>
+            </div>
+            <button id="reach-us-button" class="cta-button">
+                Reach Us <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        var frameContainer5 = document.getElementById("frameContainer5");
+        if (frameContainer5) {
+            frameContainer5.addEventListener("click", function (e) {
+            });
+        }
+        var frameContainer6 = document.getElementById("frameContainer6");
+        if (frameContainer6) {
+            frameContainer6.addEventListener("click", function (e) {
+            });
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/pre-loader.js"></script>
+    <script>
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseover", function () {
+                document.querySelector(".sub-menu").style.display = "flex";
+            });
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseout", function () {
+                document.querySelector(".sub-menu").style.display = "none";
+            });
+        let width = screen.width;
+        if (width < 600) document.querySelector("nav").style.transform = "translateY(-100%)";
+        document.querySelector("#hamburger").addEventListener("click", function () {
+            console.log(document.querySelector("nav").style.transform);
+            if (document.querySelector("nav").style.transform === "translateY(-100%)") {
+                document.querySelector("nav").style.transform = "translateY(0%)";
+            }
+            else {
+                document.querySelector("nav").style.transform = "translateY(-100%)";
+            }
+        });
+
+        document.getElementById("reach-us-button").addEventListener("click", function () {
+            window.location.href =
+                "https://www.google.com/maps/place/Madanapalle+Institute+of+Technology+%26+Sciences/@13.6170422,78.4942268,17z";
+        });
+
+    </script>
+</body>
+
+</html>

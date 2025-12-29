@@ -1,0 +1,198 @@
+/* Base responsive setup */
+:root {
+	--header-height-mobile: 60px;
+	--header-height-desktop: 80px;
+}
+/* Typography */
+html {
+	font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+/* Responsive header */
+header {
+	height: var(--header-height-desktop);
+	padding: 0.5rem 5%;
+}
+
+@media (max-width: 768px) {
+	header {
+		height: var(--header-height-mobile);
+	}
+
+	.mits-logo img {
+		height: 40px !important;
+	}
+
+	.title .upper {
+		font-size: 1.5rem;
+	}
+
+	.title .lower {
+		font-size: 0.8rem;
+	}
+
+	nav {
+		display: none;
+		position: fixed;
+		top: var(--header-height-mobile);
+		left: 0;
+		width: 100%;
+		height: calc(100vh - var(--header-height-mobile));
+		background: var(--color-primary);
+		padding: 1rem;
+	}
+
+	nav.active {
+		display: block;
+	}
+
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.ashv-hamburger {
+		display: block;
+	}
+}
+
+/* Responsive hero section */
+.hero {
+	min-height: 100svh;
+	padding: 5rem 1rem;
+}
+
+@media (max-width: 768px) {
+	.timer-container {
+		width: 90%;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.timer {
+		font-size: 2rem;
+	}
+
+	/* .ashv {
+      width: 80%;
+      max-width: 300px;
+    }
+    
+    .horse {
+      width: 40%;
+    } */
+}
+
+/* Responsive gallery */
+.gallery-section {
+	padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+	.gallery-container {
+		width: 100%;
+	}
+
+	.gallery img {
+		width: 80%;
+	}
+
+	.nav-btn {
+		display: none;
+	}
+}
+
+/* Responsive shows grid */
+.shows-section {
+	padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+	.shows-grid {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
+}
+
+/* Responsive events carousel */
+@media (max-width: 768px) {
+	.carousel-event {
+		min-width: unset;
+		width: 100%;
+		padding: 1rem;
+		overflow-x: auto;
+	}
+
+	.card {
+		min-width: 200px;
+	}
+}
+
+/* Responsive about section */
+.ashv-card {
+	padding: 2rem;
+	max-width: 95%;
+}
+
+@media (max-width: 768px) {
+	.ashv-content {
+		flex-direction: column;
+	}
+
+	.ashv-desc {
+		width: 100%;
+	}
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+	}
+
+	.map-and-reach-us {
+		flex-direction: column;
+	}
+
+	.map-container iframe {
+		width: 100%;
+	}
+
+	.reach-us {
+		width: 100%;
+	}
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+	.nav-btn:hover,
+	.explore-events:hover,
+	.know-more-btn:hover {
+		transform: none;
+	}
+
+	.card {
+		touch-action: pan-x;
+	}
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+	header {
+		padding-top: max(0.5rem, env(safe-area-inset-top));
+		padding-left: max(5%, env(safe-area-inset-left));
+		padding-right: max(5%, env(safe-area-inset-right));
+	}
+}

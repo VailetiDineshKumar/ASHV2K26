@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashv 2k26 - The race of talent</title>
+    <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/events.css">
+    <link rel="stylesheet" href="assets/styles/pre-loader.css">
+    <!-- <link rel="stylesheet" href="assets/styles/res-style.css"> -->
+    <style>
+        @media screen and (max-width: 600px) {
+            .mits-logo img {
+                height: 40px !important;
+            }
+
+        }
+
+        .side-bar {
+            position: fixed;
+            top: 50%;
+            width: fit-content;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .side-bar.show {
+            display: flex;
+            transform: translateX(0);
+        }
+
+        .popup {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            .side-bar {
+                transform: scale(0.7) translateY(-25%);
+            }
+
+            .ashv {
+                margin-bottom: 35vh !important;
+                margin-left: 30vw !important;
+            }
+        }
+
+        .announcement {
+            /* background-color: white;  */
+            background: linear-gradient(to right, #fefefe, rgb(255, 228, 166));
+            color: #333;
+            /* Text color */
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 0px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .note {
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader">
+        <div id="preloader-container">
+            <div id="preloader_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="mits-logo" style="height: 100%;">
+            <div class="logo"
+                style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+                <img src="assets/img/MITS.png" alt="" loading="eager">
+                <a href="https://www.mits.ac.in/"
+                    style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
+            </div>
+            <div class="title">
+                <div class="upper">MITS</div>
+                <hr>
+                <div class="lower">MADANAPALLE</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="committee.html">Committee</a></li>
+                <li class="event-hover"><a href="eventTiles.html" class="selected">Events <svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="font-weight: 700;"
+                            fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></a>
+                    <ul class="sub-menu">
+                        <li><a href="eventTiles.html#technical">Technical</a></li>
+                        <li><a href="eventTiles.html#theatre">Theatre</a></li>
+                        <li><a href="eventTiles.html#cultural">Cultural</a></li>
+                        <li><a href="eventTiles.html#sports">Sports</a></li>
+                        <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+                    </ul>
+                </li>
+                <li><a href="registrations.html">Registrations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div style="height: 100%; display: flex;">
+            <div class="two6-years-logo"
+                style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                <img src="assets/27years.png" alt="" class="year-logo" style="height: 100%; scale: 1.5;"
+                    loading="eager">
+                <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px;">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-133%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
+                    class="title-sponser">Title<br>
+                    Sponsor</a>
+                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateX(0) translateY(90%); color: #FFD700;right: 0; text-decoration: none;">Co-Title<br>
+                    Sponsor</a> -->
+            </div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+            id="hamburger">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </svg>
+    </header>
+    <aside class="side-bar" id="sidebar">
+        <ul>
+            <li>
+                <a href="#technical">
+                    <svg width="42" height="36" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="technical">
+                        <path
+                            d="M19 3H8C7.20435 3 6.44129 3.31607 5.87868 3.87868C5.31607 4.44129 5 5.20435 5 6V27H37V16"
+                            stroke="#041B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M1 27H41V29C41 30.5913 40.3679 32.1174 39.2426 33.2426C38.1174 34.3679 36.5913 35 35 35H7C5.4087 35 3.88258 34.3679 2.75736 33.2426C1.63214 32.1174 1 30.5913 1 29V27Z"
+                            fill="#041B78" stroke="#041B78" stroke-width="2" stroke-linejoin="round"
+                            class="event-svg" />
+                        <path d="M30 1L26 5L30 9M36 1L40 5L36 9" stroke="#041B78" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <div class="category-label">Technical</div>
+            </li>
+            <li>
+                <a href="#cultural">
+                    <svg width="37" height="41" viewBox="0 0 37 41" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="event-svg">
+                        <path
+                            d="M22.4167 3.85359C22.4167 5.47901 21.1046 6.79109 19.4792 6.79109C17.8538 6.79109 16.5417 5.47901 16.5417 3.85359C16.5417 2.22818 17.8538 0.916092 19.4792 0.916092C21.1046 0.916092 22.4167 2.22818 22.4167 3.85359ZM11.6458 6.79109C10.0204 6.79109 8.70833 8.10318 8.70833 9.72859C8.70833 11.354 10.0204 12.6661 11.6458 12.6661C13.2712 12.6661 14.5833 11.354 14.5833 9.72859C14.5833 8.10318 13.2712 6.79109 11.6458 6.79109ZM22.4167 20.4994L20.8892 16.0932H26.6858L30.9158 13.9782C31.6404 13.6453 31.9342 12.7444 31.5621 12.0198C31.4792 11.8457 31.3623 11.69 31.2183 11.5618C31.0743 11.4337 30.906 11.3357 30.7235 11.2736C30.5409 11.2115 30.3478 11.1867 30.1555 11.2005C29.9632 11.2143 29.7756 11.2665 29.6038 11.354L27.9979 12.1569L27.0383 10.5119C26.4704 9.23901 25.08 8.51443 23.7092 8.82776L18.8721 9.86568C17.5208 10.1594 16.5417 11.3932 16.5417 12.8032V14.174L11.7829 17.3465H11.8025C11.6458 17.4836 11.4304 17.6598 11.3129 17.8948L9.57 21.3611L6.08417 23.104C5.35958 23.4369 5.06583 24.3573 5.43792 25.0819C5.61516 25.4293 5.92277 25.6923 6.29345 25.8134C6.66413 25.9345 7.06769 25.9039 7.41583 25.7282L11.7633 23.5544L13.8 19.5203L16.5417 22.4578C14.5833 28.3328 0.875 36.1661 0.875 36.1661C0.875 36.1661 8.70833 40.0828 18.5 40.0828C28.2917 40.0828 36.125 36.1661 36.125 36.1661C36.125 36.1661 26.3333 28.3328 22.4167 20.4994ZM27.9979 18.7173L27.3713 19.0307H25.0212L25.1388 19.344C26.1571 21.3611 27.6454 23.4369 29.2708 25.2778L28.2329 18.5998L27.9979 18.7173Z"
+                            fill="#041B78" />
+                    </svg>
+                </a>
+                <div class="category-label">Cultural</div>
+            </li>
+            <li>
+                <a href="#theatre">
+                    <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="event-svg">
+                        <path
+                            d="M3.46673 0.732189C3.46673 0.732189 0.733398 0.732189 0.733398 3.46552V17.5641C0.733398 22.2927 1.701 28.0655 10.3001 28.0655H11.6667V19.8655L4.8334 22.5989C4.8334 22.5989 4.8334 15.7655 11.6667 15.7655V11.6655C11.6667 9.73032 11.9045 8.05752 13.0334 6.81386C14.0748 5.66586 15.7804 3.37532 20.2931 5.52646L22.6001 7.02706V3.46552C22.6001 3.46552 22.6001 0.732189 19.8667 0.732189C17.9315 0.732189 14.4602 3.46552 11.6667 3.46552C8.87327 3.46552 5.61787 0.732189 3.46673 0.732189ZM6.20007 6.19886C6.92499 6.19886 7.62022 6.48683 8.13282 6.99943C8.64542 7.51203 8.9334 8.20726 8.9334 8.93219C8.9334 9.65711 8.64542 10.3523 8.13282 10.8649C7.62022 11.3775 6.92499 11.6655 6.20007 11.6655C5.47514 11.6655 4.77991 11.3775 4.26731 10.8649C3.75471 10.3523 3.46673 9.65711 3.46673 8.93219C3.46673 8.20726 3.75471 7.51203 4.26731 6.99943C4.77991 6.48683 5.47514 6.19886 6.20007 6.19886ZM17.1334 8.93219C17.1334 8.93219 14.4001 8.93219 14.4001 11.6655V25.3322C14.4001 30.7989 17.1334 36.2655 25.3334 36.2655C33.5334 36.2655 36.2667 30.7989 36.2667 25.3322V11.6655C36.2667 8.93219 33.5334 8.93219 33.5334 8.93219C31.5982 8.93219 28.1269 11.6655 25.3334 11.6655C22.5399 11.6655 19.2845 8.93219 17.1334 8.93219ZM19.8667 14.3989C20.5917 14.3989 21.2869 14.6868 21.7995 15.1994C22.3121 15.712 22.6001 16.4073 22.6001 17.1322C22.6001 17.8571 22.3121 18.5523 21.7995 19.0649C21.2869 19.5775 20.5917 19.8655 19.8667 19.8655C19.1418 19.8655 18.4466 19.5775 17.934 19.0649C17.4214 18.5523 17.1334 17.8571 17.1334 17.1322C17.1334 16.4073 17.4214 15.712 17.934 15.1994C18.4466 14.6868 19.1418 14.3989 19.8667 14.3989ZM30.8001 14.3989C31.525 14.3989 32.2202 14.6868 32.7328 15.1994C33.2454 15.712 33.5334 16.4073 33.5334 17.1322C33.5334 17.8571 33.2454 18.5523 32.7328 19.0649C32.2202 19.5775 31.525 19.8655 30.8001 19.8655C30.0751 19.8655 29.3799 19.5775 28.8673 19.0649C28.3547 18.5523 28.0667 17.8571 28.0667 17.1322C28.0667 16.4073 28.3547 15.712 28.8673 15.1994C29.3799 14.6868 30.0751 14.3989 30.8001 14.3989ZM18.5001 25.3322H32.1667C32.1667 25.3322 32.1667 32.1655 25.3334 32.1655C18.5001 32.1655 18.5001 25.3322 18.5001 25.3322Z"
+                            fill="#041B78" />
+                    </svg>
+                </a>
+                <div class="category-label">Theatre</div>
+            </li>
+            <li>
+                <a href="#athletics">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="event-svg">
+                        <path
+                            d="M33.355 4.54829L20.3 15.2233L18.1825 13.4033L22.5225 10.9008C22.7544 10.7669 22.9525 10.5815 23.1014 10.359C23.2504 10.1365 23.3463 9.88281 23.3818 9.6174C23.4173 9.352 23.3915 9.08199 23.3062 8.82816C23.2209 8.57432 23.0786 8.34344 22.89 8.15329L17.7275 2.99079C17.4003 2.66358 16.9565 2.47976 16.4938 2.47976C16.031 2.47976 15.5873 2.66358 15.26 2.99079C14.9328 3.318 14.749 3.7618 14.749 4.22454C14.749 4.68729 14.9328 5.13108 15.26 5.45829L18.8125 9.01079L9.36255 14.4533C8.96715 14.6845 8.67813 15.0614 8.55755 15.5033L6.87755 21.6108C6.75505 22.0658 6.80755 22.5383 7.05255 22.9583L10.0975 28.2433C10.5875 29.0833 11.655 29.3633 12.495 28.8908C13.335 28.4008 13.615 27.3333 13.1425 26.4933L10.465 21.8383L11.095 19.5808L16.625 22.7483L17.395 36.7483C17.4475 37.7283 18.2525 38.4983 19.2325 38.4983C20.2125 38.4983 21.0175 37.7283 21.07 36.7483L21.8575 20.9983L35.63 7.06829C35.9317 6.75866 36.1041 6.34582 36.1123 5.91364C36.1205 5.48146 35.9638 5.06238 35.6742 4.74153C35.3845 4.42068 34.9836 4.22214 34.5528 4.18625C34.1221 4.15036 33.6938 4.2798 33.355 4.54829Z"
+                            fill="#041B78" />
+                        <path
+                            d="M8.75 12.2483C10.683 12.2483 12.25 10.6813 12.25 8.74829C12.25 6.81529 10.683 5.24829 8.75 5.24829C6.817 5.24829 5.25 6.81529 5.25 8.74829C5.25 10.6813 6.817 12.2483 8.75 12.2483Z"
+                            fill="#041B78" />
+                    </svg>
+                </a>
+                <div class="category-label">Athletics</div>
+            </li>
+            <li>
+                <a href="#sports">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="event-svg">
+                        <path
+                            d="M11.8257 22.3012L16.7007 27.1762L14.9868 28.89L10.1118 24.015L11.8257 22.3012ZM23.1562 0.0018457C24.6162 0.0018457 26.019 0.185928 27.3647 0.554092C28.7104 0.922256 29.9736 1.45546 31.1543 2.1537C32.335 2.85194 33.4014 3.67714 34.3535 4.62929C35.3057 5.58144 36.1309 6.64784 36.8291 7.82851C37.5273 9.00917 38.0605 10.2724 38.4287 11.6181C38.7969 12.9638 38.9873 14.3729 39 15.8456C39 17.6991 38.6953 19.4701 38.0859 21.1586C37.4766 22.8471 36.626 24.3768 35.5342 25.7479C34.4424 27.119 33.1348 28.287 31.6113 29.2518C30.0879 30.2167 28.4312 30.9022 26.6411 31.3085C26.7554 32.2479 26.8125 33.1874 26.8125 34.1268C26.8125 34.7997 26.6855 35.4281 26.4316 36.0121C26.1777 36.5961 25.8286 37.1166 25.3843 37.5736C24.9399 38.0307 24.4258 38.3798 23.8418 38.621C23.2578 38.8622 22.623 38.9892 21.9375 39.0018C19.9189 39.0018 17.9766 38.7416 16.1104 38.2211C14.2441 37.7006 12.4922 36.9642 10.8545 36.0121C9.2168 35.06 7.73779 33.9174 6.41748 32.5844C5.09717 31.2514 3.95459 29.7724 2.98975 28.1474C2.0249 26.5224 1.28857 24.7767 0.780762 22.9105C0.272949 21.0443 0.0126953 19.0956 0 17.0643C0 16.3915 0.126953 15.7631 0.380859 15.1791C0.634766 14.5951 0.983887 14.0746 1.42822 13.6176C1.87256 13.1605 2.38672 12.8114 2.9707 12.5702C3.55469 12.329 4.18945 12.202 4.875 12.1893C5.81445 12.1893 6.75391 12.2465 7.69336 12.3607C8.09961 10.558 8.78516 8.90126 9.75 7.39052C10.7148 5.87978 11.8828 4.57851 13.2539 3.48671C14.625 2.39491 16.1548 1.53798 17.8433 0.915908C19.5317 0.293838 21.3027 -0.0108496 23.1562 0.0018457ZM29.8975 10.8373C30.5068 11.2816 31.1733 11.6181 31.897 11.8466C32.6206 12.0751 33.3633 12.1893 34.125 12.1893C34.7598 12.1893 35.3818 12.1132 35.9912 11.9608C35.7373 11.0975 35.3945 10.2724 34.9629 9.48524C34.5312 8.69813 34.0298 7.96181 33.4585 7.27626L29.8975 10.8373ZM31.7256 5.54335C31.04 4.97206 30.3037 4.4706 29.5166 4.03896C28.7295 3.60731 27.9043 3.26454 27.041 3.01063C26.8887 3.62001 26.8125 4.24208 26.8125 4.87685C26.8125 5.63856 26.9268 6.38124 27.1553 7.10487C27.3838 7.82851 27.7202 8.49501 28.1646 9.10438L31.7256 5.54335ZM24.6606 2.53456C24.4067 2.49647 24.1592 2.47108 23.918 2.45839C23.6768 2.44569 23.4229 2.43935 23.1562 2.43935C21.582 2.43935 20.0649 2.70595 18.605 3.23915C17.145 3.77235 15.8057 4.54677 14.5869 5.56239L23.1562 14.1317L26.4316 10.8563C25.7588 10.0058 25.251 9.07265 24.9082 8.05702C24.5654 7.0414 24.3877 5.98134 24.375 4.87685C24.375 4.07704 24.4702 3.29628 24.6606 2.53456ZM12.854 7.27626C12.1812 8.07606 11.6099 8.93935 11.1401 9.8661C10.6704 10.7929 10.3213 11.7767 10.0928 12.8178C11.832 13.224 13.5015 13.8524 15.1011 14.703C16.7007 15.5536 18.167 16.5756 19.5 17.7689L21.4424 15.8456L12.854 7.27626ZM21.9375 36.5643C22.2803 36.5643 22.5977 36.5009 22.8896 36.3739C23.1816 36.247 23.4355 36.0756 23.6514 35.8598C23.8672 35.6439 24.0449 35.3837 24.1846 35.079C24.3242 34.7743 24.3877 34.4569 24.375 34.1268C24.375 32.3368 24.1465 30.6102 23.6895 28.9472C23.2324 27.2841 22.5723 25.7352 21.709 24.3007C20.8457 22.8661 19.8301 21.5521 18.6621 20.3588C17.4941 19.1654 16.1802 18.1434 14.7202 17.2929C13.2603 16.4423 11.7051 15.7885 10.0547 15.3314C8.4043 14.8744 6.67773 14.6395 4.875 14.6268C4.53223 14.6268 4.21484 14.6903 3.92285 14.8173C3.63086 14.9442 3.37695 15.1156 3.16113 15.3314C2.94531 15.5473 2.76758 15.8075 2.62793 16.1122C2.48828 16.4169 2.4248 16.7343 2.4375 17.0643C2.4375 18.8544 2.66602 20.5809 3.12305 22.244C3.58008 23.9071 4.24023 25.4559 5.10352 26.8905C5.9668 28.3251 6.98242 29.6391 8.15039 30.8324C9.31836 32.0258 10.6323 33.0477 12.0923 33.8983C13.5522 34.7489 15.1074 35.4027 16.7578 35.8598C18.4082 36.3168 20.1348 36.5517 21.9375 36.5643ZM21.2329 19.5018C22.4263 20.8349 23.4482 22.3012 24.2988 23.9008C25.1494 25.5004 25.7778 27.1698 26.1841 28.9091C27.2124 28.6806 28.1899 28.3314 29.1167 27.8617C30.0435 27.392 30.9131 26.8207 31.7256 26.1478L23.1562 17.5595L21.2329 19.5018ZM33.4395 24.4149C34.4424 23.2089 35.2104 21.8759 35.7437 20.4159C36.2769 18.9559 36.5498 17.4325 36.5625 15.8456C36.5625 15.5917 36.5562 15.3441 36.5435 15.1029C36.5308 14.8617 36.5054 14.6078 36.4673 14.3412C35.7056 14.5316 34.9248 14.6268 34.125 14.6268C33.0332 14.6268 31.9795 14.4555 30.9639 14.1127C29.9482 13.7699 29.0088 13.2558 28.1455 12.5702L24.8701 15.8456L33.4395 24.4149Z"
+                            fill="#041B78" />
+                    </svg>
+                </a>
+                <div class="category-label">Sports</div>
+            </li>
+            <li>
+                <a href="#bonus">
+                    <svg width="16" height="39" viewBox="0 0 16 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="event-svg">
+                        <path
+                            d="M0.0834961 0.167709H15.9168V12.5969C15.9168 13.2038 15.7849 13.7448 15.521 14.2198C15.2571 14.6948 14.8877 15.0774 14.4127 15.3677L8.79183 18.6927L9.90016 22.3344H15.9168L11.0085 25.8177L12.9085 31.8344L8.00016 28.1135L3.09183 31.8344L4.99183 25.8177L0.0834961 22.3344H6.10016L7.2085 18.6927L1.58766 15.3677C1.11266 15.0774 0.743218 14.6948 0.479329 14.2198C0.215441 13.7448 0.0834961 13.2038 0.0834961 12.5969V0.167709ZM6.41683 3.33438V14.4969L8.00016 15.4469L9.5835 14.4969V3.33438H6.41683Z"
+                            fill="#041B78" />
+                    </svg>
+                </a>
+                <div class="category-label">Bonus Bonanza</div>
+            </li>
+        </ul>
+    </aside>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img id="popup-image" src="" alt="Event Image">
+            <h1 id="popup-title"></h1>
+            <p id="popup-description" style="text-align: left;"></p>
+            <a id="popup-link" href="" class="register">
+                <button>Register<span class='price'><span id="popup-price"></span></span></button>
+            </a>
+        </div>
+    </div>
+
+    <main section="">
+        <div class="hero section-event">
+            <img src="assets/img/ashv-theraceoftalent.png" style="margin-left: 15vw; z-index: 3;" alt="" class="ashv">
+            <img class="left-horse horse" src="assets/img/horse.png" alt="">
+            <img class="cloud-background" src="assets/img/bg clouds.png" alt="">
+            <div class="cloud-overlay"></div>
+        </div>
+
+        <div class="announcement">
+            <p class="note">Note: Registrations through the website are exclusively for external participants.</p>
+        </div>
+
+        <div class="section-event" id="technical">
+            <h1>Technical Events</h1>
+            <div class="tiles">
+
+            </div>
+        </div>
+        <div class="section-event" id="cultural">
+            <h1>Cultural Events</h1>
+            <div class="tiles">
+            </div>
+        </div>
+        <div class="section-event" id="theatre">
+            <h1>Theatre Events</h1>
+            <div class="tiles">
+            </div>
+        </div>
+        <div class="section-event" id="athletics">
+            <h1>Athletics Events</h1>
+            <div class="tiles">
+            </div>
+        </div>
+        <div class="section-event" id="sports">
+            <h1>Sports Events</h1>
+            <div class="tiles">
+            </div>
+        </div>
+        <div class="section-event" id="bonus">
+            <h1>Bonus Bonanza</h1>
+            <div class="tiles">
+            </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <h2 class="footer-heading">Contact Us!</h2>
+            <div class="footer-container">
+                <div class="footer-left">
+                    <div class="social-and-contacts">
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fb.me/e/wH5oN1IyV">
+                                    <i class="fab fa-facebook"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/919398983918">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="technical-contacts">
+                        <p><strong>Technical: </strong>8867462790</p>
+                        <p><strong>Cultural: </strong> 8143767320</p>
+                        <p><strong>Sports: </strong> 8247432448</p>
+                        <p><strong>Theatre: </strong>6309713619</p>
+                        <p><strong>Bonus Bonanza: </strong> 7013005304</p>
+                        <p><strong>Registrations: </strong> 6304038756</p>
+                    </div>
+                    </div>
+                    <button onclick="document.location='creators.html'" class="cta-button">
+                        Meet the Creators <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="map-and-reach-us">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31865.074342890974!2d78.49422682941045!3d13.617042201220594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2677c83886ad7%3A0xad73159e2bddda33!2sMadanapalle%20institute%20of%20technology%20and%20Sciences!5e0!3m2!1sen!2sin!4v1735365545296!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="reach-us">
+                        <h3>Reach Us</h3>
+                        <p>Madanapalle Institute of Technology & Science <br>(Deemed to be University)</p>
+                        <p>Post Box No: 14, Kadiri Road</p>
+                        <p>Angallu (V), Madanapalle-517325</p>
+                        <p>Annamayya District, Andhra Pradesh, India.</p>
+                    </div>
+                </div>
+                <button id="reach-us-button" class="cta-button">
+                    Reach Us <i class="fas fa-map-marker-alt"></i>
+                </button>
+            </div>
+        </footer>
+    </main>
+
+    <div class="arrow">
+        <a href="#nav" class="up-arrow"><i class="fa fa-arrow-up"></i></a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseover", function () {
+                document.querySelector(".sub-menu").style.display = "flex";
+                document.querySelector(".sub-menu").style.animation =
+                    "sub-menu-animation 0.3s ease-in-out forwards";
+            });
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseout", function () {
+                document.querySelector(".sub-menu").style.display = "none";
+            });
+
+        document.querySelector('main').addEventListener('scroll', function () {
+            if (document.querySelector('main').scrollTop > 100) {
+                document.querySelector('header').style.display = 'none';
+            } else {
+                document.querySelector('header').style.display = 'flex';
+            }
+        });
+        let width = screen.width;
+        if (width < 600) document.querySelector("nav").style.transform = "translateY(-100%)";
+        document.querySelector("#hamburger").addEventListener("click", function () {
+            console.log(document.querySelector("nav").style.transform);
+            if (document.querySelector("nav").style.transform === "translateY(-100%)") {
+                document.querySelector("nav").style.transform = "translateY(0%)";
+            }
+            else {
+                document.querySelector("nav").style.transform = "translateY(-100%)";
+            }
+        });
+
+        document.querySelector('.arrow').addEventListener('click', () => {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        })
+
+        function isElementVisible(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= ((window.innerHeight || document.documentElement.clientHeight) + 100) &&
+                rect.right <= ((window.innerWidth || document.documentElement.clientWidth) + 5)
+            );
+        }
+
+        const sidebar = document.querySelector('.side-bar');
+        const arrow = document.querySelector('.arrow')
+
+        document.addEventListener('scroll', function () {
+            isElementVisible(document.querySelector('.hero'))
+            if (screen.width < 600) {
+                if (isElementVisible(document.querySelector('.hero'))) {
+                    sidebar.style.display = 'block';
+                    arrow.style.display = 'none';
+                } else {
+                    sidebar.style.display = 'none';
+                    arrow.style.display = 'flex';
+                }
+            }
+        });
+
+        const all_events = [
+            {
+                "category": "Technical",
+                "events": [
+                    {
+                        "name": "Devx Web Diaries:Blog Creation Essentials",
+                        "price": 300,
+                        "link": "https://forms.gle/jrtHaQGdWaTCu3it8",
+                        "image": "assets/images/devx.png",
+                        "description": "Learn the fundamentals of creating impactful blogs with hands-on guidance and modern tools. Perfect for aspiring writers and web enthusiasts."
+                    },
+                    {
+                        "name": "UI/UX Design Prototyping",
+                        "price": 300,
+                        "link": "https://forms.gle/WN8Qtm5zBiu8z5F88",
+                        "image": "assets/images/uiux.png",
+                        "description": "Master the art of prototyping with an emphasis on user-centric designs. Ideal for designers aiming to create intuitive interfaces."
+                    },
+                    {
+                        "name": "Intelligent Systems:\"Merging Embedded Tech with IOT\"",
+                        "price": 300,
+                        "link": "https://forms.gle/9XobzQbEBV2uaBBU8",
+                        "image": "assets/images/intelligent_systems.png",
+                        "description": "Dive into embedded technology and IoT innovations. Explore how these technologies shape intelligent systems for modern needs."
+                    },
+                    {
+                        "name": "Crafting Tomorrow:From Sensors to Smarts for the Next Gen",
+                        "price": 300,
+                        "link": "https://forms.gle/cp6aF6AMuWyqoYEY8",
+                        "image": "assets/images/crafting_tomorrow.png",
+                        "description": "Discover the journey from sensors to intelligent applications. A workshop tailored for innovators building smart solutions."
+                    },
+                    {
+                        "name": "Discovering Power BI",
+                        "price": 300,
+                        "link": "https://forms.gle/WUCxD9Ynsw1kED1E7",
+                        "image": "assets/images/power_bi.png",
+                        "description": "Learn to harness the power of data visualization with Power BI. A must-attend for data enthusiasts and analysts."
+                    },
+                    {
+                        "name": "Robotics and Modern Automation Workshop",
+                        "price": 300,
+                        "link": "https://forms.gle/NwK5nJSbQGpGLDhLA",
+                        "image": "assets/images/robotics.png",
+                        "description": "Explore your knowledge of the corporate world. Engage in an exciting quiz focused on business and strategy."
+                    },
+                    {
+                        "name": "Paper Presentation",
+                        "price": 200,
+                        "link": "https://forms.gle/wxANRqpEtpKzgrXs5",
+                        "image": "assets/images/paper_presentation.png",
+                        "description": "Showcase your research ideas and findings. Present your paper to a panel of experts and gain valuable insights.Topic : Recent Trends in Technology and computing"
+                    },
+                    {
+                        "name": "Poster Presentation",
+                        "price": 200,
+                        "link": "https://forms.gle/WaWg2kVh2kVcKJNc8",
+                        "image": "assets/images/poster_presentation.png",
+                        "description": `Express your innovative concepts visually through posters. A platform for creativity and technical communication.<br>
+                        <b>Topics :</b>    <br>1. 5G and future telecommunication networks<br>
+                                    2.IOT (internet of things) <br>
+
+                                    3.Augumented reality(AR) and virtual reality(VR)<br>
+                                    4.Robotics and automation <br>
+
+                                    5.Smart agriculture <br>
+                                    6.Smart transportation systems <br>
+                                    7.Technology in education <br>
+                                    8.Smart homes<br>
+                                    9.Renewable energy systems<br>
+                                    10.Space technology and innovations<br> `
+                    },
+                    {
+                        "name": "Project Expo",
+                        "price": 200,
+                        "link": "https://forms.gle/NJaMDXDuAx5KWHUd9",
+                        "image": "assets/images/project_expo.png",
+                        "description": "Exhibit your projects and ideas to a wide audience. Gain feedback and recognition for your efforts and ingenuity."
+                    },
+                    {
+                        "name": "Technical Quiz",
+                        "price": 200,
+                        "link": "https://forms.gle/y6xUSaC6SFekuqUz7",
+                        "image": "assets/images/technical_quiz.png",
+                        "description": "Test your technical knowledge and compete with peers. A fun and challenging quiz for tech enthusiasts."
+                    },
+                    {
+                        "name": "Code Crackers",
+                        "price": 200,
+                        "link": "https://forms.gle/kPnQYAMqUFY2Vkja6",
+                        "image": "assets/images/code_crackers.png",
+                        "description": "Solve coding challenges and prove your problem-solving skills. A thrilling event for programming enthusiasts."
+                    },
+                    {
+                        "name": "Business Quiz",
+                        "price": 200,
+                        "link": "https://forms.gle/FFp3jgo8LP8VJ5V89",
+                        "image": "assets/images/business_quiz.png",
+                        "description": "Explore your knowledge of the corporate world. Engage in an exciting quiz focused on business and strategy."
+                    }
+                ]
+            },
+            {
+                "category": "Cultural",
+                "events": [
+                    {
+                        "name": "Dance Arena - Solo",
+                        "price": 300,
+                        "link": "https://forms.gle/HV9Hkdcntv8zVaaR6",
+                        "image": "assets/images/dance_solo.png",
+                        "description": "Showcase your solo dance skills and mesmerize the audience. A stage for passionate and talented dancers."
+                    },
+                    {
+                        "name": "Dance Arena - Duo",
+                        "price": 500,
+                        "link": "https://forms.gle/94tqRDE8zuECEMhA9",
+                        "image": "assets/images/dance_duo.png",
+                        "description": "Pair up and dazzle the audience with synchronized dance moves. A perfect opportunity for dynamic duos."
+                    },
+                    {
+                        "name": "Dance Arena - Trio",
+                        "price": 700,
+                        "link": "https://forms.gle/avHooT3UfB4MNDTKA",
+                        "image": "assets/images/dance_trio.png",
+                        "description": "Three is not a crowd when it comes to amazing dance performances. Unleash your trio's creative choreography."
+                    },
+                    {
+                        "name": "Dance Arena - Group",
+                        "price": 1000,
+                        "link": "https://forms.gle/BJHsMNTNMZDRbPsJA",
+                        "image": "assets/images/dance_group.png",
+                        "description": "Unite as a team to deliver an electrifying group dance performance. Synchronize and mesmerize the crowd."
+                    },
+                    {
+                        "name": "Vocal vibes",
+                        "price": 250,
+                        "link": "https://forms.gle/TiHo1CTfXfWGRp8P6",
+                        "image": "assets/images/vocal_vibes.png",
+                        "description": "Showcase your vocal talent with melodious tunes. A stage for singers to express their soulful artistry."
+                    },
+                    {
+                        "name": "Artistry",
+                        "price": 250,
+                        "link": "https://forms.gle/UywWe4YkksuwVJnQ6",
+                        "image": "assets/images/artistry.png",
+                        "description": "Unleash your creativity through art and design. A platform for showcasing your unique artistic skills."
+                    },
+                    {
+                        "name": "Instrumental insight",
+                        "price": 200,
+                        "link": "https://forms.gle/SDrxmEGjXD5SPnTz6",
+                        "image": "assets/images/instrumental_insight.png",
+                        "description": "Demonstrate your instrumental prowess and captivate the audience. A melodious event for music enthusiasts."
+                    }
+                ]
+            },
+            {
+                "category": "Theatre",
+                "events": [
+                    {
+                        "name": "Short Film Contest",
+                        "price": 400,
+                        "link": "https://forms.gle/WLVpdQy3wUtfZby87",
+                        "image": "assets/images/short_film.png",
+                        "description": "Create compelling short films that tell a story. Showcase your filmmaking talent to an appreciative audience."
+                    },
+                    {
+                        "name": "Script Writing",
+                        "price": 150,
+                        "link": "https://forms.gle/DvMx9LsqZpX3wAkK6",
+                        "image": "assets/images/script_writing.png",
+                        "description": "Bring your story ideas to life with engaging scripts. An event for creative minds and storytellers."
+                    },
+                    {
+                        "name": "Reels Contest",
+                        "price": 150,
+                        "link": "https://forms.gle/FBWT1RmTw6MUFg8p8",
+                        "image": "assets/images/reels_contest.png",
+                        "description": "Create captivating reels that grab attention. A perfect event for social media enthusiasts and creators."
+                    },
+                    {
+                        "name": "Photography",
+                        "price": 150,
+                        "link": "https://forms.gle/CZNoArYR6hDakdj26",
+                        "image": "assets/images/photography.png",
+                        "description": "Capture moments with your camera and showcase your photographic talent. A treat for shutterbugs."
+                    },
+                    {
+                        "name": "Memes Competition",
+                        "price": 150,
+                        "link": "https://forms.gle/wqytBbAQAKn985Jb6",
+                        "image": "assets/images/memes.png",
+                        "description": "Create captivating Memes that grab attention. A perfect event for social media enthusiasts and creators."
+                    },
+                ]
+            },
+            {
+                "category": "Athletics",
+                "events": [
+                    {
+                        "name": "100m Race - Men",
+                        "price": 200,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLSdHwwHVTWWVYAVqwyQzrbBxY0zqYpu7wwPb_JQsImNeWjNs6w/viewform?usp=preview",
+                        "image": "assets/images/100m_men.png",
+                        "description": "Race to glory in the 100m sprint. A thrilling competition for speed enthusiasts."
+                    },
+                    {
+                        "name": "Discus Throw - Men",
+                        "price": 200,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLScRxGzzDSAf6iGaCsxlyk48VyOwbD914mDKD1NMaIZmOZ64xA/viewform?usp=preview",
+                        "image": "assets/images/discus_men.png",
+                        "description": "Showcase your strength and precision in the discus throw event. Compete with the best."
+                    },
+                    {
+                        "name": "Shot Put - Men",
+                        "price": 200,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLSePMkvZplkao7BDWMORlDo22OK60YcWWGnhDY33K45uBvbz9Q/viewform?usp=preview",
+                        "image": "assets/images/shot_put_men.png",
+                        "description": "Display your throwing power in the shot put event. A challenge for athletes seeking strength and skill."
+                    },
+                    {
+                        "name": "100m Race - Women",
+                        "price": 200,
+                        "link": "https://forms.gle/YVJfmndrKHrQk7C66",
+                        "image": "assets/images/100m_women.png",
+                        "description": "Sprint to victory in the 100m race. A high-energy competition for women athletes."
+                    },
+                    {
+                        "name": "Discus Throw - Women",
+                        "price": 200,
+                        "link": "https://forms.gle/w3F7wFZiX7Csh9oP6",
+                        "image": "assets/images/discus_women.png",
+                        "description": "Compete in the discus throw and showcase your skills. An event for women with precision and power."
+                    },
+                    {
+                        "name": "Shot Put - Women",
+                        "price": 200,
+                        "link": "https://forms.gle/rrSzuA4saRTcfoAQ6",
+                        "image": "assets/images/shot_put_women.png",
+                        "description": "Test your throwing strength in the shot put competition. A showcase of skill and determination."
+                    }
+                ]
+            },
+            {
+                "category": "Sports",
+                "events": [
+                    {
+                        "name": "Cricket - Men",
+                        "price": 3000,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLScbWYzPFRfuL1T24hBT3J7-RYdGzhddGoGXDNNunS3FnCDH3g/viewform?usp=sharing",
+                        "image": "assets/images/cricket_men.png",
+                        "description": "Showcase teamwork and skill in the ultimate cricket match. Compete with the best in an action-packed game."
+                    },
+                    {
+                        "name": "Volleyball - Men",
+                        "price": 1500,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLSeZJx3m3AGSQ2cEJENdvg3PjRu2pxPOS4g0tiQoPXCyUZKbvg/viewform?usp=preview",
+                        "image": "assets/images/volleyball_men.png",
+                        "description": "Hit, spike, and score in the men’s volleyball tournament. Bring your A-game to the court."
+                    },
+                    {
+                        "name": "Kabaddi - Men",
+                        "price": 2000,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLSdkdtPDQdNarFqkzZdB_tTIOBRFvTpVRusLDOrJK7X7VZcdIQ/viewform?usp=preview",
+                        "image": "assets/images/kabaddi_men.png",
+                        "description": "Strength, strategy, and agility combine in this kabaddi event. Compete in the traditional sport with a modern twist."
+                    },
+                    {
+                        "name": "Hand ball - Men",
+                        "price": 800,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLScECjO_k7dls8v0tKfQpvErSjqRrSOEMzSYQtPWrmDTGEH3eQ/viewform?usp=preview",
+                        "image": "assets/images/handball_men.png",
+                        "description": "Compete in this fast-paced handball tournament. Test your speed, coordination, and teamwork."
+                    },
+                    {
+                        "name": "Chess - Men",
+                        "price": 200,
+                        "link": "https://docs.google.com/forms/d/e/1FAIpQLSeROHvW8BC_JJMI5LjHs92LBZuo69_L-wbc3Y6tF-R3ncWghQ/viewform?usp=preview",
+                        "image": "assets/images/chess_men.png",
+                        "description": "Engage in a battle of wits in the chess tournament. A competition for strategic thinkers and planners."
+                    },
+                    {
+                        "name": "Carrom - Men",
+                        "price": 200,
+                        "link": "https://forms.gle/Czeb3kJ6iweQnHF97",
+                        "image": "assets/images/carrom_men.png",
+                        "description": "Show off your precision and aim in the carrom competition. A classic game for skillful players."
+                    },
+                    {
+                        "name": "Cricket - Women",
+                        "price": 2000,
+                        "link": "https://forms.gle/YLtov8fWnrcbhLif7",
+                        "image": "assets/images/cricket_women.png",
+                        "description": "Join the action in the women’s cricket tournament. Display your batting, bowling, and fielding prowess."
+                    },
+                    {
+                        "name": "Volleyball - Women",
+                        "price": 1200,
+                        "link": "https://forms.gle/mxcbsbLdkJNZoLB5A",
+                        "image": "assets/images/volleyball_women.png",
+                        "description": "Unleash your volleyball skills in this thrilling women’s tournament. Compete with the best teams."
+                    },
+                    {
+                        "name": "Kabaddi - Women",
+                        "price": 1200,
+                        "link": "https://forms.gle/f9EgncwMi9VQVvk46",
+                        "image": "assets/images/kabaddi_women.png",
+                        "description": "Bring your strength and strategy to the women’s kabaddi event. A showcase of agility and teamwork."
+                    },
+                    {
+                        "name": "Hand ball - Women",
+                        "price": 800,
+                        "link": "https://forms.gle/TrXxMyeJQ9XNZMRE7",
+                        "image": "assets/images/handball_women.png",
+                        "description": "Participate in the women’s handball tournament. A test of speed, coordination, and sportsmanship."
+                    },
+                    {
+                        "name": "Throw ball - Women",
+                        "price": 1500,
+                        "link": "https://forms.gle/REvD8peCe8tXeRtX8",
+                        "image": "assets/images/throwball_women.png",
+                        "description": "Display your throw ball skills in this exciting competition. Teamwork and strategy take center stage."
+                    },
+                    {
+                        "name": "Chess - Women",
+                        "price": 200,
+                        "link": "https://forms.gle/9H5gi3SnTa5nXZK37",
+                        "image": "assets/images/chess_women.png",
+                        "description": "Showcase your tactical brilliance in the women’s chess competition. Think ahead and plan your moves."
+                    },
+                    {
+                        "name": "Carrom - Women",
+                        "price": 200,
+                        "link": "https://forms.gle/4o16Xw5nwbzfC4aS8",
+                        "image": "assets/images/carrom_women.png",
+                        "description": "Compete in the carrom tournament with precision and skill. A fun and engaging event for women."
+                    }
+                ]
+            },
+            {
+                "category": "bonus",
+                "events": [
+                    // {
+                    //     "name": "Paper play",
+                    //     "price": 200,
+                    //     "link": "",
+                    //     "image": "assets/images/paper_play.png",
+                    //     "description": "Unleash your creativity with paper crafts and designs. A fun and interactive activity for all ages."
+                    // },
+                    // {
+                    //     "name": "Get your Childhood",
+                    //     "price": 200,
+                    //     "link": "",
+                    //     "image": "assets/images/get_your_childhood.png",
+                    //     "description": "Relive your childhood with classic games and activities. A nostalgic trip down memory lane."
+                    // },
+                    {
+                        "name": "Treasure Hunt",
+                        "price": 500,
+                        "link": "https://forms.gle/GVV3Z6uHS1ufiJKw5",
+                        "image": "assets/images/treasure_hunt.png",
+                        "description": "Embark on a thrilling treasure hunt adventure. Solve clues and race against time to find the prize."
+                    },
+                    {
+                        "name": "Freefire Max",
+                        "price": 400,
+                        "link": "https://forms.gle/FUmgtAjddmfKcgk1A",
+                        "image": "assets/images/freefire_max.png",
+                        "description": "Compete in an exciting Freefire Max tournament. Test your gaming skills against the best players."
+                    },
+                    {
+                        "name": "BGMI",
+                        "price": 400,
+                        "link": "https://forms.gle/kBGFZZRNqKWW7wcB9",
+                        "image": "assets/images/bgmi.png",
+                        "description": "Battle it out in the BGMI competition. Showcase your strategy and survival skills in this popular game."
+                    }
+                ]
+            }
+        ]
+
+        const popup = document.getElementById('popup');
+        const popupImage = document.getElementById('popup-image');
+        const popupTitle = document.getElementById('popup-title');
+        const popupDescription = document.getElementById('popup-description');
+        const popupLink = document.getElementById('popup-link');
+        const popupPrice = document.getElementById('popup-price');
+        const closeBtn = document.querySelector('.close');
+
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+        all_events.forEach((item) => {
+            const category = item.category;
+            const events = item.events;
+            const tiles = document.querySelector(`#${category.toLowerCase()} .tiles`);
+            console.log()
+            events.forEach((event) => {
+                const tile = document.createElement('div');
+                tile.classList.add('tile');
+                tile.innerHTML = `
+                <img src="${event.image}" alt="Event 1">
+                <div class="event-details">
+                    <h3 class="event-title">${event.name}</h3>
+                    <p class="event-description">${event.description}</p>
+                    <a href="${event.link}" class="register">
+                        <button>Register<span class='price'><span>₹${event.price ? `${event.price}` : 'Free'}</span></span></button>
+                    </div>`;
+                tiles.appendChild(tile);
+
+                tile.addEventListener('click', () => {
+                    popupImage.src = event.image;
+                    popupTitle.textContent = event.name;
+                    popupDescription.innerHTML = event.description;
+                    popupLink.href = event.link;
+                    popupPrice.textContent = `₹${event.price ? `${event.price}` : 'Free'}`;
+                    popup.style.display = 'flex';
+                });
+            });
+        });
+
+        document.getElementById("reach-us-button").addEventListener("click", function () {
+            window.location.href =
+                "https://www.google.com/maps/place/Madanapalle+Institute+of+Technology+%26+Sciences/@13.6170422,78.4942268,17z";
+        });
+
+    </script>
+    <script src="assets/js/pre-loader.js"></script>
+</body>
+
+</html>

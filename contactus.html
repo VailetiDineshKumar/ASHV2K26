@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/pre-loader.css">
+    <link rel="stylesheet" href="assets/styles/events.css">
+    <!-- <link rel="stylesheet" href="assets/styles/res-style.css"> -->
+    <style>
+        @media screen and (max-width:600px) {
+            .mits-logo img {
+                height: 40px;
+            }
+
+        }
+
+        .social-links {
+            z-index: 2;
+            display: flex;
+        }
+
+        .contacts {
+            z-index: 3;
+            background: linear-gradient(to right top, #252527, #8687892a);
+            padding: 2%;
+        }
+
+        .contact {
+            display: flex;
+            margin: 4%;
+            gap: 3%;
+        }
+
+        .contact * {
+            width: 33%;
+        }
+
+        .contact h3 {
+            text-align: left;
+        }
+
+        .contact #mahi,
+        a {
+            white-space: nowrap;
+            color: whitesmoke;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .bottom {
+            width: 100%;
+            display: flex;
+            z-index: 3;
+            justify-content: space-between;
+            padding: 10%;
+        }
+
+        .hero {
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 0;
+            height: 100vh;
+        }
+
+        .middle {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
+
+        .ashv {
+            margin: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .bottom {
+            width: 30%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .contacts {
+            width: 40vw;
+        }
+
+        .cloud-background {
+            height: 100vh !important;
+        }
+
+        @media screen and (max-width: 600px) {
+            .contacts {
+                width: 95vw;
+            }
+
+            .middle {
+                transform: translateX(0);
+            }
+
+            main {
+                height: 100svh !important;
+                overflow: hidden;
+            }
+        }
+
+        .footer {
+            background: linear-gradient(90deg, #08437F, #8C00D1);
+            padding: 20px 40px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        strong,
+        h3 {
+            color: #FECF00;
+        }
+
+        .footer-heading {
+            text-align: center;
+            margin: 10px 0 30px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .footer-left {
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 40px 0 40px;
+            gap: 20px;
+        }
+
+        .social-and-contacts {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .social-links {
+            list-style: none;
+            flex: 1;
+        }
+
+        .social-links li {
+            margin-bottom: 10px;
+        }
+
+        .social-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            display: flex;
+            letter-spacing: 1px;
+            gap: 12px;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .social-links li a:hover {
+            color: #FECF00;
+            font-weight: bold;
+        }
+
+        .social-links li a i {
+            margin-right: 10px;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FECF00;
+        }
+
+        .technical-contacts {
+            flex: 1;
+        }
+
+        .technical-contacts p {
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            width: 220px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: center;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .cta-button:hover {
+            background-color: white;
+            color: #8C00D1;
+            font-weight: bold;
+        }
+
+        .cta-button i {
+            margin-left: 5px;
+        }
+
+        .footer-right {
+            flex: 0 0 55%;
+            padding-left: 20px;
+        }
+
+        .map-and-reach-us {
+            display: flex;
+            gap: 50px;
+            margin: 0 10px 0 10px;
+        }
+
+        .map-container iframe {
+            width: 320px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .reach-us {
+            width: 38%;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+
+        .reach-us h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .reach-us p {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-and-contacts {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-and-reach-us {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-container iframe,
+            .reach-us {
+                width: 100%;
+            }
+
+            .footer-left,
+            .footer-right {
+                flex: 1;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-and-contacts {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-and-reach-us {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-container iframe,
+            .reach-us {
+                width: 100%;
+            }
+
+            .footer-left,
+            .footer-right {
+                flex: 1;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-and-contacts {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-and-reach-us {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-container iframe,
+            .reach-us {
+                width: 100%;
+            }
+
+            .footer-left,
+            .footer-right {
+                flex: 1;
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-and-contacts {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-and-reach-us {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .map-container iframe,
+            .reach-us {
+                width: 100%;
+            }
+
+            .footer-left,
+            .footer-right {
+                flex: 1;
+                padding: 0;
+            }
+        }
+
+        .side-bar {
+            position: fixed;
+            top: 50%;
+            width: fit-content;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .side-bar.show {
+            display: flex;
+            transform: translateX(0);
+        }
+
+        .popup {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            /* width: 100%; */
+            height: auto;
+        }
+
+        .contacts {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .contact h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #FFD700;
+        }
+
+        .contact p {
+            margin: 0;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .contact a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .half {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .half h3 {
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+
+        .half p {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .map-link {
+            /* display: inline-block; */
+            /* margin-top: 10px; */
+            color: #FFD700;
+            text-decoration: none;
+            gap: 0 !important;
+        }
+
+        .map-link:hover {
+            text-decoration: underline;
+        }
+
+        .social-media {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-links li {
+            margin-right: 10px;
+        }
+
+        .social-links li a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .social-links li a:hover {
+            color: #FFD700;
+        }
+
+        .cloud-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader">
+        <div id="preloader-container">
+            <div id="preloader_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <div class="mits-logo" style="height: 100%;">
+            <div class="logo"
+                style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+                <img src="assets/img/MITS.png" alt="" loading="eager">
+                <a href="https://www.mits.ac.in/"
+                    style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
+            </div>
+            <div class="title">
+                <div class="upper">MITS</div>
+                <hr>
+                <div class="lower">MADANAPALLE</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="committee.html">Committee</a></li>
+                <li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" style="font-weight: 700;" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></a>
+                    <ul class="sub-menu">
+                        <li><a href="eventTiles.html#technical">Technical</a></li>
+                        <li><a href="eventTiles.html#theatre">Theatre</a></li>
+                        <li><a href="eventTiles.html#cultural">Cultural</a></li>
+                        <li><a href="eventTiles.html#sports">Sports</a></li>
+                        <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+                    </ul>
+                </li>
+                <li><a href="registrations.html">Registrations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contactus.html" class="selected">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div style="height: 100%; display: flex;">
+            <div class="two6-years-logo"
+                style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                <img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;"
+                    loading="eager">
+                <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px;">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-133%); color: #FFD700;right: 0; text-decoration: none; text-align: center; font-weight: normal;"
+                    class="title-sponser">Title<br>
+                    Sponsor</a>
+                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateX(0) translateY(90%); color: #FFD700;right: 0; text-decoration: none; font-weight: normal;">Co-Title<br>
+                    Sponsor</a> -->
+            </div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+            id="hamburger">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </svg>
+    </header>
+
+    <main section="">
+        <div class="hero section-event">
+            <img class="left-horse horse" src="assets/img/horse.png" alt="">
+            <img class="cloud-background" src="assets/img/bg clouds.png" alt="">
+            <div class="cloud-overlay"></div>
+            <div class="middle">
+                <img src="assets/img/ashv-theraceoftalent.png" style="z-index: 3;" alt="" class="ashv">
+                <div class="contacts">
+                    <div class="contact">
+                        <h3>Technical:</h3>
+                        <p id="mahi">Amrutha.BS</p>
+                          <p><a href="tel:+91886746270"></a>886746270</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Cultural:</h3>
+                        <p id="mahi">M. Harsha Vardhan</p>
+                        <p><a href="tel:+918143767320"></a>8143767320</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Sports:</h3>
+                        <p id="mahi">V.Wazid</p>
+                        <p><a href="tel:+918247432448"></a>8247432448</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Theatre:</h3>
+                        <p id="mahi">P.Sohith Reddy</p>
+                        <p><a href="tel:+916309713619"></a>6309713619</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Bonus Bonanza:</h3>
+                        <p id="mahi">K.Vidhya Sagar</p>
+                        <p><a href="tel:+917013005304"></a>7013005304</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Registrations:</h3>
+                        <p id="mahi">V. Dinesh Kumar</p>
+                        <p><a href=""></a>6304038756</p>
+                    </div>
+                    <div class="contact">
+                        <h3>Accommodation:</h3>
+                        <p id="mahi">T.Devendra Reddy</p>
+                        <p><a href="tel:+919347698116"></a>9347698116</p>
+                    </div>
+                    <div class="social-media">
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://maps.app.goo.gl/8b5u4CSQtCRUWxvTA" class="map-link" target="_blank"
+                                    aria-label="View College on Google Maps">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span style="font-size: 1rem;">MITS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://fb.me/e/wH5oN1IyV">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/919398983918">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/pre-loader.js"></script>
+    </main>
+    <script>
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseover", function () {
+                document.querySelector(".sub-menu").style.display = "flex";
+            });
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseout", function () {
+                document.querySelector(".sub-menu").style.display = "none";
+            });
+        let width = screen.width;
+        if (width < 600) document.querySelector("nav").style.transform = "translateY(-100%)";
+
+        document.querySelector("#hamburger").addEventListener("click", function () {
+            console.log(document.querySelector("nav").style.transform);
+            if (document.querySelector("nav").style.transform === "translateY(-100%)") {
+                document.querySelector("nav").style.transform = "translateY(0%)";
+            }
+            else {
+                document.querySelector("nav").style.transform = "translateY(-100%)";
+            }
+        });
+    </script>
+</body>
+
+</html>

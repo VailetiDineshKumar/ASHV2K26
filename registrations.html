@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashv 2k26 - The race of talent</title>
+    <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/res-style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/registration.css">
+    <link rel="stylesheet" href="assets/styles/pre-loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <style>
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: auto;
+                z-index: 10 !important;
+                padding: 2rem;
+                transition: all 0.3s ease-in-out;
+                transform: translateY(-100%);
+                background: linear-gradient(#003366, #0033669f);
+                box-shadow: 0 0 10px 10px #0033669f;
+            }
+
+            .ashv-hamburger {
+                display: none;
+                cursor: pointer;
+                z-index: 10;
+            }
+
+            nav.active {
+                display: block;
+                transform: translateY(0);
+            }
+
+            .ashv-hamburger {
+                display: block;
+                top: 1rem;
+                right: 1rem;
+                font-size: 2rem;
+                color: #ffd700;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .event-hover ul {
+                display: none;
+            }
+
+            .event-hover:hover ul {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader
+	<div class="loader">
+		<div id="preloader-container">
+			<div id="preloader_1">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+		</div>
+	</div> -->
+    <!-- Header -->
+    <header>
+        <div class="mits-logo" style="height: 100%;">
+            <div class="logo"
+                style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+                <img src="assets/img/MITS.png" alt="" loading="eager">
+                <a href="https://www.mits.ac.in/"
+                    style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
+            </div>
+            <div class="title">
+                <div class="upper">MITS</div>
+                <hr>
+                <div class="lower">MADANAPALLE</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="committee.html">Committee</a></li>
+                <li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" style="font-weight: 700;" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></a>
+                    <ul class="sub-menu">
+                        <li><a href="eventTiles.html#technical">Technical</a></li>
+                        <li><a href="eventTiles.html#theatre">Theatre</a></li>
+                        <li><a href="eventTiles.html#cultural">Cultural</a></li>
+                        <li><a href="eventTiles.html#sports">Sports</a></li>
+                        <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+                    </ul>
+                </li>
+                <li><a href="registrations.html" class="selected">Registrations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div style="height: 100%; display: flex;">
+            <div class="two6-years-logo"
+                style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                <img src="assets/27years.png" alt="" class="year-logo" style="height: 100%; scale: 1.5;"
+                    loading="eager">
+                <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px;">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-105%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
+                    class="title-sponser">Title<br>
+                    Sponsor</a>
+                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateX(15%) translateY(90%); color: #FFD700;right: 0; text-decoration: none;">Co-Title<br>
+                    Sponsor</a> -->
+            </div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+            id="hamburger">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </svg>
+    </header>
+
+    <section class="hero">
+        <!-- Ashv Logo -->
+        <div class="ashv-logo-container">
+            <img src="assets/img/ashv-theraceoftalent.png" alt="Ashv Logo" class="ashv-logo">
+        </div>
+
+        <div class="shows-events-schedule">
+            <div class="contains glass-effect">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading">
+                            <h2 style="color: white;"></h2>
+                        </div>
+                    </div>
+                    <div class="des">
+                        <h1>Accommodation</h1>
+                        <p>Madanapalle Institute of Technology & Science (MITS) is offering accommodation for students
+                            from other colleges participating in ASHV 2k25 events.</p>
+                        <p>The accommodation is available at a daily rate of Rs 200/-(Free accommodation is provided for
+                            sports persons), allowing participants to stay on campus throughout
+                            the event duration.</p>
+                        <p>This initiative is particularly beneficial for students traveling long distances as it
+                            eliminates the need for separate lodging arrangements.</p>
+                        <p>The accommodation opportunity fosters a sense of camaraderie among participants from
+                            different colleges.</p>
+                        <p>It facilitates closer interaction and collaboration during their stay, enhancing the overall
+                            experience.</p>
+                        <p>With accommodation worries addressed, participants can fully immerse themselves in the
+                            events.</p>
+                        <p>The accommodation likely includes essential amenities for a comfortable stay, ensuring
+                            attendees' needs are met.</p>
+                        <p>Due to anticipated demand, advance booking is advisable to secure accommodations.</p>
+                        <p>This initiative reflects MITS's commitment to supporting ASHV 2k25 events and enhancing the
+                            experience for all participants.</p>
+                        <p>It underscores the institute's dedication to fostering a conducive environment for academic
+                            and extracurricular activities.</p>
+                    </div>
+                    <div class="event" style="background: unset;">
+                        <!-- <div class="event-details1">
+                                <h3>Accommodation</h3>
+                            </div> -->
+                        <div class="event-details1">
+                            <p><span class="icon">🛏️</span><strong>Available <br>Throughout Event</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Daily Rate: <br>Rs 200/-</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Free for <br>Sports Persons</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdE3GPre2jwsswVJc_MzuFjeAnMbXP2SfF_8UaXzfl7D80BIA/viewform?usp=header'">Book
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/9110349183';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <hr>
+    <section class="registration-section">
+
+        <div class="registrations">
+            <h1>Registrations</h1>
+            <div class="events-list1">
+                <h2 id="tech">Technical Events</h2>
+                <div class="technical-events">
+                    <div class="workshop-events">
+                        <h2>Workshops</h2>
+                        <div class="workshop-carousel">
+                            <div class="carousel-wrapper">
+                                <div class="event-card">
+                                    <h3 class="workshop1">DevX Web Diaries:<br> Blog Creation Essentials</h3>
+                                    <div class="event-details">
+                                        <div class="event-info">
+                                            <span class="icon">🕒</span>
+                                            <p>February<br>21 & 22</p>
+                                        </div>
+                                        <div class="event-info">
+                                            <span class="icon">📍</span>
+                                            <p>MITS<br>Madanapalle</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-footer">
+                                        <p class="price" style="margin-left: 10px;">300/-</p>
+                                        <button class="register-btn"
+                                            onclick="window.location.href = 'https://forms.gle/jrtHaQGdWaTCu3it8 '">Register
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <!-- Repeat the card for other events -->
+                                <div class="event-card">
+                                    <h3 class="workshop4">UI/UX Design<br> Prototyping</h3>
+                                    <div class="event-details">
+                                        <div class="event-info">
+                                            <span class="icon">🕒</span>
+                                            <p>February<br>21 & 22</p>
+                                        </div>
+                                        <div class="event-info">
+                                            <span class="icon">📍</span>
+                                            <p>MITS<br>Madanapalle</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-footer">
+                                        <p class="price" style="margin-left: 10px;">300/-</p>
+                                        <button class="register-btn"
+                                            onclick="window.location.href = 'https://forms.gle/WN8Qtm5zBiu8z5F88 '">Register
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="event-card">
+                                    <h3 class="workshop2">Intelligent Systems: <br> ”Merging Embedded Tech with IOT”
+                                    </h3>
+                                    <div class="event-details">
+                                        <div class="event-info">
+                                            <span class="icon">🕒</span>
+                                            <p>February<br>21 & 22</p>
+                                        </div>
+                                        <div class="event-info">
+                                            <span class="icon">📍</span>
+                                            <p>MITS<br>Madanapalle</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-footer">
+                                        <p class="price" style="margin-left: 10px;">300/-</p>
+                                        <button class="register-btn"
+                                            onclick="window.location.href = 'https://forms.gle/9XobzQbEBV2uaBBU8 '">Register
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="event-card">
+                                    <h3 class="workshop2">Crafting Tomorrow:<br> From Sensors to Smarts for Next Gen
+                                    </h3>
+                                    <div class="event-details">
+                                        <div class="event-info">
+                                            <span class="icon">🕒</span>
+                                            <p>February<br>21 & 22</p>
+                                        </div>
+                                        <div class="event-info">
+                                            <span class="icon">📍</span>
+                                            <p>MITS<br>Madanapalle</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-footer">
+                                        <p class="price" style="margin-left: 10px;">300/-</p>
+                                        <button class="register-btn"
+                                            onclick="window.location.href = 'https://forms.gle/cp6aF6AMuWyqoYEY8 '">Register
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="event-card">
+                                    <h3 class="workshop3">Discovering Power BI</h3>
+                                    <div class="event-details">
+                                        <div class="event-info">
+                                            <span class="icon">🕒</span>
+                                            <p>February<br>21 & 22</p>
+                                        </div>
+                                        <div class="event-info">
+                                            <span class="icon">📍</span>
+                                            <p>MITS<br>Madanapalle</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-footer">
+                                        <p class="price" style="margin-left: 10px;">300/-</p>
+                                        <button class="register-btn"
+                                            onclick="window.location.href = 'https://forms.gle/WUCxD9Ynsw1kED1E7 '">Register
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div class="event-card">
+                                    <h3 class="workshop3">Robotics and Modern Automation Workshop</h3>
+                                    <div class="event-details">
+                                        <div class="event-info">
+                                            <span class="icon">🕒</span>
+                                            <p>February<br>21 & 22</p>
+                                        </div>
+                                        <div class="event-info">
+                                            <span class="icon">📍</span>
+                                            <p>MITS<br>Madanapalle</p>
+                                        </div>
+                                    </div>
+                                    <div class="event-footer">
+                                        <p class="price" style="margin-left: 10px;">300/-</p>
+                                        <button class="register-btn"
+                                            onclick="window.location.href = 'https://forms.gle/NwK5nJSbQGpGLDhLA'">Register
+                                            Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="event">
+                        <div class="event-details1">
+                            <h3>Business Quiz</h3>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Registration <br>Fee: 200/-</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://forms.gle/FFp3jgo8LP8VJ5V89'">Register
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/918978346504';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="event">
+                        <div class="event-details1">
+                            <h3>Paper Presentation</h3>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Registration <br>Fee: 200/-</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://forms.gle/wxANRqpEtpKzgrXs5 '">Register
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/918978346504';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="event">
+                        <div class="event-details1">
+                            <h3>Poster Presentation</h3>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Registration <br>Fee: 200/-</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://forms.gle/WaWg2kVh2kVcKJNc8 '">Register
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/918978346504';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="event">
+                        <div class="event-details1">
+                            <h3>Project Expo</h3>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Registration <br>Fee: 200/-</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://forms.gle/NJaMDXDuAx5KWHUd9 '">Register
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/918978346504';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="event">
+                        <div class="event-details1">
+                            <h3>Technical Quiz</h3>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Registration <br>Fee: 200/-</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://forms.gle/y6xUSaC6SFekuqUz7 '">Register
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/918978346504';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="event">
+                        <div class="event-details1">
+                            <h3>Code Crackers</h3>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                        </div>
+                        <div class="event-details1">
+                            <p><strong>Registration <br>Fee: 200/-</strong></p>
+                        </div>
+
+                        <div class="event-buttons">
+                            <button class="register-btn"
+                                onclick="window.location.href = 'https://forms.gle/kPnQYAMqUFY2Vkja6 '">Register
+                                Now</button>
+                            <button class="contact-btn"
+                                onclick="window.location.href = 'https://wa.me/918978346504';">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- <div class="events-list1">
+            <h2 id="tech">Cultural Events</h2>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Dance Arena - Solo</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 300/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSchDHPm9Co7YE4J9RY_m9j1ehHic7TjBRrTweqnY69cakylkA/viewform?usp=header'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Dance Arena - Duo</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 500/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSchDHPm9Co7YE4J9RY_m9j1ehHic7TjBRrTweqnY69cakylkA/viewform?usp=header'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Dance Arena - Trio</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 700/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSchDHPm9Co7YE4J9RY_m9j1ehHic7TjBRrTweqnY69cakylkA/viewform?usp=header'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Dance Arena - Group</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 1000/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSchDHPm9Co7YE4J9RY_m9j1ehHic7TjBRrTweqnY69cakylkA/viewform?usp=header'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div> -->
+
+        <div class="events-list1">
+            <h2 id="tech"> Cultural Events</h2>
+            <div class="technical-events">
+                <div class="workshop-events">
+                    <h2>Dance Arena</h2>
+                    <div class="workshop-carousel">
+                        <div class="carousel-wrapper">
+                            <div class="event-card1">
+                                <h3 class="sport1">Dance Arena - Solo</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">300/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/HV9Hkdcntv8zVaaR6'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Dance Arena - Duo</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">500/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/94tqRDE8zuECEMhA9'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <!-- Repeat the card for other events -->
+                            <div class="event-card1">
+                                <h3 class="sport1">Dance Arena - Trio</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">700/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/avHooT3UfB4MNDTKA'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Dance Arena - Group</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">1000/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/BJHsMNTNMZDRbPsJA'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Vocal vibes</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 250/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/TiHo1CTfXfWGRp8P6'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Artistry</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 250/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/UywWe4YkksuwVJnQ6'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Instrumental insight</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/SDrxmEGjXD5SPnTz6'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Fashion Dynasty</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: Free/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn" onclick="window.location.href = '#'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/918143767320';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="events-list1">
+            <h2 id="tech">Theatre</h2>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Short Film</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 400/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/WLVpdQy3wUtfZby87'">Register Now</button>
+                        <button class="contact-btn" onclick="window.location.href = 'https://wa.me/9652698204';">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Script Writing</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 150/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn" onclick="window.location.href = ''"
+                            onclick="window.location.href = 'https://forms.gle/DvMx9LsqZpX3wAkK6'">Register Now</button>
+                        <button class="contact-btn" onclick="window.location.href = 'https://wa.me/9652698204';">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+            <!-- memes contest
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3> Memes</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 150/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn" onclick="window.location.href = ''">Register Now</button>
+                        <button class="contact-btn" onclick="window.location.href = 'https://wa.me/9652698204';">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Reels Contest</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 150/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/FBWT1RmTw6MUFg8p8'">Register
+                            Now</button>
+                        <button class="contact-btn" onclick="window.location.href = 'https://wa.me/9652698204';">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Photography</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 150/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/CZNoArYR6hDakdj26'">Register
+                            Now</button>
+                        <button class="contact-btn" onclick="window.location.href = 'https://wa.me/9652698204';">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Memes Competition</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 150/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/wqytBbAQAKn985Jb6'">Register
+                            Now</button>
+                        <button class="contact-btn" onclick="window.location.href = 'https://wa.me/9652698204';">Contact
+                            Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="events-list1">
+            <h2 id="tech">Athletics</h2>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>100m Race - Men</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdHwwHVTWWVYAVqwyQzrbBxY0zqYpu7wwPb_JQsImNeWjNs6w/viewform?usp=preview'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/919502631137';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3> Shot Put - Men</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSePMkvZplkao7BDWMORlDo22OK60YcWWGnhDY33K45uBvbz9Q/viewform?usp=preview'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/919502631137';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Discus Throw - Men</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScRxGzzDSAf6iGaCsxlyk48VyOwbD914mDKD1NMaIZmOZ64xA/viewform?usp=preview'">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/919502631137';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>100m Race - Women</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/YVJfmndrKHrQk7C66'">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/919502631137';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3> Shot Put - Women</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/rrSzuA4saRTcfoAQ6'">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/919502631137';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Discus Throw - Women</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/w3F7wFZiX7Csh9oP6 '">Register
+                            Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/919502631137';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="events-list1">
+            <h2 id="tech"> Sports</h2>
+            <div class="technical-events">
+                <div class="workshop-events">
+                    <h2>Men</h2>
+                    <div class="workshop-carousel">
+                        <div class="carousel-wrapper">
+                            <div class="event-card1">
+                                <h3 class="sport1">Cricket</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">3000/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScbWYzPFRfuL1T24hBT3J7-RYdGzhddGoGXDNNunS3FnCDH3g/viewform?usp=sharing'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Volleyball</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">1500/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeZJx3m3AGSQ2cEJENdvg3PjRu2pxPOS4g0tiQoPXCyUZKbvg/viewform?usp=preview'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <!-- Repeat the card for other events -->
+                            <div class="event-card1">
+                                <h3 class="sport1">Kabaddi</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">2000/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdkdtPDQdNarFqkzZdB_tTIOBRFvTpVRusLDOrJK7X7VZcdIQ/viewform?usp=preview'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Chess</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">200/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeROHvW8BC_JJMI5LjHs92LBZuo69_L-wbc3Y6tF-R3ncWghQ/viewform?usp=preview'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Carroms</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">200/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/Czeb3kJ6iweQnHF97'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Handball</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">800/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScECjO_k7dls8v0tKfQpvErSjqRrSOEMzSYQtPWrmDTGEH3eQ/viewform?usp=preview'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="technical-events">
+                <div class="workshop-events">
+                    <h2>Women</h2>
+                    <div class="workshop-carousel">
+                        <div class="carousel-wrapper">
+                            <div class="event-card1">
+                                <h3 class="sport1">Cricket</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">2000/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/YLtov8fWnrcbhLif7 '">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Volleyball</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">1200/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/mxcbsbLdkJNZoLB5A'">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <!-- Repeat the card for other events -->
+                            <div class="event-card1">
+                                <h3 class="sport1">Kabaddi</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">1200/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/f9EgncwMi9VQVvk46 '">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Chess</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">200/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = ' https://forms.gle/9H5gi3SnTa5nXZK37 '">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Carroms</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">200/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/4o16Xw5nwbzfC4aS8 '">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                            <div class="event-card1">
+                                <h3 class="sport1">Handball</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">800/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/TrXxMyeJQ9XNZMRE7 '">Register
+                                        Now</button>
+                                </div>
+                            </div>
+
+                            <div class="event-card1">
+                                <h3 class="sport1">Throwball</h3>
+                                <div class="event-details">
+                                    <div class="event-info">
+                                        <span class="icon">🕒</span>
+                                        <p>February<br>21 & 22</p>
+                                    </div>
+                                    <div class="event-info">
+                                        <span class="icon">📍</span>
+                                        <p>MITS<br>Madanapalle</p>
+                                    </div>
+                                </div>
+                                <div class="event-footer">
+                                    <p class="price" style="margin-left: 10px;">1500/-</p>
+                                    <button class="register-btn"
+                                        onclick="window.location.href = 'https://forms.gle/REvD8peCe8tXeRtX8 '">Register
+                                        Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="events-list1">
+            <h2 id="tech">Bonus Bonanza</h2>
+
+
+
+            <!-- <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Treasure Hunt</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 500/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/GVV3Z6uHS1ufiJKw5'">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/917671033525';">Contact Us</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3> Free Fire Max</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee:400/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/FUmgtAjddmfKcgk1A'">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/917671033525';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3> BGMI </h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 400/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/kBGFZZRNqKWW7wcB9'">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/917671033525';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3> Get Your Childhood</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn" onclick="window.location.href = ''">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/916281662669';">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Paper Play</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 200/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn" onclick="window.location.href = ''">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/916281662669';">Contact Us</button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="container">
+                <div class="event">
+                    <div class="event-details1">
+                        <h3>Ludo King</h3>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">🕒</span><strong>February <br>21 & 22</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><span class="icon">📍</span><strong>MITS <br>Madanapalle</strong></p>
+                    </div>
+                    <div class="event-details1">
+                        <p><strong>Registration <br>Fee: 100/-</strong></p>
+                    </div>
+
+                    <div class="event-buttons">
+                        <button class="register-btn"
+                            onclick="window.location.href = 'https://forms.gle/qyVa11M8PLw9KyHE9'">Register Now</button>
+                        <button class="contact-btn"
+                            onclick="window.location.href = 'https://wa.me/917671033525';">Contact Us</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2 class="footer-heading">Contact Us!</h2>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="social-and-contacts">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://fb.me/e/wH5oN1IyV">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/919398983918">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="technical-contacts">
+                        <p><strong>Technical: </strong>8867462790</p>
+                        <p><strong>Cultural: </strong> 8143767320</p>
+                        <p><strong>Sports: </strong> 8247432448</p>
+                        <p><strong>Theatre: </strong>6309713619</p>
+                        <p><strong>Bonus Bonanza: </strong> 7013005304</p>
+                        <p><strong>Registrations: </strong> 6304038756</p>
+                    </div>
+                </div>
+
+                <button onclick="document.location='creators.html'" class="cta-button">
+                    Meet the Creators <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+
+            <!-- Map and Reach Us (visible only on desktop) -->
+            <div class="map-and-reach-us">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31865.074342890974!2d78.49422682941045!3d13.617042201220594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2677c83886ad7%3A0xad73159e2bddda33!2sMadanapalle%20institute%20of%20technology%20and%20Sciences!5e0!3m2!1sen!2sin!4v1735365545296!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="reach-us">
+                    <h3>Reach Us</h3>
+                    <p>Madanapalle Institute of Technology & Science <br>(Deemed to be University)</p>
+                    <p>Post Box No: 14, Kadiri Road</p>
+                    <p>Angallu (V), Madanapalle-517325</p>
+                    <p>Annamayya District, Andhra Pradesh, India.</p>
+                </div>
+            </div>
+
+            <!-- Reach Us Button (visible only on mobile) -->
+            <button id="reach-us-button" class="cta-button">
+                Reach Us <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/album.js"></script>
+    <script src="./assets/js/pre-loader.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

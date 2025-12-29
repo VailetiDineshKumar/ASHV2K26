@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashv 2k26 - The race of talent</title>
+    <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/res-style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/pre-loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .col-lg-4 {
+        margin: 7%;
+    }
+
+    .gallery {
+        overflow-x: auto;
+        margin: 5%;
+        z-index: 1;
+        /* Enable horizontal scrolling */
+    }
+
+    .year {
+        display: block;
+        font-size: 2rem;
+        color: #ffd700 !important;
+        /* Change to block-level element */
+        clear: both;
+        /* Clear the float */
+        margin-bottom: 20px;
+        /* Add space between years */
+    }
+
+    .year h2 {
+        margin-bottom: 10px;
+    }
+
+    .images {
+        overflow-x: auto;
+        overflow-y: hidden;
+        /* Enable horizontal scrolling for images */
+        white-space: nowrap;
+        /* Prevent line breaks */
+        z-index: 1;
+    }
+
+    .gallery {
+        width: 90vw;
+    }
+
+    .images img {
+        width: 200px;
+        margin-right: 10px;
+        display: inline-block;
+        /* Ensure images appear inline */
+        vertical-align: top;
+        /* Align images to the top */
+        border: 2px solid #ddd;
+        /* Add border */
+        border-radius: 5px;
+        /* Add border radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Add box shadow */
+        transition: transform 0.3s ease;
+        /* Add transition effect */
+        z-index: 1000;
+    }
+
+    .images img:hover {
+        transform: scale(1.05);
+        /* Add hover effect to scale images */
+    }
+
+    @media screen and (max-width:600px) {
+        .images img {
+            width: 50vw !important;
+        }
+
+        .gallery {
+            width: 90% !important;
+        }
+    }
+
+    .col-lg-12 img {
+        width: 350px;
+        margin: 60px 0px 30px 0px;
+        height: auto;
+    }
+
+    .text {
+        width: 45%;
+        margin: auto;
+        padding: 8px;
+        font-size: 20px;
+    }
+
+    .page-heading-shows-events {
+        background-image: url(assets/img/galleryBG.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 110px 0px;
+        text-align: center;
+        min-height: 100vh;
+    }
+
+    .page-heading-shows-events h2 {
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    #b {
+        font-weight: 900;
+    }
+
+    .up-arrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        z-index: 1000;
+        transition: background-color 0.3s;
+    }
+
+    .up-arrow:hover {
+        color: #ddcccc;
+    }
+
+    .main-nav .nav li {
+        display: inline-block;
+    }
+
+    .main-nav img {
+        position: absolute !important;
+    }
+
+    #imgOne {
+        left: 3rem;
+        top: 0.5rem !important;
+        margin-top: 0 !important;
+        width: auto;
+        height: 4rem;
+        margin-top: .5rem;
+    }
+
+
+    #imgTwo {
+        left: 13rem;
+        top: 0.5rem !important;
+        margin-top: 0 !important;
+        width: auto;
+        height: 4rem;
+        margin-top: 0.5rem;
+    }
+
+    .gallery::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .gallery::-webkit-scrollbar-thumb {
+        background-color: #ffd700;
+        /* Thumb color */
+        border-radius: 4px;
+    }
+
+    .gallery::-webkit-scrollbar-thumb:hover {
+        background-color: #00ccff;
+        /* Hover effect */
+    }
+
+    .gallery::-webkit-scrollbar-track {
+        background-color: #f4f4f4;
+        /* Track color */
+        border-radius: 4px;
+    }
+
+    @media screen and (max-width:768px) {
+        .main-nav img {
+            position: absolute;
+        }
+
+        #imgOne {
+            left: 1rem;
+            top: 1rem;
+            margin-top: 0;
+        }
+
+        #imgTwo {
+            left: 12rem;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+
+        .logo-container img {
+            margin-right: 10px;
+        }
+
+        .footer-social {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skills-icon {
+            width: 35%;
+
+        }
+
+        .social-item {
+            margin: 0;
+            margin-bottom: 0;
+        }
+
+        #phone-footer {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .social-item span {
+            display: none;
+        }
+
+        .text {
+            width: 98%;
+            margin: auto;
+            padding: 8px;
+            font-size: 20px;
+        }
+
+        .col-lg-12 img {
+            width: 350px;
+            margin: 40px 0px 30px 0px;
+            height: auto;
+        }
+    }
+
+    :root {
+        --color-primary: #003366;
+        --color-secondary: #ffefa9;
+        --color-accent: #FFD700;
+        --color-text: #fff;
+        --color-text-dark: #000;
+        --color-overlay: rgba(0, 0, 0, 0.5);
+        --color-shadow: #0033669f;
+        --color-hover: #08437f;
+    }
+
+    body {
+        background: linear-gradient(#003366, #9334ff9f);
+    }
+</style>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader">
+        <div id="preloader-container">
+            <div id="preloader_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+        </div>
+    </div>
+    <!-- Header -->
+    <!-- ***** Header Area Start ***** -->
+    <header>
+        <div class="mits-logo" style="height: 100%;">
+            <div class="logo"
+                style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+                <img src="assets/img/MITS.png" alt="" loading="eager">
+                <a href="https://www.mits.ac.in/"
+                    style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
+            </div>
+            <div class="title">
+                <div class="upper">MITS</div>
+                <hr>
+                <div class="lower">MADANAPALLE</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="committee.html">Committee</a></li>
+                <li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" style="font-weight: 700;" fill="currentColor"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></a>
+                    <ul class="sub-menu">
+                        <li><a href="eventTiles.html#technical">Technical</a></li>
+                        <li><a href="eventTiles.html#theatre">Theatre</a></li>
+                        <li><a href="eventTiles.html#cultural">Cultural</a></li>
+                        <li><a href="eventTiles.html#sports">Sports</a></li>
+                        <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+                    </ul>
+                </li>
+                <li><a href="registrations.html">Registrations</a></li>
+                <li><a href="gallery.html" class="selected">Gallery</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div style="height: 100%; display: flex;">
+            <div class="two6-years-logo"
+                style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+                <img src="assets/27years.png" alt="" class="year-logo" style="height: 100%; scale: 1.5;"
+                    loading="eager">
+                <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px;">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-105%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
+                    class="title-sponser">Title<br>
+                    Sponsor</a>
+                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateX(15%) translateY(90%); color: #FFD700;right: 0; text-decoration: none;">Co-Title<br>
+                    Sponsor</a> -->
+            </div>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+            id="hamburger">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </svg>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- Gallery -->
+    <div class="page-heading-shows-events">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="old/assets/images/ashv1.webp" alt="Image description">
+                    <h2 style="text-shadow: 3px 3px 4px black; color: #ffd700;">Gallery</h2>
+                    <p class="text" style="text-shadow: 3px 3px 4px black; color: white;">The Ashv Gallery is a treasure
+                        trove of cherished memories,
+                        capturing the spirit and essence of our journey through the years. Each moment preserved here
+                        tells a story we hold close to our hearts, celebrating the legacy of Ashv forever.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+          <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k25 <br>
+                <h2></h2>
+                <div class="images">
+                    <!-- <img src="old/assets/images/2k231.jpg" alt="Image 1"> -->
+                    <img src="old/assets/images/2k232.jpg" alt="Image 2">
+                    <!-- <img src="old/assets/images/2k234.jpg" alt="Image 1"> -->
+                    <!-- <img src="old/assets/images/2k235.jpg" alt="Image 1"> -->
+                    <img src="old/assets/images/2k236.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k2314.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k2316.jpg" alt="Image 1">
+                    <!-- <img src="old/assets/images/2k237.jpg" alt="Image 1"> -->
+                    <img src="old/assets/images/2k239.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k2315.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k2310.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k2311.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k2313.jpg" alt="Image 1">
+
+
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k24 <br>
+                <h2></h2>
+                <div class="images">
+                    <img src="old/assets/images/2k24 (1).jpg" alt="Image 1">
+                    <img src="old/assets/images/2k24 (2).jpg" alt="Image 2">
+                    <img src="old/assets/images/2k24 (3).jpg" alt="Image 3">
+                    <img src="old/assets/images/2k24 (4).jpg" alt="Image 4">
+                    <img src="old/assets/images/2k24 (5).jpg" alt="Image 5">
+                    <img src="old/assets/images/2k24 (6).jpg" alt="Image 6">
+                    <img src="old/assets/images/2k24 (7).jpg" alt="Image 7">
+
+
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k23 <br>
+                <h2></h2>
+                <div class="images">
+                    <!-- <img src="old/assets/images/2k231.jpg" alt="Image 1"> -->
+                    <img src="old/assets/images/2k232.jpg" alt="Image 2">
+                    <!-- <img src="old/assets/images/2k234.jpg" alt="Image 1"> -->
+                    <!-- <img src="old/assets/images/2k235.jpg" alt="Image 1"> -->
+                    <img src="old/assets/images/2k236.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k2314.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k2316.jpg" alt="Image 1">
+                    <!-- <img src="old/assets/images/2k237.jpg" alt="Image 1"> -->
+                    <img src="old/assets/images/2k239.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k2315.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k2310.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k2311.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k2313.jpg" alt="Image 1">
+
+
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k19 <br>
+                <h2></h2>
+                <div class="images">
+                    <img src="old/assets/images/2k191.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k192.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k193.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k194.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k195.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k196.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k197.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k198.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k199.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k1910.jpg" alt="Image 1">
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k18 <br>
+                <h2></h2>
+                <div class="images">
+                    <img src="old/assets/images/2k181.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k181.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k183.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k184.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k185.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k186.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k187.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k187.jpg" alt="Image 2">
+
+
+
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k17 <br>
+                <h2></h2>
+                <div class="images">
+                    <img src="old/assets/images/2k177.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k171.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k172.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k173.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k174.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k175.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k176.jpg" alt="Image 1">
+
+
+
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k16 <br>
+                <h2></h2>
+                <div class="images">
+                    <img src="old/assets/images/2k161.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k162.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k163.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k164.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k165.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k166.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k167.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k168.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k169.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k1610.jpg" alt="Image 1">
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+
+        </div>
+        <div class="gallery">
+            <div class="year" style="font-weight: bold; color:rgb(230, 17, 134);">Ashv 2k15 <br>
+                <h2></h2>
+                <div class="images">
+                    <img src="old/assets/images/2k151.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k152.jpg" alt="Image 2">
+                    <img src="old/assets/images/2k153.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k154.jpg" alt="Image 1">
+                    <img src="old/assets/images/2k155.jpg" alt="Image 2">
+
+                    <!-- Add more images for the year 2023 -->
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <footer class="footer">
+        <h2 class="footer-heading">Contact Us!</h2>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="social-and-contacts">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://fb.me/e/wH5oN1IyV">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/919398983918">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="technical-contacts">
+                        <p><strong>Technical: </strong>8867462790</p>
+                        <p><strong>Cultural: </strong> 8143767320</p>
+                        <p><strong>Sports: </strong> 8247432448</p>
+                        <p><strong>Theatre: </strong>6309713619</p>
+                        <p><strong>Bonus Bonanza: </strong> 7013005304</p>
+                        <p><strong>Registrations: </strong> 6304038756</p>
+                    </div>
+                </div>
+
+                <button onclick="document.location='creators.html'" class="cta-button">
+                    Meet the Creators <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+
+            <!-- Map and Reach Us (visible only on desktop) -->
+            <div class="map-and-reach-us">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31865.074342890974!2d78.49422682941045!3d13.617042201220594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2677c83886ad7%3A0xad73159e2bddda33!2sMadanapalle%20institute%20of%20technology%20and%20Sciences!5e0!3m2!1sen!2sin!4v1735365545296!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="reach-us">
+                    <h3>Reach Us</h3>
+                    <p>Madanapalle Institute of Technology & Science <br>(Deemed to be University)</p>
+                    <p>Post Box No: 14, Kadiri Road</p>
+                    <p>Angallu (V), Madanapalle-517325</p>
+                    <p>Annamayya District, Andhra Pradesh, India.</p>
+                </div>
+            </div>
+
+            <!-- Reach Us Button (visible only on mobile) -->
+            <!-- <button id="reach-us-button" class="reach-us-button" style="display: none;">
+			Reach Us <i class="fas fa-map-marker-alt"></i>
+		  </button> -->
+            <button id="reach-us-button" class="cta-button">
+                Reach Us <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseover", function () {
+                document.querySelector(".sub-menu").style.display = "flex";
+            });
+        document
+            .querySelector(".event-hover")
+            .addEventListener("mouseout", function () {
+                document.querySelector(".sub-menu").style.display = "none";
+            });
+        let width = screen.width;
+        if (width < 600) document.querySelector("nav").style.transform = "translateY(-100%)";
+        document.querySelector("#hamburger").addEventListener("click", function () {
+            console.log(document.querySelector("nav").style.transform);
+            if (document.querySelector("nav").style.transform === "translateY(-100%)") {
+                document.querySelector("nav").style.transform = "translateY(0%)";
+            }
+            else {
+                document.querySelector("nav").style.transform = "translateY(-100%)";
+            }
+        });
+        document.querySelectorAll("img").forEach((img) => {
+            img.setAttribute("loading", "lazy");
+        });
+    </script>
+    <script src="./assets/js/pre-loader.js"></script>
+</body>
+
+</html>

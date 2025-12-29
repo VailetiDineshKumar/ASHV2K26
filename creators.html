@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashv 2k26 - The race of talent</title>
+  <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/styles/res-style.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="assets/styles/pre-loader.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <style>
+    main {
+      background: linear-gradient(to bottom, #003366, #cc00cc);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .heading {
+      margin-top: 60px;
+    }
+
+    .heading h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0 60px 0;
+    }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      min-width: 230px;
+      text-align: center;
+      padding: 20px 0 10px 0;
+    }
+
+    .profile-card img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 5px;
+      border: 2px solid #003366;
+    }
+
+    .profile-card h2 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .profile-card p {
+      font-size: 14px;
+      color: #000;
+      margin: 5px 0 15px;
+    }
+
+    .profile-card .links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .profile-card .links a {
+      text-decoration: none;
+      color: #003366;
+      background-color: #ffd700;
+      border-radius: 50%;
+      padding: 10px;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+
+    .profile-card .links a:hover {
+      background-color: #ffcc00;
+      opacity: 0.9;
+    }
+
+    /* Mobile Menu */
+
+		@media (max-width: 768px) {
+			nav {
+        	position: absolute;
+        	top: 0;
+        	right: 0;
+        	width: 100%;
+        	height: auto;
+        	z-index: 10 !important;
+        	padding: 2rem;
+        	transition: all 0.3s ease-in-out;
+        	transform: translateY(-100%);
+        	background: linear-gradient(#003366, #0033669f);
+        	box-shadow: 0 0 10px 10px #0033669f;
+    	}
+
+      .ashv-hamburger {
+        display: none;
+        cursor: pointer;
+        z-index: 10;
+      }
+
+      nav.active {
+        display: block;
+        transform: translateY(0);
+      }
+
+			.ashv-hamburger {
+				display: block;
+				top: 1rem;
+				right: 1rem;
+				font-size: 2rem;
+				color: #ffd700;
+			}
+
+			nav ul {
+				flex-direction: column;
+				width: 100%;
+				padding: 0;
+			}
+
+      nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .event-hover ul {
+        display: none;
+      }
+
+      .event-hover:hover ul {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile-card {
+        min-width: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+      <!-- Preloader -->
+	<div class="loader">
+		<div id="preloader-container">
+			<div id="preloader_1">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+		</div>
+	</div>
+	<!-- Header -->
+  <header>
+    <div class="mits-logo" style="height: 100%;">
+      <div class="logo"
+        style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+        <img src="assets/img/MITS.png" alt="" loading="eager">
+        <a href="https://www.mits.ac.in/"
+          style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
+      </div>
+      <div class="title">
+        <div class="upper">MITS</div>
+        <hr>
+        <div class="lower">MADANAPALLE</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/" class="selected">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" style="font-weight: 700;" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+            </svg></a>
+          <ul class="sub-menu">
+            <li><a href="eventTiles.html#technical">Technical</a></li>
+            <li><a href="eventTiles.html#theatre">Theatre</a></li>
+            <li><a href="eventTiles.html#cultural">Cultural</a></li>
+            <li><a href="eventTiles.html#sports">Sports</a></li>
+            <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+          </ul>
+        </li>
+        <li><a href="registrations.html">Registrations</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="two6-years-logo"
+      style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+      <img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;" loading="eager">
+      <!-- <img src="assets/img/title_sp.png" class="year-logo" loading="eager" style="height: 80%;">
+      <a href=""
+        style="position: absolute; bottom: 0; transform: translateY(70%); white-space: nowrap;color: #FFD700;right: 0; text-decoration: none;">Title
+        Sponsor</a> -->
+    </div>
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+      id="hamburger">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+      </g>
+    </svg>
+  </header>
+
+  <main>
+    <div class="heading">
+      <h1>Creators</h1>
+    </div>
+    <div class="row">
+      <div class="profile-card">
+        <img src="assets/images/HarshaRao.jpeg" alt="HarshaVardhanRao">
+        <h2>V. Harshavardhan</h2>
+        <p>III CSE - 22691A0571</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/harshavardhan1974?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/HarshaVardhanRao" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="https://harsharao.netlify.app" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/bava.png" alt="Profile Picture">
+        <h2>V. Mahesh Kumar</h2>
+        <p>III CSE - 22691A05B5</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/mahesh-kumar-vaileti-b76295152?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/MaheshKumar1533" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/creators/Timmampalli.jpg" alt="Profile Picture">
+        <h2>T. Meghana</h2>
+        <p>III CSE - 22691A05C3</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/meghana-timmampalli-21abb8272?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMTRk4FfXQ9%2BJO%2Fi8tvYJKA%3D%3D"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Meghana3015" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="https://www.behance.net/meghanatimmamp" target="_blank" class="portfolio"><i
+              class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/creators/Rohith.jpg" alt="Profile Picture">
+        <h2>E. Reddy Rohith</h2>
+        <p>III CSE - 22691A05I1</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/reddy-rohith-enduluri-656000273/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/ReddyRohith-E" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="https://rohith-pavilion.netlify.app" target="_blank" class="portfolio"><i
+              class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/creators/Karthik.jpeg" alt="Profile Picture">
+        <h2>K. Naga Sai Karthik</h2>
+        <p>III CSE - 22691A05E2</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/nagasai-karthik-kanakagiri-91a221254"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Karthik70904" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="https://kns-blogs.netlify.app" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="profile-card">
+        <img src="assets/images/creators/Mutra.jpg" alt="Profile Picture">
+        <h2>M. Jahnavi</h2>
+        <p>III CSE - 22691A0583</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/jahnavi-mutra-a48009254/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/JahnaviMutra" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/creators/sudhakar.jpg" alt="Profile Picture">
+        <h2>M. Keerthana Evanjilin</h2>
+        <p>III CSE - 22691A0599</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/keerthana-evanjilin-34abb3272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/KeerthanaSudhakar" target="_blank" class="github"><i
+              class="fab fa-github"></i></a>
+          <a href="#" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/creators/Keerthi.jpg" alt="Profile Picture">
+        <h2>C. Keerthi Padma Priya</h2>
+        <p>III CSE - 22691A05A1</p>
+        <div class="links">
+          <a
+            href="https://www.linkedin.com/in/chilumpalli-keerthi-a84bab272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Keerthichilumpalli" target="_blank" class="github"><i
+              class="fab fa-github"></i></a>
+          <a href="#" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="assets/images/creators/loki.jpg" alt="Profile Picture">
+        <h2>P.G. Lokeshwari</h2>
+        <p>III CSE - 22691A05B1</p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/pg-lokeshwari-751114263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Loke2004" target="_blank" class="github"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank" class="portfolio"><i class="fas fa-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/pre-loader.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+	</script>
+
+</body>
+
+</html>
