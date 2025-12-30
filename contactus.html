@@ -458,8 +458,14 @@
             text-decoration: none;
         }
 
-        .contact a:hover {
-            text-decoration: underline;
+        .contact a:focus {
+            outline: 2px solid #FFD700;
+            outline-offset: 2px;
+        }
+
+        .social-links li a:focus {
+            outline: 2px solid #FFD700;
+            outline-offset: 2px;
         }
 
         .bottom {
@@ -530,12 +536,28 @@
             height: 100%;
             z-index: 1;
         }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
     </style>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Preloader -->
-    <div class="loader">
+    <div class="loader" role="status" aria-live="polite">
         <div id="preloader-container">
             <div id="preloader_1">
                 <span></span>
@@ -544,23 +566,23 @@
                 <span></span>
                 <span></span>
             </div>
-            <img src="./assets/img/ashv-theraceoftalent.png	" alt="Loader Image">
+            <img src="./assets/img/ashv-theraceoftalent.png" alt="ASHV The Race of Talent Logo Loading" loading="eager">
         </div>
     </div>
     <!-- Header -->
     <header>
         <div class="mits-logo" style="height: 100%;">
             <div class="logo"
-                style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
-                <img src="assets/img/MITS.png" alt="" loading="eager">
-                <a href="https://www.mits.ac.in/"
-                    style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a>
-            </div>
-            <div class="title">
+				style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
+				<img src="assets/img/lgmits.jfif" alt="MadanaPalle Institute of Technology and Science Logo" loading="eager">
+				<!-- <a href="https://www.mits.ac.in/"
+					style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a> -->
+			</div>
+            <!-- <div class="title">
                 <div class="upper">MITS</div>
                 <hr>
                 <div class="lower">MADANAPALLE</div>
-            </div>
+            </div> -->
         </div>
         <nav>
             <ul>
@@ -590,7 +612,7 @@
         <div style="height: 100%; display: flex;">
             <div class="two6-years-logo"
                 style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
-                <img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;"
+                <img src="assets/27years.png" alt="27 Years Celebration Logo" class="year-logo" style="height: 80%; scale: 1.5;"
                     loading="eager">
                 <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
                     style="height: 80%; background-color: white; border-radius: 10px;">
@@ -617,77 +639,77 @@
         </svg>
     </header>
 
-    <main section="">
+    <main id="main-content" section="">
         <div class="hero section-event">
             <img class="left-horse horse" src="assets/img/horse.png" alt="">
             <img class="cloud-background" src="assets/img/bg clouds.png" alt="">
             <div class="cloud-overlay"></div>
             <div class="middle">
-                <img src="assets/img/ashv-theraceoftalent.png" style="z-index: 3;" alt="" class="ashv">
+                <img src="assets/img/ashv-theraceoftalent.png" style="z-index: 3;" alt="ASHV The Race of Talent Logo" class="ashv">
                 <div class="contacts">
+                    <h2>Contact Information</h2>
                     <div class="contact">
                         <h3>Technical:</h3>
                         <p id="mahi">Amrutha.BS</p>
-                          <p><a href="tel:+91886746270"></a>886746270</p>
+                        <p><a href="tel:+91886746270" aria-label="Call Amrutha.BS at 886746270">886746270</a></p>
                     </div>
                     <div class="contact">
                         <h3>Cultural:</h3>
                         <p id="mahi">M. Harsha Vardhan</p>
-                        <p><a href="tel:+918143767320"></a>8143767320</p>
+                        <p><a href="tel:+918143767320" aria-label="Call M. Harsha Vardhan at 8143767320">8143767320</a></p>
                     </div>
                     <div class="contact">
                         <h3>Sports:</h3>
                         <p id="mahi">V.Wazid</p>
-                        <p><a href="tel:+918247432448"></a>8247432448</p>
+                        <p><a href="tel:+918247432448" aria-label="Call V.Wazid at 8247432448">8247432448</a></p>
                     </div>
                     <div class="contact">
                         <h3>Theatre:</h3>
                         <p id="mahi">P.Sohith Reddy</p>
-                        <p><a href="tel:+916309713619"></a>6309713619</p>
+                        <p><a href="tel:+916309713619" aria-label="Call P.Sohith Reddy at 6309713619">6309713619</a></p>
                     </div>
                     <div class="contact">
                         <h3>Bonus Bonanza:</h3>
                         <p id="mahi">K.Vidhya Sagar</p>
-                        <p><a href="tel:+917013005304"></a>7013005304</p>
+                        <p><a href="tel:+917013005304" aria-label="Call K.Vidhya Sagar at 7013005304">7013005304</a></p>
                     </div>
                     <div class="contact">
                         <h3>Registrations:</h3>
                         <p id="mahi">V. Dinesh Kumar</p>
-                        <p><a href=""></a>6304038756</p>
+                        <p><a href="tel:+916304038756" aria-label="Call V. Dinesh Kumar at 6304038756">6304038756</a></p>
                     </div>
                     <div class="contact">
                         <h3>Accommodation:</h3>
                         <p id="mahi">T.Devendra Reddy</p>
-                        <p><a href="tel:+919347698116"></a>9347698116</p>
+                        <p><a href="tel:+919347698116" aria-label="Call T.Devendra Reddy at 9347698116">9347698116</a></p>
                     </div>
                     <div class="social-media">
                         <ul class="social-links">
                             <li>
                                 <a href="https://maps.app.goo.gl/8b5u4CSQtCRUWxvTA" class="map-link" target="_blank"
-                                    aria-label="View College on Google Maps">
-                                    <i class="bi bi-geo-alt"></i>
+                                    aria-label="View MadanaPalle Institute of Technology and Science on Google Maps">
+                                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
                                     <span style="font-size: 1rem;">MITS</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy">
-                                    <i class="fab fa-instagram"></i>
+                                <a href="https://www.instagram.com/ashv2k25?igsh=NXp2djdvZHV4eHYy" aria-label="Follow ASHV on Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
-                                    <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/" aria-label="Visit MadanaPalle Institute of Technology and Science on LinkedIn">
+                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://fb.me/e/wH5oN1IyV">
-                                    <i class="fab fa-facebook"></i>
+                                <a href="https://fb.me/e/wH5oN1IyV" aria-label="Like ASHV on Facebook">
+                                    <i class="fab fa-facebook" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://wa.me/919398983918">
-                                    <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/919398983918" aria-label="Contact ASHV on WhatsApp">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ul>
