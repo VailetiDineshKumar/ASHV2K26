@@ -1094,11 +1094,11 @@
                             <div class="text json-grid" id="student-committee">
                             </div>
                         </div>
-                        <div class="dropdown">Student Advisors</div>
+                        <!-- <div class="dropdown">Student Advisors</div>
                         <div class="dropdown-content">
                             <div class="text json-grid" id="student-advisors">
                             </div>
-                        </div>
+                        </div> -->
 
                         <style>
                             .person {
@@ -1342,7 +1342,7 @@
         });
         student_committee.innerHTML += "<div></div><div></div><div></div><div></div><div></div>"
 
-        const student_advisors = document.getElementById('student-advisors');
+        /* const student_advisors = document.getElementById('student-advisors');
         json_object["STUDENT ADVISORS"].forEach(member => {
             const person = document.createElement('div');
             person.classList.add('person');
@@ -1358,7 +1358,7 @@
                 </div>
             `;
             student_advisors.appendChild(person);
-        });
+        }); */
 
         const student_committee_vice_presidents = document.getElementById('student-committee-vice-presidents');
         json_object["VICE PRESIDENTS"].forEach(member => {
@@ -1396,7 +1396,7 @@
             event_heads.appendChild(person);
         });
 
-        const student_sponsors = document.getElementById('student-sponsors');
+        /* const student_sponsors = document.getElementById('student-sponsors');
         json_object["STUDENT SPONSORS"].forEach(member => {
             const person = document.createElement('div');
             person.classList.add('person');
@@ -1412,7 +1412,7 @@
                 </div>
             `;
             student_sponsors.appendChild(person);
-        });
+        }); */
     </script>
 
     <footer class="footer">
