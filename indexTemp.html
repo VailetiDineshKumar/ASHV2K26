@@ -45,6 +45,97 @@
   }
 }
 
+/* Popup animation for hero logos */
+@keyframes popupIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(100px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+  }
+  70% {
+    transform: scale(0.95) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popupBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateY(100px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.15) translateY(-10px);
+  }
+  80% {
+    transform: scale(0.95) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.ashv {
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.association-sponsor {
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.association-text {
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.ashv-title {
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, goldShine 4s linear infinite;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.ashv-tagline {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  z-index: 3;
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .ashv-tagline {
+    font-size: 1.1rem;
+  }
+}
+
+#ashv-countdown {
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  filter: drop-shadow(0 0 5px #59451c);
+}
+
+.explore-events {
+  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
 
 		.ashv,
 		.explore-events,
@@ -110,7 +201,7 @@
 		</div>
 	</div>
 	<!-- Header -->
-	<header>
+	<header style="background: none; box-shadow: none;">
 		<div class="mits-logo" style="height: 100%;">
 			<div class="logo"
 				style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
@@ -198,10 +289,11 @@
 				</div>
 			</div>	 -->
 			<img src="assets/img/ashv-theraceoftalent.png" alt="" class="ashv" loading="eager">
-			<p style="color: white;">Association with</p>
-			<img src="assets/images/sponsors/The_Times_of_India_Logo_full.png" alt=""
+			<p style="color: white;" class="association-text">Association with</p>
+			<img src="assets/images/sponsors/The_Times_of_India_Logo_full.png" alt="" class="association-sponsor"
 				style="height: 8%; background-color: white; margin-bottom: 2rem; z-index: 10000000000;">
-			<h2 style="color: rgb(245, 243, 243); ">Countdown to ASHV 2K26 </h2>
+			<h2 class="ashv-title">ASHV 2K26 </h2>
+			<p class="ashv-tagline">A new era begins</p>
 			<h1 class="hero-title" id="ashv-countdown">
 				
 
@@ -211,7 +303,7 @@
 			<img class="left-horse horse" src="assets/img/horse.png" alt="" loading="eager">
 			<img class="right-horse horse" src="assets/img/horse.png" alt="" loading="eager">
 			<img class="cloud-background" src="assets/img/bg clouds.png" alt="" loading="eager">
-			<div class="cloud-overlay"></div>
+			<div class="cloud-overlay" style="background: none;"></div>
 			<a href="eventTiles.html" class="explore-events">Explore Events</a>
 		</div>
 
