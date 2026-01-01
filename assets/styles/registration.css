@@ -167,7 +167,7 @@ html, body {
 
 .event-card {
     background: url('/assets/img/regbg1.png') no-repeat center center / cover;
-    width: 235px;
+    width: 255px;
     height: 255px;
     border-radius: 15px;
     box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
@@ -181,7 +181,7 @@ html, body {
 }
 
 .event-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #041B78;
     text-align: left;
     padding: 8px;
@@ -189,11 +189,11 @@ html, body {
 }
 
 .workshop1{
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .workshop2{
-  margin-bottom: 18px;
+  margin-bottom: 40px;
 }
 
 .workshop3{
