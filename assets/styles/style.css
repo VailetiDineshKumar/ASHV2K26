@@ -260,6 +260,12 @@ button {
 	display: none;
 	z-index: 10;
 }
+.ashv-trio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
 
 @keyframes lhorse {
@@ -339,7 +345,9 @@ header {
 		height: 4rem !important;
 		width: 3.8rem;
 	}
+	
 }
+
 
 @media (max-width: 600px) {
 	header {
@@ -353,7 +361,7 @@ header {
 	}
 	.ashv {
 		width: 50vw;
-		margin-bottom: 10vh;
+		margin-bottom:-1vh;
 	}
 	header {
 		z-index: 10 !important;
@@ -392,10 +400,33 @@ header {
 	}
 
 	.hero {
-		justify-content: space-around !important;
+		justify-content: space-around ;
 		padding-top: 10vh;
 		z-index: 1;
+		
 	}
+	.ashv-trio{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		gap: 2rem;  
+		
+		margin-bottom: 15rem;
+	}
+	.ashv-tagline{
+		font-size: 15px;
+
+	}
+	.hero{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	
+	
+	
 	.timer-container {
 		width: 70% !important;
 		z-index: -2;
@@ -480,6 +511,8 @@ header {
 	position: relative;
 	overflow: hidden;
 }
+
+
 
 .cloud-background {
 	position: absolute;
@@ -945,7 +978,7 @@ header {
 
 @media screen and (max-width: 768px) {
 	.notification {
-		width: 80vw;
+		width: 37vw;
 		margin-right: 10vw;
 	}
 }
@@ -1667,8 +1700,9 @@ h3 {
 		font-size: 0.625rem;
 	}
 	.explore-events {
-		font-size: 0.875rem;
-		padding: 0.5rem 1rem;
+		font-size: 1.3rem;
+		padding: 1rem 1.3rem;
+		margin-bottom: 5vh;
 	}
 	.map-and-reach-us {
 		display: none; /* Hide map and address on mobile */
