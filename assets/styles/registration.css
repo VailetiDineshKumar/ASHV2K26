@@ -189,7 +189,7 @@ html, body {
 }
 
 .workshop1{
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 
 .workshop2{
@@ -250,6 +250,7 @@ html, body {
   color: #041B78;
   text-align: left;
   padding: 8px;
+  margin-bottom: 24px;
   text-shadow: 1px 1px 8px rgba(40, 46, 113, 0.6);
 }
 
