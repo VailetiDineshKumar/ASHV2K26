@@ -59,7 +59,7 @@ window.onload = () => {
 			"right-horse-animation linear 1.5s forwards";
 	}
 	document.querySelector(".cloud-background").style.animation =
-		"cloud-animation 1s linear";
+		"cloud-animation 1s linear forwards";
 	document.querySelectorAll(".timer").forEach((timer) => {
 		timer.style.animation = "timer-animation-text 1s linear";
 	});

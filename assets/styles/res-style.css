@@ -26,13 +26,58 @@ header {
 	padding: 0.5rem 5%;
 }
 
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+	header {
+		padding: 0.5rem 3%;
+	}
+	
+	nav ul {
+		gap: 0.8rem;
+	}
+	
+	nav ul li a {
+		font-size: 0.9rem;
+	}
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+	header {
+		padding: 0.5rem 2%;
+	}
+	
+	nav ul {
+		gap: 0.6rem;
+	}
+	
+	nav ul li a {
+		font-size: 0.85rem;
+	}
+	
+	.mits-logo img {
+		height: 50px !important;
+	}
+	
+	.year-logo {
+		height: 80% !important;
+		scale: 1.2 !important;
+	}
+}
+
 @media (max-width: 768px) {
 	header {
 		height: var(--header-height-mobile);
+		padding: 0.5rem 3%;
 	}
 
 	.mits-logo img {
 		height: 40px !important;
+	}
+	
+	.year-logo {
+		height: 70% !important;
+		scale: 1 !important;
 	}
 
 	.title .upper {
@@ -44,27 +89,114 @@ header {
 	}
 
 	nav {
-		display: none;
 		position: fixed;
 		top: var(--header-height-mobile);
 		left: 0;
 		width: 100%;
-		height: calc(100vh - var(--header-height-mobile));
-		background: var(--color-primary);
-		padding: 1rem;
-	}
-
-	nav.active {
-		display: block;
+		height: auto;
+		max-height: calc(100vh - var(--header-height-mobile));
+		background: linear-gradient(180deg, #003366 0%, #001a33 100%);
+		padding: 2rem 1rem;
+		overflow-y: auto;
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 	}
 
 	nav ul {
 		flex-direction: column;
 		align-items: center;
+		gap: 1.5rem;
+		width: 100%;
+	}
+	
+	nav ul li {
+		width: 100%;
+		text-align: center;
+	}
+	
+	nav ul li a {
+		font-size: 1.1rem;
+		display: block;
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	
+	nav ul li a:hover,
+	nav ul li a.selected {
+		background-color: rgba(255, 215, 0, 0.2);
+	}
+	
+	/* Sub-menu styles for mobile */
+	.sub-menu {
+		position: static !important;
+		display: none;
+		background: transparent !important;
+		box-shadow: none !important;
+		padding: 0.5rem 0 !important;
+		margin-top: 0.5rem;
+	}
+	
+	.event-hover:hover .sub-menu,
+	.event-hover:focus-within .sub-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	
+	.sub-menu li a {
+		font-size: 0.95rem !important;
+		padding: 0.4rem 1rem !important;
 	}
 
 	.ashv-hamburger {
 		display: block;
+	}
+	
+	.two6-years-logo {
+		gap: 0.5rem !important;
+	}
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+	header {
+		height: 55px;
+		padding: 0.3rem 2%;
+	}
+	
+	.mits-logo img {
+		height: 35px !important;
+	}
+	
+	.year-logo {
+		height: 60% !important;
+		scale: 0.9 !important;
+	}
+	
+	.ashv-hamburger {
+		height: 5vh !important;
+	}
+	
+	nav ul li a {
+		font-size: 1rem;
+	}
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+	header {
+		height: 50px;
+		padding: 0.2rem 1%;
+	}
+	
+	.mits-logo img {
+		height: 30px !important;
+	}
+	
+	.year-logo {
+		height: 50% !important;
+		scale: 0.8 !important;
 	}
 }
 

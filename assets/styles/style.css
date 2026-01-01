@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Racing+Sans+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Science+Gothic:wght@100..900&display=swap');
 :root {
 	--color-primary: #003366;
 	--color-secondary: #ffefa9;
@@ -408,10 +408,10 @@ header {
 
 @keyframes cloud-animation {
 	from {
-		transform: scaleY(1);
+		transform: scale(1);
 	}
 	to {
-		transform: scaleY(1.1);
+		transform: scale(1.1);
 	}
 }
 
@@ -423,7 +423,16 @@ header {
 	height: 100%;
 	z-index: -1;
 	object-fit: cover;
-	background: linear-gradient(var(--color-primary), #3c41c733);
+	animation: blur 1s ease-in-out forwards;
+}
+
+@keyframes blur {
+	from {
+		backdrop-filter: blur(0px);
+	}
+	to {
+		backdrop-filter: blur(3px);
+	}
 }
 
 .horse {
@@ -485,6 +494,83 @@ header {
 		right: 0;
 		transform: rotateZ(0deg) scale(1);
 	}
+}
+
+@keyframes goldShine {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.ashv-title{
+	font-family: 'Luckiest Guy', sans-serif;
+	font-size: 100px; /* Adjust size as needed */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    line-height: 1;
+
+    /* --- THE GOLD GRADIENT & SHINE --- */
+    /* This gradient has gold colors + a lighter 'shine' strip in the middle */
+    background: linear-gradient(
+        110deg, 
+        #decd14 20%,   /* Dark Gold */
+        #c9bd36 40%,   /* Light Gold */
+        #faf281 50%,   /* The White Shine Line */
+        #dedc4c 60%,   /* Light Gold */
+        #e5c824 80%    /* Dark Gold */
+    );
+    
+    /* Size must be larger than 100% so we can move it */
+    background-size: 200% auto;
+    
+    /* Clip background to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Make text transparent so background shows */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* --- THE SHADOW EFFECT --- */
+    /* We use 'filter' because normal text-shadow doesn't work on transparent text */
+    filter: drop-shadow(0px 5px 3px rgba(0,0,0,0.5));
+
+    /* --- ACTIVATE ANIMATION --- */
+    animation: goldShine 4s linear infinite;
+}
+
+/* Responsive styles for ashv-title */
+@media (max-width: 992px) {
+  .ashv-title {
+    font-size: 70px;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ashv-title {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ashv-title {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ashv-title {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
 }
 
 .timer-container {
