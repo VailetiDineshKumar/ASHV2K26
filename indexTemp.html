@@ -201,7 +201,13 @@
 			<p style="color: white;">Association with</p>
 			<img src="assets/images/sponsors/The_Times_of_India_Logo_full.png" alt=""
 				style="height: 8%; background-color: white; margin-bottom: 2rem; z-index: 10000000000;">
-			<h1 class="hero-title">Countdown to ASHV 2K26 Begins — February 2026!</h1>
+			<h2 style="color: red;">Countdown to ASHV 2k26 </h2>
+			<h1 class="hero-title" id="ashv-countdown">
+				
+
+				<span id="days">00</span>d : <span id="hours">00</span>h : <span id="minutes">00</span>m : <span
+					id="seconds">00</span>s
+			</h1>
 			<img class="left-horse horse" src="assets/img/horse.png" alt="" loading="eager">
 			<img class="right-horse horse" src="assets/img/horse.png" alt="" loading="eager">
 			<img class="cloud-background" src="assets/img/bg clouds.png" alt="" loading="eager">
@@ -261,26 +267,27 @@
 			<h1 class="shows-title">Shows</h1>
 			<div class="shows-grid">
 				<div class="show">
-					<img src="assets/images/celeb_night.jpeg" alt="Celebrity Night" class="show-image">
+					<img src="assets/images/comming_soon.jpeg" alt="Celebrity Night" class="show-image">
 					<div class="show-content">
-						<h2 class="show-title">Celebrity Night</h2>
-						<button class="know-more-btn">Know More</button>
+						<h2 class="show-title">Comming soon</h2>
+						<!-- <button class="know-more-btn">Know More</button> -->
 					</div>
 				</div>
 
 				<div class="show">
-					<img src="assets/images/cropped-musicalnight.jpg" alt="Musical Night" class="show-image">
+					<img src="assets/images/comming_soon.jpeg" alt="Coming soon" class="show-image">
+					
 					<div class="show-content">
-						<h2 class="show-title">Musical Night</h2>
-						<button class="know-more-btn">Know More</button>
+						<h2 class="show-title">Comming soon</h2>
+						<!-- <button class="know-more-btn">Know More</button> -->
 					</div>
 				</div>
 
 				<div class="show">
-					<img src="old/assets/images/theatre.jpg" alt="Theatre" class="show-image">
+					<img src="assets/images/comming_soon.jpeg" alt="Theatre" class="show-image">
 					<div class="show-content">
-						<h2 class="show-title">Amusement Stalls</h2>
-						<button class="know-more-btn">Know More</button>
+						<h2 class="show-title">Comming soon</h2>
+						<!-- <button class="know-more-btn">Know More</button> -->
 					</div>
 				</div>
 			</div>
@@ -487,6 +494,31 @@
 				popup.style.display = 'flex';
 			});
 		});
+	</script>
+	<script>
+		// Countdown to March 25, 2026
+		const countdownDate = new Date("March 25, 2026 00:00:00").getTime();
+
+		const x = setInterval(function () {
+			const now = new Date().getTime();
+			const distance = countdownDate - now;
+
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("ashv-countdown").innerHTML = "Event Started";
+				return;
+			}
+
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+			document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+			document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+			document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+		}, 1000);
 	</script>
 </body>
 
