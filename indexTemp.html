@@ -12,360 +12,397 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<style>
 		.hero-title {
-  font-size: 3rem;
-  color: #FFD700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-block: 1.5rem;
-  text-align: center;
-  line-height: 1.2;
-}
+			font-size: 3rem;
+			color: #FFD700;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			margin-block: 1.5rem;
+			text-align: center;
+			line-height: 1.2;
+		}
 
-/* Medium devices (tablets) */
-@media (max-width: 992px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-}
+		/* Medium devices (tablets) */
+		@media (max-width: 992px) {
+			.hero-title {
+				font-size: 1.8rem;
+			}
+		}
 
-/* Small devices (phones) */
-@media (max-width: 600px) {
-  .hero-title {
-	margin-top:10px;
-    font-size: 1.4rem;
-    margin-block: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  }
-}
+		/* Small devices (phones) */
+		@media (max-width: 600px) {
+			.hero-title {
+				margin-top: 10px;
+				font-size: 1.4rem;
+				margin-block: 1rem;
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+			}
+		}
 
-/* Extra small devices (very small phones) */
-@media (max-width: 400px) {
-  .hero-title {
-    font-size: 1.2rem;
-  }
-}
+		/* Extra small devices (very small phones) */
+		@media (max-width: 400px) {
+			.hero-title {
+				font-size: 1.2rem;
+			}
+		}
 
-/* Popup animation for hero logos */
-@keyframes popupIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3) translateY(100px);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1) translateY(-10px);
-  }
-  70% {
-    transform: scale(0.95) translateY(5px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
+		/* Popup animation for hero logos */
+		@keyframes popupIn {
+			0% {
+				opacity: 0;
+				transform: scale(0.3) translateY(100px);
+			}
 
-@keyframes popupBounce {
-  0% {
-    opacity: 0;
-    transform: scale(0) translateY(100px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.15) translateY(-10px);
-  }
-  80% {
-    transform: scale(0.95) translateY(5px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
+			50% {
+				opacity: 1;
+				transform: scale(1.1) translateY(-10px);
+			}
 
-.ashv {
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation-delay: 1s;
-  opacity: 0;
-  margin-bottom:10px;
-}
+			70% {
+				transform: scale(0.95) translateY(5px);
+			}
 
-.association-sponsor {
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation-delay: 1s;
-  opacity: 0;
-}
+			100% {
+				opacity: 1;
+				transform: scale(1) translateY(0);
+			}
+		}
 
-.association-text {
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation-delay: 1s;
-  opacity: 0;
-  font-size: 1.2rem;
-}
+		@keyframes popupBounce {
+			0% {
+				opacity: 0;
+				transform: scale(0) translateY(100px);
+			}
 
-.association-sponsor {
-  height: 8%;
-  min-height: 40px;
-}
+			60% {
+				opacity: 1;
+				transform: scale(1.15) translateY(-10px);
+			}
 
-.ashv-title {
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, goldShine 4s linear infinite;
-  animation-delay: 1s;
-  opacity: 0;
-}
+			80% {
+				transform: scale(0.95) translateY(5px);
+			}
 
-.ashv-tagline {
-  color: #fff;
-  font-size: 1.4rem;
-  font-style: italic;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 1rem;
-  z-index: 3;
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation-delay: 1s;
-  opacity: 0;
-}
+			100% {
+				opacity: 1;
+				transform: scale(1) translateY(0);
+			}
+		}
 
-/* Responsive styles for hero section elements */
-/* Medium devices (tablets) */
-@media (max-width: 992px) {
-  .ashv-tagline {
-    font-size: 1.2rem;
-  }
-  .association-text {
-    font-size: 1.1rem;
-  }
-  .association-sponsor {
-    min-height: 35px;
-  }
-}
+		.ashv {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+			margin-bottom: 10px;
+		}
 
-/* Small devices (phones) */
-@media (max-width: 768px) {
-  .ashv-tagline {
-    font-size: 1.1rem;
-  }
-  .association-text {
-    font-size: 1rem;
-  }
-  .association-sponsor {
-    min-height: 30px;
-  }
-}
+		.association-sponsor {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+		}
 
-@media (max-width: 600px) {
-  .ashv-tagline {
-    font-size: 1rem;
-  }
-  .association-text {
-    font-size: 0.9rem;
-  }
-  .association-sponsor {
-    min-height: 25px;
-  }
-}
+		.association-text {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+			font-size: 1.2rem;
+		}
 
-/* Extra small devices */
-@media (max-width: 400px) {
-  .ashv-tagline {
-    font-size: 0.85rem;
-  }
-  .association-text {
-    font-size: 0.8rem;
-  }
-  .association-sponsor {
-    min-height: 20px;
-  }
-}
+		.association-sponsor {
+			height: 8%;
+			min-height: 40px;
+		}
 
-/* Countdown Timer Styles */
-.countdown-timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  z-index: 10;
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation-delay: 1s;
-  opacity: 0;
-  margin-bottom: 1.5rem;
-}
+		.ashv-title {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, goldShine 4s linear infinite;
+			animation-delay: 1s;
+			opacity: 0;
+		}
 
-.timer-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 50, 0.8));
-  border: 2px solid #FFD700;
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  min-width: 80px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 
-    0 0 20px rgba(255, 215, 0, 0.3),
-    inset 0 0 20px rgba(255, 215, 0, 0.1);
-}
+		.ashv-tagline {
+			color: #fff;
+			font-size: 1.4rem;
+			font-style: italic;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			margin-bottom: 1rem;
+			z-index: 3;
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+		}
 
-.timer-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
-  animation: timer-shine 3s infinite;
-}
+		/* Responsive styles for hero section elements */
+		/* Medium devices (tablets) */
+		@media (max-width: 992px) {
+			.ashv-tagline {
+				font-size: 1.2rem;
+			}
 
-@keyframes timer-shine {
-  0% {
-    left: -100%;
-  }
-  50%, 100% {
-    left: 100%;
-  }
-}
+			.association-text {
+				font-size: 1.1rem;
+			}
 
-.timer-value {
-  font-family: 'Orbitron', 'Racing Sans One', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #FFD700;
-  text-shadow: 
-    0 0 10px rgba(255, 215, 0, 0.8),
-    0 0 20px rgba(255, 215, 0, 0.5),
-    0 0 30px rgba(255, 215, 0, 0.3);
-  line-height: 1;
-  animation: timer-pulse 1s ease-in-out infinite;
-}
+			.association-sponsor {
+				min-height: 35px;
+			}
+		}
 
-@keyframes timer-pulse {
-  0%, 100% {
-    text-shadow: 
-      0 0 10px rgba(255, 215, 0, 0.8),
-      0 0 20px rgba(255, 215, 0, 0.5),
-      0 0 30px rgba(255, 215, 0, 0.3);
-  }
-  50% {
-    text-shadow: 
-      0 0 15px rgba(255, 215, 0, 1),
-      0 0 30px rgba(255, 215, 0, 0.7),
-      0 0 45px rgba(255, 215, 0, 0.5);
-  }
-}
+		/* Small devices (phones) */
+		@media (max-width: 768px) {
+			.ashv-tagline {
+				font-size: 1.1rem;
+			}
 
-.timer-box .timer-label {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 0.5rem;
-  opacity: 0.9;
-}
+			.association-text {
+				font-size: 1rem;
+			}
 
-.timer-separator {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #FFD700;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-  animation: separator-blink 1s ease-in-out infinite;
-}
+			.association-sponsor {
+				min-height: 30px;
+			}
+		}
 
-@keyframes separator-blink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
-  }
-}
+		@media (max-width: 600px) {
+			.ashv-tagline {
+				font-size: 1rem;
+			}
 
-/* Responsive Timer Styles */
-@media (max-width: 992px) {
-  .timer-box {
-    padding: 0.8rem 1.2rem;
-    min-width: 70px;
-  }
-  .timer-value {
-    font-size: 2rem;
-  }
-  .timer-separator {
-    font-size: 2rem;
-  }
-  .timer-box .timer-label {
-    font-size: 0.75rem;
-  }
-}
+			.association-text {
+				font-size: 0.9rem;
+			}
 
-@media (max-width: 768px) {
-  .countdown-timer {
-    gap: 0.3rem;
-  }
-  .timer-box {
-    padding: 0.6rem 0.8rem;
-    min-width: 55px;
-    border-radius: 8px;
-  }
-  .timer-value {
-    font-size: 1.5rem;
-  }
-  .timer-separator {
-    font-size: 1.5rem;
-  }
-  .timer-box .timer-label {
-    font-size: 0.65rem;
-    letter-spacing: 1px;
-  }
-}
+			.association-sponsor {
+				min-height: 25px;
+			}
+		}
 
-@media (max-width: 480px) {
-  .countdown-timer {
-    gap: 0.2rem;
-  }
-  .timer-box {
-    padding: 0.5rem 0.6rem;
-    min-width: 45px;
-    border-width: 1px;
-  }
-  .timer-value {
-    font-size: 1.2rem;
-  }
-  .timer-separator {
-    font-size: 1.2rem;
-  }
-  .timer-box .timer-label {
-    font-size: 0.55rem;
-    letter-spacing: 0.5px;
-    margin-top: 0.3rem;
-  }
-}
+		/* Extra small devices */
+		@media (max-width: 400px) {
+			.ashv-tagline {
+				font-size: 0.85rem;
+			}
 
-@media (max-width: 360px) {
-  .timer-box {
-    padding: 0.4rem 0.5rem;
-    min-width: 40px;
-  }
-  .timer-value {
-    font-size: 1rem;
-  }
-  .timer-separator {
-    font-size: 1rem;
-  }
-  .timer-box .timer-label {
-    font-size: 0.5rem;
-  }
-}
+			.association-text {
+				font-size: 0.8rem;
+			}
 
-.explore-events {
-  animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-  animation-delay: 1s;
-  opacity: 0;
-}
+			.association-sponsor {
+				min-height: 20px;
+			}
+		}
+
+		/* Countdown Timer Styles */
+		.countdown-timer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			z-index: 10;
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+			margin-bottom: 1.5rem;
+		}
+
+		.timer-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 50, 0.8));
+			border: 2px solid #FFD700;
+			border-radius: 12px;
+			padding: 1rem 1.5rem;
+			min-width: 80px;
+			position: relative;
+			overflow: hidden;
+			box-shadow:
+				0 0 20px rgba(255, 215, 0, 0.3),
+				inset 0 0 20px rgba(255, 215, 0, 0.1);
+		}
+
+		.timer-box::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+			animation: timer-shine 3s infinite;
+		}
+
+		@keyframes timer-shine {
+			0% {
+				left: -100%;
+			}
+
+			50%,
+			100% {
+				left: 100%;
+			}
+		}
+
+		.timer-value {
+			font-family: 'Orbitron', 'Racing Sans One', sans-serif;
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #FFD700;
+			text-shadow:
+				0 0 10px rgba(255, 215, 0, 0.8),
+				0 0 20px rgba(255, 215, 0, 0.5),
+				0 0 30px rgba(255, 215, 0, 0.3);
+			line-height: 1;
+			animation: timer-pulse 1s ease-in-out infinite;
+		}
+
+		@keyframes timer-pulse {
+
+			0%,
+			100% {
+				text-shadow:
+					0 0 10px rgba(255, 215, 0, 0.8),
+					0 0 20px rgba(255, 215, 0, 0.5),
+					0 0 30px rgba(255, 215, 0, 0.3);
+			}
+
+			50% {
+				text-shadow:
+					0 0 15px rgba(255, 215, 0, 1),
+					0 0 30px rgba(255, 215, 0, 0.7),
+					0 0 45px rgba(255, 215, 0, 0.5);
+			}
+		}
+
+		.timer-box .timer-label {
+			font-family: 'Poppins', sans-serif;
+			font-size: 0.85rem;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-top: 0.5rem;
+			opacity: 0.9;
+		}
+
+		.timer-separator {
+			font-family: 'Orbitron', sans-serif;
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #FFD700;
+			text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+			animation: separator-blink 1s ease-in-out infinite;
+		}
+
+		@keyframes separator-blink {
+
+			0%,
+			100% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.3;
+			}
+		}
+
+		/* Responsive Timer Styles */
+		@media (max-width: 992px) {
+			.timer-box {
+				padding: 0.8rem 1.2rem;
+				min-width: 70px;
+			}
+
+			.timer-value {
+				font-size: 2rem;
+			}
+
+			.timer-separator {
+				font-size: 2rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.75rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.countdown-timer {
+				gap: 0.3rem;
+			}
+
+			.timer-box {
+				padding: 0.6rem 0.8rem;
+				min-width: 55px;
+				border-radius: 8px;
+			}
+
+			.timer-value {
+				font-size: 1.5rem;
+			}
+
+			.timer-separator {
+				font-size: 1.5rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.65rem;
+				letter-spacing: 1px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.countdown-timer {
+				gap: 0.2rem;
+			}
+
+			.timer-box {
+				padding: 0.5rem 0.6rem;
+				min-width: 45px;
+				border-width: 1px;
+			}
+
+			.timer-value {
+				font-size: 1.2rem;
+			}
+
+			.timer-separator {
+				font-size: 1.2rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.55rem;
+				letter-spacing: 0.5px;
+				margin-top: 0.3rem;
+			}
+		}
+
+		@media (max-width: 360px) {
+			.timer-box {
+				padding: 0.4rem 0.5rem;
+				min-width: 40px;
+			}
+
+			.timer-value {
+				font-size: 1rem;
+			}
+
+			.timer-separator {
+				font-size: 1rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.5rem;
+			}
+		}
+
+		.explore-events {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+		}
 
 		.ashv,
 		.explore-events,
@@ -377,18 +414,20 @@
 			.title-sponser {
 				transform: translateX(-125%) translateY(90%) !important;
 			}
-			
+
 			/* Make horses smaller in mobile view */
 			.horse {
 				transform: scale(0.95);
 			}
+
 			.left-horse {
 				transform: rotateY(180deg) scale(0.95);
 			}
+
 			.right-horse {
 				transform: scale(0.95);
 			}
-			
+
 			/* Increase z-index for hero elements to prevent overlap */
 			.ashv,
 			.association-text,
@@ -401,6 +440,93 @@
 			.explore-events {
 				z-index: 10 !important;
 				position: relative;
+			}
+		}
+
+		.notices-galary-section {
+			border: 2px solid red;
+			width: 100%;
+			height: auto;
+			padding: 20px 60px;
+			display: flex;
+		}
+
+		.notices-new {
+			border: 2px solid black;
+		}
+
+		/* Notices column */
+		.notices-new {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			width: 36%;
+		}
+
+		.notice-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			background: rgba(255, 255, 255, 0.03);
+			padding: 12px;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: transform 0.12s ease, box-shadow 0.12s ease;
+		}
+
+		.notice-item:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+		}
+
+		.notice-item img {
+			width: 96px;
+			height: 64px;
+			object-fit: cover;
+			border-radius: 6px;
+		}
+
+		.notice-content {
+			background: rgba(173, 158, 158, 0.5);
+			border-radius: 50vw;
+			padding: 0.5rem 1.5rem;
+			backdrop-filter: blur(5px);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.notice-content h3 {
+			color: #0a0a0a;
+			margin: 0;
+			font-size: 1.05rem;
+		}
+
+		.notice-content p {
+			color: #03243a;
+			margin: 6px 0;
+			font-size: 0.95rem;
+		}
+
+		.notice-btn {
+			background: transparent;
+			border: 2px solid #faf9f5;
+			color: #0e0d0d;
+			padding: 6px 10px;
+			border-radius: 6px;
+			cursor: pointer;
+			width: auto;
+		}
+
+		@media (max-width: 900px) {
+			.notices-new {
+				width: 100%;
+			}
+
+			.notice-item img {
+				width: 80px;
+				height: 56px;
 			}
 		}
 	</style>
@@ -428,17 +554,17 @@
 					<!-- <img src="assets/images/kiran-abbavaramNotification.jpg" alt=""
 						style=" height: 70px;aspect-ratio:1; border-radius: 50vw;object-fit: cover;"> -->
 					<div class="notification-content">
-						<marquee behavior="" direction="" style="font-size: 1.5rem;">Ashv teaser 
+						<marquee behavior="" direction="" style="font-size: 1.5rem;">Ashv teaser
 							<!-- launch by <strong>Actor
 								Kiran Abbavaram's Dilruba
 								Team</strong> -->
-							</marquee>
+						</marquee>
 						<!-- <p>18<sup>th</sup> Jan 2025</p> -->
 					</div>
 				</h3>
 			</div>
 			<div class="content" style="height: 100%; flex-direction: column; align-items: flex-start;">
-				<marquee behavior="" direction="">Ashv teaser 
+				<marquee behavior="" direction="">Ashv teaser
 					<!-- launch byActor Kiran Abbavaram's Dilruba Team -->
 				</marquee>
 				</h1>
@@ -463,7 +589,7 @@
 				<!-- <a href="https://www.mits.ac.in/"
 					style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a> -->
 			</div>
-			 
+
 		</div>
 		<nav>
 			<ul>
@@ -576,8 +702,10 @@
 			<div class="cloud-overlay" style="background: none;"></div>
 		</div>
 
+
+
 		<!-- Gallery -->
-		 
+
 		<!-- <section class="gallery-section">
 			<h1 class="gallery-title">Notices</h1>
 			<div class="gallery-slider">
@@ -623,6 +751,37 @@
 			</div>
 		</section>
 
+		<!-- notices and galary section -->
+		<div class="notices-galary-section">
+			<div class="notices-new">
+				<div class="notice-item" data-index="0" role="button" tabindex="0">
+					<div class="notice-content">
+						<h3>Media Coverage</h3>
+						<p>ASHV 2K26 Sponsor Video Launch Covered by Telugu Media.</p>
+						<button class="notice-btn" data-index="0">View Notice</button>
+					</div>
+				</div>
+
+				<div class="notice-item" data-index="1" role="button" tabindex="0">
+					<div class="notice-content">
+						<h3>Fest AnnouncementRe</h3>
+						<p>MITS Announces ASHV 2026 Techno-Cultural Sports Fest</p>
+						<button class="notice-btn" data-index="1">View Notice</button>
+					</div>
+				</div>
+
+				<div class="notice-item" data-index="2" role="button" tabindex="0">
+					<div class="notice-content">
+						<h3>Press Highlight</h3>
+						<p>ASHV 2K26 Featured in Skyline English Daily.</p>
+						<button class="notice-btn" data-index="2">View Notice</button>
+					</div>
+				</div>
+			</div>
+			<div class="gallery-new"></div>
+		</div>
+
+
 		<!-- Shows -->
 		<section class="shows-section">
 			<h1 class="shows-title">Shows</h1>
@@ -630,16 +789,16 @@
 				<div class="show">
 					<img src="assets/img/celebrity-night.jpeg" alt="Celebrity Night" class="show-image">
 					<div class="show-content">
-						<h2 class="show-title">Celebrity night</h2>
+						<h2 class="show-title">Celebrity Night</h2>
 						<!-- <button class="know-more-btn">Know More</button> -->
 					</div>
 				</div>
 
 				<div class="show">
 					<img src="assets/img/musical-night.jpeg" alt="Comming soon" class="show-image">
-					
+
 					<div class="show-content">
-						<h2 class="show-title">Musical night</h2>
+						<h2 class="show-title">Musical Night</h2>
 						<!-- <button class="know-more-btn">Know More</button> -->
 					</div>
 				</div>
@@ -647,7 +806,7 @@
 				<div class="show">
 					<img src="assets/img/influencer-meetup.jpeg" alt="Theatre" class="show-image">
 					<div class="show-content">
-						<h2 class="show-title">Influencer Meetup</h2>
+						<h2 class="show-title">Influencer MeetUp</h2>
 						<!-- <button class="know-more-btn">Know More</button> -->
 					</div>
 				</div>
@@ -759,13 +918,13 @@
 					</ul>
 
 					<div class="technical-contacts">
-                        <p><strong>Technical: </strong>8867462790</p>
-                        <p><strong>Cultural: </strong> 8143767320</p>
-                        <p><strong>Sports: </strong> 8247432448</p>
-                        <p><strong>Theatre: </strong>6309713619</p>
-                        <p><strong>Bonus Bonanza: </strong> 7013005304</p>
-                        <p><strong>Registrations: </strong> 6304038756</p>
-                    </div>
+						<p><strong>Technical: </strong>8867462790</p>
+						<p><strong>Cultural: </strong> 8143767320</p>
+						<p><strong>Sports: </strong> 8247432448</p>
+						<p><strong>Theatre: </strong>6309713619</p>
+						<p><strong>Bonus Bonanza: </strong> 7013005304</p>
+						<p><strong>Registrations: </strong> 6304038756</p>
+					</div>
 				</div>
 
 				<button onclick="document.location='creators.html'" class="cta-button">
@@ -853,6 +1012,56 @@
 				popupTitle.textContent = show.title;
 				popupDescription.textContent = show.description;
 				popup.style.display = 'flex';
+			});
+		});
+
+		// Notices data and handlers
+		const notices = [
+			{
+				title: 'Important Update',
+				description: 'Event schedule updated. Please check the full timetable and venue changes in the PDF attached.',
+				image: 'assets/img/n1.jpg'
+			},
+			{
+				title: 'Registration Open',
+				description: 'Registrations for technical and cultural events are now open. Visit the registrations page to apply.',
+				image: 'assets/img/n2.jpg'
+			},
+			{
+				title: 'Volunteer Call',
+				description: 'Join our team as a volunteer and get free access to events. Fill the volunteer form to apply.',
+				image: 'assets/img/n3.jpg'
+			}
+		];
+
+		document.querySelectorAll('.notice-btn').forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				e.stopPropagation();
+				const i = Number(btn.dataset.index);
+				const n = notices[i];
+				if (n) {
+					popupImage.src = n.image;
+					popupTitle.textContent = n.title;
+					popupDescription.textContent = n.description;
+					popup.style.display = 'flex';
+				}
+			});
+		});
+
+		document.querySelectorAll('.notice-item').forEach(item => {
+			item.addEventListener('click', () => {
+				const i = Number(item.dataset.index);
+				const n = notices[i];
+				if (n) {
+					popupImage.src = n.image;
+					popupTitle.textContent = n.title;
+					popupDescription.textContent = n.description;
+					popup.style.display = 'flex';
+				}
+			});
+
+			item.addEventListener('keydown', (ev) => {
+				if (ev.key === 'Enter' || ev.key === ' ') item.click();
 			});
 		});
 	</script>
