@@ -460,7 +460,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
-			width: 36%;
+			min-width: 30%;
 		}
 
 		.notice-item {
@@ -472,11 +472,6 @@
 			border-radius: 8px;
 			cursor: pointer;
 			transition: transform 0.12s ease, box-shadow 0.12s ease;
-		}
-
-		.notice-item:hover {
-			transform: translateY(-3px);
-			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 		}
 
 		.notice-item img {
@@ -495,6 +490,11 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			width: 90%;
+		}
+
+		.notice-content:hover {
+			background: rgba(173, 158, 158, 0.7);
 		}
 
 		.notice-content h3 {
@@ -519,6 +519,22 @@
 			width: auto;
 		}
 
+		.gallery-new {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 2px solid greenyellow;
+			flex-wrap: wrap;
+			gap: 20px;
+
+		}
+		.gallery-new img {
+			width: 18rem;
+			height: 15rem;
+			border: #333;
+			
+		}
+
 		@media (max-width: 900px) {
 			.notices-new {
 				width: 100%;
@@ -527,6 +543,91 @@
 			.notice-item img {
 				width: 80px;
 				height: 56px;
+			}
+		}
+
+		/* Popup styling for notices */
+		#popup {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 1000;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#popup.active {
+			display: flex !important;
+		}
+
+		.popup-content {
+			background-color: white;
+			border-radius: 12px;
+			padding: 30px;
+			width: 90vw;
+			max-width: 800px;
+			max-height: 85vh;
+			overflow-y: auto;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			position: relative;
+		}
+
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 20px;
+			font-size: 28px;
+			cursor: pointer;
+			color: #333;
+		}
+
+		.close:hover {
+			color: #FFD700;
+		}
+
+		#popup-image {
+			width: 100%;
+			height: auto;
+			max-height: 60vh;
+			object-fit: contain;
+			border-radius: 8px;
+			margin-bottom: 20px;
+			display: block;
+		}
+
+		#popup-title {
+			color: #FFD700;
+			font-size: 1.8rem;
+			margin: 20px 0 10px 0;
+		}
+
+		#popup-description {
+			color: #333;
+			font-size: 1rem;
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		@media (max-width: 768px) {
+			.popup-content {
+				width: 95vw;
+				padding: 20px;
+			}
+
+			#popup-title {
+				font-size: 1.5rem;
+			}
+
+			#popup-description {
+				font-size: 0.95rem;
+			}
+
+			#popup-image {
+				max-height: 50vh;
 			}
 		}
 	</style>
@@ -757,14 +858,14 @@
 				<div class="notice-item" data-index="0" role="button" tabindex="0">
 					<div class="notice-content">
 						<h3>Media Coverage</h3>
-						<p>ASHV 2K26 Sponsor Video Launch Covered by Telugu Media.</p>
+						<p>ASHV 2K26 Sponsor Video Launch Covered .</p>
 						<button class="notice-btn" data-index="0">View Notice</button>
 					</div>
 				</div>
 
 				<div class="notice-item" data-index="1" role="button" tabindex="0">
 					<div class="notice-content">
-						<h3>Fest AnnouncementRe</h3>
+						<h3>Fest Announcement</h3>
 						<p>MITS Announces ASHV 2026 Techno-Cultural Sports Fest</p>
 						<button class="notice-btn" data-index="1">View Notice</button>
 					</div>
@@ -778,7 +879,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="gallery-new"></div>
+			<div class="gallery-new">
+
+				<img src="assets/img/2k191.jpg" alt="Image 1">
+				<img src="assets/img/2k195.jpg" alt="Image 2">
+				<img src="assets/img/main3.jpg" alt="Image 3">
+				<img src="assets/img/main4.jpg" alt="Image 4">
+						<img src="assets/img/main5.jpg" alt="Image 5">
+						<img src="assets/img/main6.jpg" alt="Image 6">
+
+			</div>
 		</div>
 
 
@@ -996,12 +1106,12 @@
 		const closeBtn = document.querySelector('.close');
 
 		closeBtn.addEventListener('click', () => {
-			popup.style.display = 'none';
+			popup.classList.remove('active');
 		});
 
 		window.addEventListener('click', (event) => {
 			if (event.target === popup) {
-				popup.style.display = 'none';
+				popup.classList.remove('active');
 			}
 		});
 
@@ -1011,26 +1121,26 @@
 				popupImage.src = show.image;
 				popupTitle.textContent = show.title;
 				popupDescription.textContent = show.description;
-				popup.style.display = 'flex';
+				popup.classList.add('active');
 			});
 		});
 
 		// Notices data and handlers
 		const notices = [
 			{
-				title: 'Important Update',
-				description: 'Event schedule updated. Please check the full timetable and venue changes in the PDF attached.',
+				title: 'Media Coverage',
+				description: 'ASHV 2K26 Sponsor Video Launch Covered ',
 				image: 'assets/img/n1.jpg'
 			},
 			{
-				title: 'Registration Open',
+				title: 'Fest Announcement',
 				description: 'Registrations for technical and cultural events are now open. Visit the registrations page to apply.',
 				image: 'assets/img/n2.jpg'
 			},
 			{
-				title: 'Volunteer Call',
-				description: 'Join our team as a volunteer and get free access to events. Fill the volunteer form to apply.',
-				image: 'assets/img/n3.jpg'
+				title: 'Press Highlight',
+				description: 'ASHV 2K26 Featured in Skyline English Daily.',
+				image: 'assets/img/n5.jpg'
 			}
 		];
 
@@ -1043,7 +1153,7 @@
 					popupImage.src = n.image;
 					popupTitle.textContent = n.title;
 					popupDescription.textContent = n.description;
-					popup.style.display = 'flex';
+					popup.classList.add('active');
 				}
 			});
 		});
@@ -1056,7 +1166,7 @@
 					popupImage.src = n.image;
 					popupTitle.textContent = n.title;
 					popupDescription.textContent = n.description;
-					popup.style.display = 'flex';
+					popup.classList.add('active');
 				}
 			});
 
