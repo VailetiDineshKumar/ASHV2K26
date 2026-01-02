@@ -239,12 +239,34 @@ button {
 	button {
 		font-size: 0.875rem; /* Adjust for smaller screens */
 	}
+
+	.logo{
+		width: 3rem ;
+		height: 4.5rem;	
+	}
+	.logo img{
+		width: 100% !important;
+		height: 100%;
+	}
+	
+	.two6-years-logo img{
+		height: 5.5rem !important;
+		width: 5rem;
+	}
+
 }
 
 .ashv-hamburger {
 	display: none;
 	z-index: 10;
 }
+.ashv-trio{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 
 @keyframes lhorse {
 	from {
@@ -266,6 +288,67 @@ header {
 	z-index: 1;
 }
 
+@media (min-width: 601px) and (max-width: 992px) {
+	.left-horse {
+		left: -10vw;
+	}
+	.right-horse {
+		right: -10vw ;
+	}
+	.ashv {
+		width: 60vw;
+		margin-bottom: 10vh;
+	}
+	header {
+		z-index: 10 !important;
+	}
+	.logo{
+		width: 13rem !important;
+		height: 4rem;	
+	}
+	.logo img{
+		width: 100% !important;
+		height: 100%;
+	}
+	
+	.two6-years-logo img{
+		height: 5.5rem !important;
+		width: 5rem;
+	}
+}
+
+@media (min-width:993px) and (max-width: 1200px) {
+	.left-horse {
+		left: -10vw !important;
+	}
+	.right-horse {
+		right: -10vw !important;
+	}
+	.ashv {
+		width: 55vw;
+		margin-bottom: 10vh;
+	}
+	header {
+		z-index: 10 !important;
+	}
+	.logo{
+		width: 12rem !important;
+		height: 4rem;	
+		
+	}
+	.logo img{
+		width: 100% !important;
+		height: 100%;
+	}
+	
+	.two6-years-logo img{
+		height: 4rem !important;
+		width: 3.8rem;
+	}
+	
+}
+
+
 @media (max-width: 600px) {
 	header {
 		height: 60px;
@@ -278,12 +361,24 @@ header {
 	}
 	.ashv {
 		width: 50vw;
-		margin-bottom: 10vh;
+		margin-bottom:-1vh;
 	}
 	header {
 		z-index: 10 !important;
 	}
-
+	.logo{
+		width: 50vw !important;
+		height: 4.5rem;	
+	}
+	.logo img{
+		width: 100% !important;
+		height: 100%;
+	}
+	
+	.two6-years-logo img{
+		height: 5.5rem !important;
+		width: 5rem;
+	}
 	nav {
 		position: absolute;
 		top: 0;
@@ -305,10 +400,33 @@ header {
 	}
 
 	.hero {
-		justify-content: space-around !important;
+		justify-content: space-around ;
 		padding-top: 10vh;
 		z-index: 1;
+		
 	}
+	.ashv-trio{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		gap: 2rem;  
+		
+		margin-bottom: 15rem;
+	}
+	.ashv-tagline{
+		font-size: 15px;
+
+	}
+	.hero{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	
+	
+	
 	.timer-container {
 		width: 70% !important;
 		z-index: -2;
@@ -393,6 +511,8 @@ header {
 	position: relative;
 	overflow: hidden;
 }
+
+
 
 .cloud-background {
 	position: absolute;
@@ -858,7 +978,7 @@ header {
 
 @media screen and (max-width: 768px) {
 	.notification {
-		width: 80vw;
+		width: 37vw;
 		margin-right: 10vw;
 	}
 }
@@ -1580,8 +1700,9 @@ h3 {
 		font-size: 0.625rem;
 	}
 	.explore-events {
-		font-size: 0.875rem;
-		padding: 0.5rem 1rem;
+		font-size: 1.3rem;
+		padding: 1rem 1.3rem;
+		margin-bottom: 5vh;
 	}
 	.map-and-reach-us {
 		display: none; /* Hide map and address on mobile */
