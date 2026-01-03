@@ -500,7 +500,7 @@
 				margin-top: 0.3rem;
 			}
 				.show-new-data p{
-
+            color: white;
 			font-size: 10px;
 			
 		}
@@ -576,9 +576,7 @@
 			height: auto;
 			padding: 20px 60px;
 			display: flex;
-			background: linear-gradient(180deg,
-					#40a2ee 0%,
-					#e1f3b6 100%);
+			background: linear-gradient(to  top, #e65d3b, #bebe4f, #f15cd3);
 
 		}
 
@@ -597,7 +595,7 @@
 			display: flex;
 			align-items: center;
 			gap: 12px;
-			background: rgba(255, 255, 255, 0.03);
+			
 			padding: 12px;
 			border-radius: 8px;
 			cursor: pointer;
@@ -712,43 +710,65 @@
 
 
 		.notice-content {
-			background: rgba(173, 158, 158, 0.5);
-			border-radius: 50vw;
-			padding: 0.5rem 1.5rem;
-			backdrop-filter: blur(5px);
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width: 90%;
-			border: 2px solid #faf9f5;
-		}
+  background: linear-gradient(135deg, rgba(25, 13, 136, 0.7), rgba(15, 15, 161, 0.7));
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(8px) saturate(150%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  border: 2px solid #faf9f5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
 
-		.notice-content:hover {
-			background: rgba(173, 158, 158, 0.7);
-		}
+.notice-content:hover {
+  background: linear-gradient(135deg, #ed4e14);
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
 
-		.notice-content h3 {
-			color: #0a0a0a;
-			margin: 0;
-			font-size: 1.05rem;
-		}
+.notice-content h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
 
-		.notice-content p {
-			color: #03243a;
-			margin: 6px 0;
-			font-size: 0.95rem;
-		}
+.notice-content p {
+  color: #f0f0f0;
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
 
-		.notice-btn {
-			background: transparent;
-			border: 2px solid #faf9f5;
-			color: #0e0d0d;
-			padding: 6px 10px;
-			border-radius: 6px;
-			cursor: pointer;
-			width: auto;
-		}
+.notice-btn {
+   background: linear-gradient(135deg, #e4da46);
+  border: none;
+  color: #1e1717;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.notice-btn:hover {
+  background: linear-gradient(135deg, #9d06a2);
+  color: #dae2e2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
 
 		.gallery-new {
 			display: flex;
@@ -884,64 +904,72 @@
 			}
 		}
 
-		.shows-new{
-			
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			background: linear-gradient(180deg, #e77abd 0%, #daa4da, #b6ddb6 100%);
+		.shows-new {
+    width: 100%;
+    display: none; /* hidden by default (desktop) */
+    flex-direction: column;
+    background: linear-gradient(180deg, #1e8c9c 0%, #a44fa4, #2ea72e 100%);
+}
 
-		}
-		.shows-new-heading{
-			width: 100%;
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 5px 20px;
-			
+.shows-new-heading {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+}
 
-		}
+.shows-new-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.shows-new-div {
+    padding: 10px 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.show-new-image {
+    height: 20rem;
+    width: 23rem;
+}
+
+.show-new-image img {
+    height: 100%;
+    width: 100%;
+    border: 10px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.show-new-data h1 {
+    font-size: 1.5rem;
+	color:yellow;
+}
+
+/* Desktop font size */
+@media (min-width: 1200px) {
+    .show-new-data h1 {
+        font-size: 3rem;
+		color:yellow;
+    }
+}
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+    .shows-new {
+        display: flex;
+    }
+	.shows-section{
+		display:none
+	}
+	
+}
+
 		
-		.shows-new-content{
-			display: flex;
-			flex-direction: column;
-			
-
-		}
-		.shows-new-div{
-			padding: 10px 10px;
-			display: flex;
-			gap: 20px;
-			justify-content: space-around;
-			
-			align-items: center;
-		}
-		.show-new-image{
-			height: 20rem;
-			width: 23rem;
-		}
-		.show-new-image img{
-			height: 100%;
-			width: 100%;
-			border: 10px solid whitesmoke;
-			border-radius: 10px;
-			
-		}
-		.show-new-data h1{
-
-			font-size: 1.5rem;
-			
-		}
-		@media  (min-width:1200px) {
-		.show-new-data h1{
-
-			font-size: 3rem;
-			
-		}	
-			
-		}
-
 		
 
 
@@ -1001,10 +1029,15 @@
 		<div class="mits-logo" style="height: 100%;">
 			<div class="logo"
 				style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
-				<img src="assets/new-collage-log.PNG" alt="" loading="eager">
+				<!-- <img src="assets/new-collage-log.PNG" alt="" loading="eager"> -->
 				<!-- <a href="https://www.mits.ac.in/"
 					style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a> -->
 			</div>
+			  <div class="title">
+                <div class="upper">MITS</div>
+                <hr>
+                <div class="lower">MADANAPALLE</div>
+            </div>
 
 		</div>
 		<nav>
@@ -1208,42 +1241,41 @@
 		</div>
 
 
-		<!-- Shows -->
-		<!-- <section class="shows-section">
+		 
+		<section class="shows-section">
 			<h1 class="shows-title">Shows</h1>
 			<div class="shows-grid">
 				<div class="show">
 					<img src="assets/img/celebrity-night.jpeg" alt="Celebrity Night" class="show-image">
 					<div class="show-content">
-						<h2 class="show-title">Celebrity Night</h2> -->
-						<!-- <button class="know-more-btn">Know More</button> -->
-					<!-- </div>
+						<h2 class="show-title">Celebrity Night</h2> 
+						 <button class="know-more-btn">Know More</button> 
+					 </div>
 				</div>
 
 				<div class="show">
 					<img src="assets/img/musical-night.jpeg" alt="Comming soon" class="show-image">
 
 					<div class="show-content">
-						<h2 class="show-title">Musical Night</h2> -->
-						<!-- <button class="know-more-btn">Know More</button> -->
-					<!-- </div>
+						<h2 class="show-title">Musical Night</h2> 
+						 <button class="know-more-btn">Know More</button> 
+					</div>
 				</div>
 
 				<div class="show">
 					<img src="assets/img/influencer-meetup.jpeg" alt="Theatre" class="show-image">
 					<div class="show-content">
-						<h2 class="show-title">Influencer MeetUp</h2> -->
-						<!-- <button class="know-more-btn">Know More</button> -->
-					<!-- </div>
+						<h2 class="show-title">Influencer MeetUp</h2>
+						 <button class="know-more-btn">Know More</button> 
+					 </div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 
-  <!-- Shows new-->
 
   <section class="shows-new">
 	<div class="shows-new-heading">
-		<h2>Shows</h2>
+		<h1 class="shows-title">Shows</h1>
 	</div>
 	<div class="shows-new-content">
 		<div class="shows-new-div">
@@ -1320,7 +1352,7 @@
 			<div class="ashv-card">
 				<div class="ashv-content">
 					<div class="left-content">
-						<h2 style="color: blue;">About Ashv 2k26</h2>
+						<h2 style="color: rgb(21, 4, 82);">About Ashv 2k26</h2>
 						<p class="ashv-subtitle">The race of talent</p>
 						<p class="ashv-desc">
 							"Experience the enormous excitement at 'Ashv: The Race of Talent', our vibrant two-day

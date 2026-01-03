@@ -579,7 +579,8 @@ header {
 }
 
 .year-logo {
-	height: 100%;
+	height: 50%;
+	width:auto;
 }
 
 @keyframes left-horse-animation {
@@ -884,14 +885,15 @@ header {
 	justify-content: center;
 	padding: 20px;
 	flex-grow: 1;
-	background: linear-gradient(to  top, #caae31, #bebe4f, #f7f6f8);
+	background: linear-gradient(to  top, #3a38a8, #bebe4f, #9253d0);
+	
 }
 
 .album-title {
 	margin-bottom: 20px;
 	text-align: center;
 	font-size: 3rem;
-	color: rgb(94, 94, 5);
+	color: rgb(228, 237, 55);
 	font-weight: 700;
 }
 
@@ -905,6 +907,7 @@ header {
 }
 
 .book {
+	margin-bottom: 90px;
 	position: relative;
 	display: flex;
 	margin: auto;
@@ -997,7 +1000,7 @@ header {
 
 .shows-title {
 	text-align: center;
-	color: var(--color-primary);
+	color: yellow;
 	font-size: 2.5rem;
 	margin: 20px;
 }
@@ -1005,7 +1008,7 @@ header {
 .shows-section {
 	width: 100%;
 	margin: 0 auto;
-	background: linear-gradient(180deg, #e77abd 0%, #daa4da, #b6ddb6 100%);
+	background: linear-gradient(180deg, #1e8c9c 0%, #a44fa4, #2ea72e 100%);
 }
 
 .shows-grid {
@@ -1076,7 +1079,7 @@ header {
 }
 /* Events */
 .events-section {
-	background: linear-gradient(to top right, #f8feff, #fce4e4);
+	background: linear-gradient(to top right,#e7465e,beige,gold);
 	padding: 80px 0 20px 0;
 }
 .container-event {
@@ -1085,7 +1088,7 @@ header {
 	margin: auto;
 	border-radius: 18px;
 	padding: 20px;
-	background: linear-gradient(135deg, #4e54c8, #8f94fb);
+	background: linear-gradient(135deg, #141977, #8f94fb);
 }
 
 .carousel-wrapper-event {
@@ -1223,7 +1226,7 @@ header {
 .ashv-section {
 	min-height: 80vh;
 	background-color: #f8feff;
-	background: linear-gradient(to bottom right, #f8feff, #fce4e4);
+	background: linear-gradient(to bottom right, #26b983, #cf4c9f);
 	/* padding: 2rem; */
 	display: flex;
 	align-items: center;
@@ -1320,7 +1323,7 @@ h2 {
 }
 
 .conclave-btn {
-	background: radial-gradient(circle, #a47cf3 0%, #0f4684 100%);
+	background: radial-gradient(circle, #2b1060 0%, #0f4684 100%);
 	color: white;
 	font-size: 16px;
 	font-weight: 600;
