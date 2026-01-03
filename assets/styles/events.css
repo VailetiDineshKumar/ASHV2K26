@@ -557,6 +557,14 @@ main {
 	.section-event h1 {
 		font-size: 2rem;
 	}
+	.left-horse{
+		display: none;
+	}
+	.ashv{
+		margin-top: 200px;
+		height: auto;
+
+	}
 }
 
 @media (max-width: 480px) {
@@ -574,6 +582,12 @@ main {
 	}
 	.section-event h1 {
 		font-size: 1.5rem;
+	}
+	.left-horse{
+		display: none;
+	}
+	.side-bar {
+		display: flex;
 	}
 }
 
@@ -593,6 +607,10 @@ main {
 	.event-details button {
 		width: 35vw;
 	}
+	.left-horse{
+		display: none;
+	}
+
 }
 
 .arrow {
