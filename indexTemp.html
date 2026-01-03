@@ -18,6 +18,54 @@
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<style>
+.carousel-event {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.card {
+    min-width: 240px;
+    scroll-snap-align: start;
+    border-radius: 16px;
+    background: white;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+@media (max-width: 768px) {
+
+    .carousel-event {
+        gap: 14px;
+        padding: 10px 14px 20px;
+    }
+
+    .card {
+		 /* flex: 0 0 75%;   */
+        min-width: 180px;   /* 👈 reduced size */
+        max-width: 180px;
+        /* border-radius: 14px; */
+    }
+
+    .card img {
+        width: 100%;
+        height: 140px;     /* 👈 smaller image */
+        object-fit: cover;
+        border-radius: 14px;
+    }
+
+    .card h3 {
+        font-size: 14px;   /* 👈 smaller text */
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-event {
+        padding-right: 80px; /* shows half next card */
+    }
+}
+
 		html,
 		body {
 			max-width: 100%;
@@ -221,6 +269,10 @@
 
 		/* Small devices (phones) */
 		@media (max-width: 768px) {
+			 .left-horse,
+    .right-horse {
+        display: none;
+    }
 			.ashv-tagline {
 				font-size: 1.1rem;
 			}
@@ -1322,7 +1374,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://wa.me/919398983918">
+							<a href="https://wa.me/916304038756">
 								<i class="fab fa-whatsapp"></i> WhatsApp
 							</a>
 						</li>
