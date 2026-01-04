@@ -262,10 +262,8 @@ button {
 	
 }
 
-.ashv-hamburger {
-	display: none;
-	z-index: 10;
-}
+
+
 .ashv-trio{
 	display: flex;
 	flex-direction: column;
