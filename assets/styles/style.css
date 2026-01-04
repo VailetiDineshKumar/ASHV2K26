@@ -581,6 +581,7 @@ header {
 .year-logo {
 	height: 50%;
 	width:auto;
+	
 }
 
 @keyframes left-horse-animation {
@@ -691,12 +692,22 @@ header {
     font-size: 40px;
     letter-spacing: 2px;
   }
+  .year-logo{
+	height: 40%;
+	width:auto;
+
+  }
 }
 
 @media (max-width: 400px) {
   .ashv-title {
     font-size: 32px;
     letter-spacing: 1px;
+  }
+  .year-logo{
+	height: 30%;
+	width:auto;
+	
   }
 }
 
@@ -885,7 +896,8 @@ header {
 	justify-content: center;
 	padding: 20px;
 	flex-grow: 1;
-	background: linear-gradient(to  top, #3a38a8, #bebe4f, #9253d0);
+	background: linear-gradient(to  top,#bebe4f, #c34494 90%);
+	
 	
 }
 
@@ -1008,7 +1020,7 @@ header {
 .shows-section {
 	width: 100%;
 	margin: 0 auto;
-	background: linear-gradient(180deg, #1e8c9c 0%, #a44fa4, #2ea72e 100%);
+	background: linear-gradient(180deg, #0a4c92,#bebe4f);
 }
 
 .shows-grid {
@@ -1079,7 +1091,7 @@ header {
 }
 /* Events */
 .events-section {
-	background: linear-gradient(to top right,#e7465e,beige,gold);
+	background: linear-gradient(to top ,#bebe4f,rgb(23, 168, 190));
 	padding: 80px 0 20px 0;
 }
 .container-event {
@@ -1088,7 +1100,7 @@ header {
 	margin: auto;
 	border-radius: 18px;
 	padding: 20px;
-	background: linear-gradient(135deg, #141977, #8f94fb);
+	background: linear-gradient(135deg, #d610c9, #8f94fb);
 }
 
 .carousel-wrapper-event {
@@ -1177,7 +1189,7 @@ header {
 
 .explore-btn:hover {
 	transform: translateY(-2px);
-	box-shadow: inset -3px -3px 6px rgba(67, 32, 165, 0.7),
+	box-shadow: inset -3px -3px 6px rgba(81, 58, 144, 0.7),
 		inset 3px 3px 6px rgba(0, 0, 0, 0.3), 6px 6px 12px rgba(0, 0, 0, 0.5),
 		-6px -6px 12px rgba(255, 255, 255, 0.2);
 	border: 1px solid #003366;
@@ -1226,7 +1238,7 @@ header {
 .ashv-section {
 	min-height: 80vh;
 	background-color: #f8feff;
-	background: linear-gradient(to bottom right, #26b983, #cf4c9f);
+	background: linear-gradient(to top, #80393d, #072a6d);
 	/* padding: 2rem; */
 	display: flex;
 	align-items: center;
@@ -1822,10 +1834,11 @@ h3 {
 
 .explore-btn {
 	margin-top: 20px;
-	background: #ffd700;
-	color: #1e3a8a;
+	background: #15058e;
+	color: #d4dbf1;
 	border: none;
 	padding: 10px 8px;
+	font-weight: bold;
 	font-size: 1rem;
 	border-radius: 1rem;
 	cursor: pointer;
@@ -1838,7 +1851,7 @@ h3 {
 }
 
 .explore-btn:hover {
-	background: #f1c40f;
+	background: #dd3c1b;
 	transform: translateY(-2px);
 	box-shadow: inset -3px -3px 6px rgba(67, 32, 165, 0.7),
 		inset 3px 3px 6px rgba(75, 74, 74, 0.3),
@@ -1944,3 +1957,18 @@ h3 {
 .mits-logo img {
 	height: 80px !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
