@@ -1524,7 +1524,7 @@ h3 {
 
 @media (max-width: 768px) {
 	.footer {
-		background: linear-gradient(90deg, #08437f, #8c00d1);
+		background: rgb(22, 22, 102);
 		color: white;
 		font-family: Arial, sans-serif;
 		padding: 8px 0;
