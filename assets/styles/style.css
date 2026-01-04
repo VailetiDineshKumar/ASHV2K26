@@ -251,9 +251,15 @@ button {
 	
 	.two6-years-logo img{
 		height: 5.5rem ;
-		width: 5rem;
+		width: 3rem;
 	}
-
+	.two6-years-logo{
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+		margin-left: 160px;
+	}
+	
 }
 
 .ashv-hamburger {
@@ -292,6 +298,7 @@ header {
 		height: 5rem;
 		width: 5rem;
 	}
+	
 }
 
 @media (min-width: 601px) and (max-width: 992px) {
@@ -383,7 +390,7 @@ header {
 	
 	.two6-years-logo img{
 		height: 5.5rem;
-		width: 5rem;
+		width: 3rem;
 	}
 	nav {
 		position: absolute;
@@ -685,6 +692,7 @@ header {
     font-size: 50px;
     letter-spacing: 3px;
   }
+ 
 }
 
 @media (max-width: 600px) {
