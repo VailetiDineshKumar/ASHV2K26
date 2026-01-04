@@ -250,19 +250,22 @@ button {
 	}
 	
 	.two6-years-logo img{
-		height: 5.5rem ;
-		width: 5rem;
+		height: 5rem ;
+		width: 3rem;
 	}
-
+	.two6-years-logo{
+		display: flex;
+		
+		margin-top: 0px;
+		margin-left:auto;
+	}
+	
 }
 
 .ashv-hamburger {
 	display: none;
 	z-index: 10;
 }
-
-
-
 .ashv-trio{
 	display: flex;
 	flex-direction: column;
@@ -387,7 +390,7 @@ header {
 	
 	.two6-years-logo img{
 		height: 5.5rem;
-		width: 5rem;
+		width: 4rem;
 	}
 	nav {
 		position: absolute;
@@ -1716,10 +1719,10 @@ h3 {
 
 @media (max-width: 480px) {
 	.title .upper {
-		font-size: 1.5rem;
+		font-size: 2.5rem;
 	}
 	.title .lower {
-		font-size: 0.625rem;
+		font-size: 0.785rem;
 	}
 	nav ul {
 		gap: 0.5rem;

@@ -356,7 +356,7 @@ header {
 	}
 	
 	.year-logo {
-		height: 5rem !important;
+		height: 4.5rem !important;
 		scale: 0.9 !important;
 	}
 	
@@ -381,7 +381,7 @@ header {
 	}
 	
 	.year-logo {
-		height: 5.5rem !important;
+		height: 5rem !important;
 		width: auto;
 		scale: 0.8 !important;
 		margin-top: -10px;
