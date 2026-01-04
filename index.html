@@ -2,747 +2,1624 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHV2K26 - Coming Soon</title>
-    <link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/pre-loader.css">
-    <link rel="stylesheet" href="assets/styles/events.css">
-    <!-- <link rel="stylesheet" href="assets/styles/res-style.css"> -->
-    <style>
-        @media screen and (max-width:600px) {
-            .mits-logo img {
-                height: 40px;
-            }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ashv 2k26 - The race of talent</title>
+	<link rel="shortcut icon" href="assets/img/ashv-theraceoftalent.png" type="image/x-icon">
+	<link rel="stylesheet" href="assets/styles/res-style.css">
+	<link rel="stylesheet" href="assets/styles/style.css">
+	<link rel="stylesheet" href="assets/styles/pre-loader.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+   
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        }
+	<style>
+.carousel-event {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.card {
+    min-width: 240px;
+    scroll-snap-align: start;
+    border-radius: 16px;
+    background: white;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .social-links {
-            z-index: 2;
-            display: flex;
-        }
 
-        .contacts {
-            z-index: 3;
-            background: linear-gradient(to right top, #252527, #8687892a);
-            padding: 2%;
-        }
 
-        .contact {
-            display: flex;
-            margin: 4%;
-            gap: 3%;
-        }
+@media (max-width: 768px) {
 
-        .contact * {
-            width: 33%;
-        }
+    .carousel-event {
+        gap: 14px;
+        padding: 10px 14px 20px;
+    }
 
-        .contact h3 {
-            text-align: left;
-        }
+    .card {
+		 /* flex: 0 0 75%;   */
+        min-width: 180px;   /* 👈 reduced size */
+        max-width: 180px;
+        /* border-radius: 14px; */
+    }
 
-        .contact #mahi,
-        a {
-            white-space: nowrap;
-            color: whitesmoke;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-        }
+    .card img {
+        width: 100%;
+        height: 140px;     /* 👈 smaller image */
+        object-fit: cover;
+        border-radius: 14px;
+    }
 
-        .bottom {
-            width: 100%;
-            display: flex;
-            z-index: 3;
-            justify-content: space-between;
-            padding: 10%;
-        }
+    .card h3 {
+        font-size: 14px;   /* 👈 smaller text */
+        padding: 8px 0;
+    }
+}
 
-        .hero {
-            flex-direction: row;
-            justify-content: flex-end;
-            gap: 0;
-            height: 100vh;
-        }
+@media (max-width: 768px) {
+    .carousel-event {
+        padding-right: 80px; /* shows half next card */
+    }
+}
 
-        .middle {
-            width: 30%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            transform: translateX(-50%);
-            z-index: 100;
-        }
+		html,
+		body {
+			max-width: 100%;
+			overflow-x: hidden;
+		}
 
-        .ashv {
-            margin: 0;
-            width: 100%;
-            height: auto;
-        }
+		.footer {
+			width: 100%;
+			overflow-x: hidden;
+		}
 
-        .bottom {
-            width: 30%;
-            background: rgba(0, 0, 0, 0.5);
-        }
+		.footer p,
+		.footer a {
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			white-space: normal;
+		}
 
-        .contacts {
-            width: 40vw;
-        }
+		.social-links {
+			padding: 0;
+			margin: 0;
+		}
 
-        .cloud-background {
-            height: 100vh !important;
-        }
+		.social-links li {
+			list-style: none;
+			max-width: 100%;
+		}
 
-        @media screen and (max-width: 600px) {
-            .contacts {
-                width: 95vw;
-            }
+		.social-links a {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			max-width: 100%;
+			white-space: normal;
+		}
 
-            .middle {
-                transform: translateX(0);
-            }
+		@media screen and (max-width: 400px) {
 
-            main {
-                height: 100svh !important;
-                overflow: hidden;
-            }
-        }
+			.footer-container {
 
-        .footer {
-            background: linear-gradient(90deg, #08437F, #8C00D1);
-            padding: 20px 40px;
+				flex-direction: column;
+				width: 100%;
+				padding: 1rem;
+				box-sizing: border-box;
+			}
+
+			.footer-left {
+				width: 100%;
+			}
+
+			.technical-contacts p {
+				font-size: 0.9rem;
+			}
+
+			.cta-button {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.hero-title {
+			font-size: 3rem;
+			color: #FFD700;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			margin-block: 1.5rem;
+			text-align: center;
+			line-height: 1.2;
+		}
+
+		/* Medium devices (tablets) */
+		@media (max-width: 992px) {
+			.hero-title {
+				font-size: 1.8rem;
+			}
+		}
+
+		/* Small devices (phones) */
+		@media (max-width: 600px) {
+			.hero-title {
+				margin-top: 10px;
+				font-size: 1.4rem;
+				margin-block: 1rem;
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+			}
+			.ashv{
+			height: 10rem;
+			width: 15rem;
+
+			}
+		}
+
+		/* Extra small devices (very small phones) */
+		@media (max-width: 400px) {
+			.hero-title {
+				font-size: 1.2rem;
+			}
+		}
+
+		/* Popup animation for hero logos */
+		@keyframes popupIn {
+			0% {
+				opacity: 0;
+				transform: scale(0.3) translateY(100px);
+			}
+
+			50% {
+				opacity: 1;
+				transform: scale(1.1) translateY(-10px);
+			}
+
+			70% {
+				transform: scale(0.95) translateY(5px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: scale(1) translateY(0);
+			}
+		}
+
+		@keyframes popupBounce {
+			0% {
+				opacity: 0;
+				transform: scale(0) translateY(100px);
+			}
+
+			60% {
+				opacity: 1;
+				transform: scale(1.15) translateY(-10px);
+			}
+
+			80% {
+				transform: scale(0.95) translateY(5px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: scale(1) translateY(0);
+			}
+		}
+
+		.ashv {
+			height: 15rem;
+			width: 30rem;
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+			margin-top: 20px;
+		}
+
+		.association-sponsor {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+		}
+
+		.association-text {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+			font-size: 1.2rem;
+		}
+
+		.association-sponsor {
+			height: 8%;
+			min-height: 40px;
+		}
+
+		.ashv-title {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards, goldShine 4s linear infinite;
+			animation-delay: 1s;
+			opacity: 0;
+		}
+
+		.ashv-tagline {
+			color: #fff;
+			font-size: 1.4rem;
+			font-style: italic;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			margin-bottom: 1rem;
+			z-index: 3;
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+		}
+
+		/* Responsive styles for hero section elements */
+		/* Medium devices (tablets) */
+		@media (max-width: 992px) {
+			.ashv-tagline {
+				font-size: 1.2rem;
+			}
+
+			.association-text {
+				font-size: 1.1rem;
+			}
+
+			.association-sponsor {
+				min-height: 35px;
+			}
+		}
+
+		/* Small devices (phones) */
+		@media (max-width: 768px) {
+			 .left-horse,
+    .right-horse {
+        display: none;
+    }
+			.ashv-tagline {
+				font-size: 1.1rem;
+			}
+
+			.association-text {
+				font-size: 1rem;
+			}
+
+			.association-sponsor {
+				min-height: 30px;
+			}
+		}
+
+		@media (max-width: 600px) {
+			.ashv-tagline {
+				font-size: 1rem;
+			}
+
+			.association-text {
+				font-size: 0.9rem;
+			}
+
+			.association-sponsor {
+				min-height: 25px;
+			}
+		}
+
+		/* Extra small devices */
+		@media (max-width: 400px) {
+			.ashv-tagline {
+				font-size: 0.85rem;
+			}
+
+			.association-text {
+				font-size: 0.8rem;
+			}
+
+			.association-sponsor {
+				min-height: 20px;
+			}
+		}
+
+		/* Countdown Timer Styles */
+		.countdown-timer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			z-index: 10;
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+			margin-bottom: 1.5rem;
+		}
+
+		.timer-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 50, 0.8));
+			border: 2px solid #FFD700;
+			border-radius: 12px;
+			padding: 1rem 1.5rem;
+			min-width: 80px;
+			position: relative;
+			overflow: hidden;
+			box-shadow:
+				0 0 20px rgba(255, 215, 0, 0.3),
+				inset 0 0 20px rgba(255, 215, 0, 0.1);
+		}
+
+		.timer-box::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+			animation: timer-shine 3s infinite;
+		}
+
+		@keyframes timer-shine {
+			0% {
+				left: -100%;
+			}
+
+			50%,
+			100% {
+				left: 100%;
+			}
+		}
+
+		.timer-value {
+			font-family: 'Orbitron', 'Racing Sans One', sans-serif;
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #FFD700;
+			text-shadow:
+				0 0 10px rgba(255, 215, 0, 0.8),
+				0 0 20px rgba(255, 215, 0, 0.5),
+				0 0 30px rgba(255, 215, 0, 0.3);
+			line-height: 1;
+			animation: timer-pulse 1s ease-in-out infinite;
+		}
+
+		@keyframes timer-pulse {
+
+			0%,
+			100% {
+				text-shadow:
+					0 0 10px rgba(255, 215, 0, 0.8),
+					0 0 20px rgba(255, 215, 0, 0.5),
+					0 0 30px rgba(255, 215, 0, 0.3);
+			}
+
+			50% {
+				text-shadow:
+					0 0 15px rgba(255, 215, 0, 1),
+					0 0 30px rgba(255, 215, 0, 0.7),
+					0 0 45px rgba(255, 215, 0, 0.5);
+			}
+		}
+
+		.timer-box .timer-label {
+			font-family: 'Poppins', sans-serif;
+			font-size: 0.85rem;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin-top: 0.5rem;
+			opacity: 0.9;
+		}
+
+		.timer-separator {
+			font-family: 'Orbitron', sans-serif;
+			font-size: 2.5rem;
+			font-weight: 700;
+			color: #FFD700;
+			text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+			animation: separator-blink 1s ease-in-out infinite;
+		}
+
+		@keyframes separator-blink {
+
+			0%,
+			100% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.3;
+			}
+		}
+
+		/* Responsive Timer Styles */
+		@media (max-width: 992px) {
+			.timer-box {
+				padding: 0.8rem 1.2rem;
+				min-width: 70px;
+			}
+
+			.timer-value {
+				font-size: 2rem;
+			}
+
+			.timer-separator {
+				font-size: 2rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.75rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.countdown-timer {
+				gap: 0.3rem;
+			}
+
+			.timer-box {
+				padding: 0.6rem 0.8rem;
+				min-width: 55px;
+				border-radius: 8px;
+			}
+
+			.timer-value {
+				font-size: 1.5rem;
+			}
+
+			.timer-separator {
+				font-size: 1.5rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.65rem;
+				letter-spacing: 1px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.countdown-timer {
+				gap: 0.2rem;
+			}
+
+			.timer-box {
+				padding: 0.5rem 0.6rem;
+				min-width: 45px;
+				border-width: 1px;
+			}
+
+			.timer-value {
+				font-size: 1.2rem;
+			}
+
+			.timer-separator {
+				font-size: 1.2rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.55rem;
+				letter-spacing: 0.5px;
+				margin-top: 0.3rem;
+			}
+				.show-new-data p{
             color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        strong,
-        h3 {
-            color: #FECF00;
-        }
-
-        .footer-heading {
-            text-align: center;
-            margin: 10px 0 30px 0;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 0 20px;
-        }
-
-        .footer-left {
-            flex: 0 0 40%;
-            display: flex;
-            flex-direction: column;
-            margin: 0 40px 0 40px;
-            gap: 20px;
-        }
-
-        .social-and-contacts {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .social-links {
-            list-style: none;
-            flex: 1;
-        }
-
-        .social-links li {
-            margin-bottom: 10px;
-        }
-
-        .social-links li a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            display: flex;
-            letter-spacing: 1px;
-            gap: 12px;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .social-links li a:hover {
-            color: #FECF00;
-            font-weight: bold;
-        }
-
-        .social-links li a i {
-            margin-right: 10px;
-            font-size: 20px;
-            line-height: 24px;
-            color: #FECF00;
-        }
-
-        .technical-contacts {
-            flex: 1;
-        }
-
-        .technical-contacts p {
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-            font-size: 16px;
-        }
-
-        .cta-button {
-            width: 220px;
-            background-color: transparent;
-            color: white;
-            border: 2px solid white;
-            border-radius: 10px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            align-self: center;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .cta-button:hover {
-            background-color: white;
-            color: #8C00D1;
-            font-weight: bold;
-        }
-
-        .cta-button i {
-            margin-left: 5px;
-        }
-
-        .footer-right {
-            flex: 0 0 55%;
-            padding-left: 20px;
-        }
-
-        .map-and-reach-us {
-            display: flex;
-            gap: 50px;
-            margin: 0 10px 0 10px;
-        }
-
-        .map-container iframe {
-            width: 320px;
-            height: 200px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .reach-us {
-            width: 38%;
-            line-height: 25px;
-            letter-spacing: 1px;
-        }
-
-        .reach-us h3 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .reach-us p {
-            margin-bottom: 5px;
-            font-size: 16px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .social-and-contacts {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-and-reach-us {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-container iframe,
-            .reach-us {
-                width: 100%;
-            }
-
-            .footer-left,
-            .footer-right {
-                flex: 1;
-                padding: 0;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .footer-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .social-and-contacts {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-and-reach-us {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-container iframe,
-            .reach-us {
-                width: 100%;
-            }
-
-            .footer-left,
-            .footer-right {
-                flex: 1;
-                padding: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .social-and-contacts {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-and-reach-us {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-container iframe,
-            .reach-us {
-                width: 100%;
-            }
-
-            .footer-left,
-            .footer-right {
-                flex: 1;
-                padding: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .footer-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .social-and-contacts {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-and-reach-us {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .map-container iframe,
-            .reach-us {
-                width: 100%;
-            }
-
-            .footer-left,
-            .footer-right {
-                flex: 1;
-                padding: 0;
-            }
-        }
-
-        .side-bar {
-            position: fixed;
-            top: 50%;
-            width: fit-content;
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .side-bar.show {
-            display: flex;
-            transform: translateX(0);
-        }
-
-        .popup {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .popup-content {
-            background-color: #fefefe;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .hero {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-
-        .hero img {
-            /* width: 100%; */
-            height: auto;
-        }
-
-        .contacts {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2%;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .contact {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
-        }
-
-        .contact h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: #FFD700;
-        }
-
-        .contact p {
-            margin: 0;
-            font-size: 1rem;
-            color: white;
-        }
-
-        .contact a {
-            color: #FFD700;
-            text-decoration: none;
-        }
-
-        .contact a:focus {
-            outline: 2px solid #FFD700;
-            outline-offset: 2px;
-        }
-
-        .social-links li a:focus {
-            outline: 2px solid #FFD700;
-            outline-offset: 2px;
-        }
-
-        .bottom {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .half {
-            flex: 1;
-            padding: 10px;
-        }
-
-        .half h3 {
-            font-size: 1.5rem;
-            color: #FFD700;
-        }
-
-        .half p {
-            font-size: 1rem;
-            color: white;
-        }
-
-        .map-link {
-            /* display: inline-block; */
-            /* margin-top: 10px; */
-            color: #FFD700;
-            text-decoration: none;
-            gap: 0 !important;
-        }
-
-        .map-link:hover {
-            text-decoration: underline;
-        }
-
-        .social-media {
-            display: flex;
-            align-items: center;
-        }
-
-        .social-links {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            list-style: none;
-            padding: 0;
-        }
-
-        .social-links li {
-            margin-right: 10px;
-        }
-
-        .social-links li a {
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .social-links li a:hover {
-            color: #FFD700;
-        }
-
-        .cloud-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #000;
-            color: #fff;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 100;
-        }
-
-        .skip-link:focus {
-            top: 6px;
-        }
-
-        .coming-soon-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #FFD700;
-            margin-bottom: 20px;
-            letter-spacing: 1px;
-        }
-
-        .coming-soon-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: white;
-            font-weight: 300;
-            margin-bottom: 30px;
-            letter-spacing: 0.5px;
-        }
-
-        .coming-soon-title .highlight {
-            font-size: 1.2em;
-            font-weight: bolder;
-        }
-
-        @media screen and (max-width: 600px) {
-            .coming-soon-title {
-                font-size: 2rem;
-            }
-            .coming-soon-subtitle {
-                font-size: 1rem;
-            }
-        }
-    </style>
+			font-size: 10px;
+			
+		}
+		}
+
+		@media (max-width: 360px) {
+			.timer-box {
+				padding: 0.4rem 0.5rem;
+				min-width: 40px;
+			}
+
+			.timer-value {
+				font-size: 1rem;
+			}
+
+			.timer-separator {
+				font-size: 1rem;
+			}
+
+			.timer-box .timer-label {
+				font-size: 0.5rem;
+			}
+		}
+
+		.explore-events {
+			animation: popupIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			animation-delay: 1s;
+			opacity: 0;
+		}
+
+		.ashv,
+		.explore-events,
+		.hero-title {
+			z-index: 3;
+		}
+
+		@media screen and (max-width: 600px) {
+			.title-sponser {
+				transform: translateX(-125%) translateY(90%) !important;
+			}
+
+			/* Make horses smaller in mobile view */
+			.horse {
+				transform: scale(0.95);
+			}
+
+			.left-horse {
+				transform: rotateY(180deg) scale(0.95);
+			}
+
+			.right-horse {
+				transform: scale(0.95);
+			}
+
+			/* Increase z-index for hero elements to prevent overlap */
+			.ashv,
+			.association-text,
+			.association-sponsor,
+			.ashv-title,
+			.ashv-tagline,
+			.hero-title,
+			#ashv-countdown,
+			.countdown-timer,
+			.explore-events {
+				z-index: 10 !important;
+				position: relative;
+			}
+			.notice-content{
+				margin-left: 25px;
+			}
+		}
+
+		.notices-galary-section {
+
+			width: 100%;
+			height: auto;
+			padding: 20px 60px;
+			display: flex;
+			background: linear-gradient(to  top, #bebe4f, #59159d);
+
+		}
+
+
+
+		/* Notices column */
+		.notices-new {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			min-width: 30%;
+			margin: 20px 0px;
+		}
+
+		.notice-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			
+			padding: 12px;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: transform 0.12s ease, box-shadow 0.12s ease;
+		}
+
+		.notice-item img {
+			width: 96px;
+			height: 64px;
+			object-fit: cover;
+			border-radius: 6px;
+			opacity: 0;
+			transform: rotate(0deg) scale(0.9);
+			transition: all 0.9s ease;
+		}
+
+		/* When image becomes visible */
+		.gallery-new img.show {
+			opacity: 1;
+			transform: rotate(0deg) scale(1);
+		}
+
+		/* Unique animations per image */
+		.gallery-new img:nth-child(1).show {
+			transform: rotate(-6deg) scale(1);
+		}
+
+		.gallery-new img:nth-child(2).show {
+			transform: rotate(6deg) scale(1);
+		}
+
+		.gallery-new img:nth-child(3).show {
+			transform: translateY(-20px) rotate(-3deg) scale(1);
+		}
+
+		.gallery-new img:nth-child(4).show {
+			transform: translateY(20px) rotate(3deg) scale(1);
+		}
+
+		.gallery-new img:nth-child(5).show {
+			transform: scale(1.08) rotate(-4deg);
+		}
+
+		.gallery-new img:nth-child(6).show {
+			transform: scale(1.08) rotate(4deg);
+		}
+
+		/* Hover interaction */
+		.gallery-new img:hover {
+			transform: scale(1.12) rotate(0deg);
+			box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+			z-index: 2;
+		}
+
+		/* Responsive */
+		@media (max-width: 904px) {
+			.gallery-new img {
+				width: 90%;
+				height: 220px;
+			}
+
+			.gallery-new {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				max-height: 200px;
+				border: 5px solid whitesmoke;
+				padding: 20px;
+				overflow-y: hidden;
+
+
+			}
+				/* Show scrollbar */
+				.gallery-new {
+					scrollbar-width: thin;
+					/* Firefox */
+					scrollbar-color: #4d97ec #e5e7eb;
+					border-radius: 10px;
+				}
+
+				/* Chrome, Edge, Safari */
+				.gallery-new::-webkit-scrollbar {
+					height: 8px;
+					/* horizontal scrollbar */
+				}
+
+				.gallery-new::-webkit-scrollbar-track {
+					background: #e5e7eb;
+					border-radius: 10px;
+				}
+
+				.gallery-new::-webkit-scrollbar-thumb {
+					background: #93c5fd;
+					border-radius: 30px;
+				}
+
+				.gallery-new::-webkit-scrollbar-thumb:hover {
+					background: #60a5fa;
+				}
+
+				.notices-galary-section {
+				flex-direction: column;
+				padding: 20px 20px;
+			}
+
+			}
+
+			.notices-galary-section {
+				gap: 3rem;
+			}
+
+
+		.notice-content {
+  background: linear-gradient(135deg, rgba(25, 13, 136, 0.7), rgba(15, 15, 161, 0.7));
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(8px) saturate(150%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  border: 2px solid #faf9f5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.notice-content:hover {
+  background: linear-gradient(135deg, #ed4e14);
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.notice-content h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.notice-content p {
+  color: #f0f0f0;
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notice-btn {
+   background: linear-gradient(135deg, #e4da46);
+  border: none;
+  color: #1e1717;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.notice-btn:hover {
+  background: linear-gradient(135deg, #9d06a2);
+  color: #dae2e2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+
+		.gallery-new {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		.gallery-new img {
+			width: 15rem;
+			height: 15rem;
+			border: #333;
+			object-fit: cover;
+			/* crop nicely */
+			border-radius: 14px;
+			/* smooth corners */
+
+			/* Frame effect */
+			background: #fff;
+			padding: 6px;
+			border: 3px solid #e5e7eb;
+
+			/* Shadow for depth */
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+		}
+
+		@media (max-width: 600px) {
+			.notices-galary-section {
+				flex-direction: column;
+				padding: 20px 20px;
+			}
+
+
+		}
+
+		@media (max-width: 900px) {
+			.notices-new {
+				width: 100%;
+			}
+
+			.notice-item img {
+				width: 80px;
+				height: 56px;
+			}
+		}
+
+		/* Popup styling for notices */
+		#popup {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 1000;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#popup.active {
+			display: flex !important;
+		}
+
+		.popup-content {
+			background-color: white;
+			border-radius: 12px;
+			padding: 30px;
+			width: 90vw;
+			max-width: 800px;
+			max-height: 85vh;
+			overflow-y: auto;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			position: relative;
+		}
+
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 20px;
+			font-size: 28px;
+			cursor: pointer;
+			color: #333;
+		}
+
+		.close:hover {
+			color: #FFD700;
+		}
+
+		#popup-image {
+			width: 100%;
+			height: auto;
+			max-height: 60vh;
+			object-fit: contain;
+			border-radius: 8px;
+			margin-bottom: 20px;
+			display: block;
+		}
+
+		#popup-title {
+			color: #FFD700;
+			font-size: 1.8rem;
+			margin: 20px 0 10px 0;
+		}
+
+		#popup-description {
+			color: #333;
+			font-size: 1rem;
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		@media (max-width: 768px) {
+			.popup-content {
+				width: 95vw;
+				padding: 20px;
+			}
+
+			#popup-title {
+				font-size: 1.5rem;
+			}
+
+			#popup-description {
+				font-size: 0.95rem;
+			}
+
+			#popup-image {
+				max-height: 50vh;
+			}
+		}
+
+		.shows-new {
+    width: 100%;
+    display: none; /* hidden by default (desktop) */
+    flex-direction: column;
+    background: linear-gradient(180deg, #0a4c92,#bebe4f);
+}
+
+.shows-new-heading {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.shows-new-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.shows-new-div {
+    padding: 10px 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.show-new-image {
+    height: 20rem;
+    width: 23rem;
+}
+
+.show-new-image img {
+    height: 100%;
+    width: 100%;
+    border: 10px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.show-new-data h1 {
+    font-size: 1.5rem;
+	color:yellow;
+}
+
+/* Desktop font size */
+@media (min-width: 1200px) {
+    .show-new-data h1 {
+        font-size: 3rem;
+		color:yellow;
+    }
+}
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+    .shows-new {
+        display: flex;
+    }
+	.shows-section{
+		display:none
+	}
+	
+}
+
+		
+		
+
+
+	</style>
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <!-- Preloader -->
-    <div class="loader" role="status" aria-live="polite">
-        <div id="preloader-container">
-            <div id="preloader_1">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <img src="./assets/img/ashv-theraceoftalent.png" alt="ASHV The Race of Talent Logo Loading" loading="eager">
-        </div>
-    </div>
-    <!-- Header -->
-    <header>
-        <div class="mits-logo" style="height: 100%;">
-            <div class="logo"
+	<!-- Preloader -->
+	<div class="loader">
+		<div id="preloader-container">
+			<div id="preloader_1">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<img src="./assets/ashv.png" alt="Loader Image">
+		</div>
+	</div>
+	<!-- Notification -->
+	<div class="notifications">
+		<div class="notification notification-1">
+			<div class="short">
+				<h3>
+					<!-- <img src="assets/images/kiran-abbavaramNotification.jpg" alt=""
+						style=" height: 70px;aspect-ratio:1; border-radius: 50vw;object-fit: cover;"> -->
+					<div class="notification-content">
+						<marquee behavior="" direction="" style="font-size: 1.5rem;">Ashv teaser
+							<!-- launch by <strong>Actor
+								Kiran Abbavaram's Dilruba
+								Team</strong> -->
+						</marquee>
+						<!-- <p>18<sup>th</sup> Jan 2025</p> -->
+					</div>
+				</h3>
+			</div>
+			<div class="content" style="height: 100%; flex-direction: column; align-items: flex-start;">
+				<marquee behavior="" direction="">Ashv teaser
+					<!-- launch byActor Kiran Abbavaram's Dilruba Team -->
+				</marquee>
+				</h1>
+				<!-- <p>18 Jan 2025</p> -->
+				<video src="assets/images/ashv.mp4"
+					style="width: 90%; max-height: 80%; aspect-ratio: 16/9; margin-inline: auto; align-self: center;"
+					controls></video>
+			</div>
+			<div class="close-button">
+				<button>
+					<i class="bi bi-x"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- Header -->
+	<header style="background: none; box-shadow: none;">
+		<div class="mits-logo" style="height: 100%;">
+			<div class="logo"
 				style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;">
-				<img src="assets/img/lgmits.jfif" alt="MadanaPalle Institute of Technology and Science Logo" loading="eager">
+				<!-- <img src="assets/new-collage-log.PNG" alt="" loading="eager"> -->
 				<!-- <a href="https://www.mits.ac.in/"
 					style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a> -->
 			</div>
-            <!-- <div class="title">
+			  <div class="title">
                 <div class="upper">MITS</div>
                 <hr>
                 <div class="lower">MADANAPALLE</div>
-            </div> -->
-        </div>
-        <!-- <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="committee.html">Committee</a></li>
-                <li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" style="font-weight: 700;" fill="currentColor"
-                            class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                        </svg></a>
-                    <ul class="sub-menu">
-                        <li><a href="eventTiles.html#technical">Technical</a></li>
-                        <li><a href="eventTiles.html#theatre">Theatre</a></li>
-                        <li><a href="eventTiles.html#cultural">Cultural</a></li>
-                        <li><a href="eventTiles.html#sports">Sports</a></li>
-                        <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
-                    </ul>
-                </li>
-                <li><a href="registrations.html">Registrations</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="contactus.html" class="selected">Contact Us</a></li>
-            </ul>
-        </nav> -->
-        <div style="height: 100%; display: flex;">
-            <div class="two6-years-logo"
-                style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
-                <img src="assets/27years.png" alt="27 Years Celebration Logo" class="year-logo" style="height: 80%; scale: 1.5;"
-                    loading="eager">
-                <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
-                    style="height: 80%; background-color: white; border-radius: 10px;">
-                <a href=""
-                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-133%); color: #FFD700;right: 0; text-decoration: none; text-align: center; font-weight: normal;"
-                    class="title-sponser">Title<br>
-                    Sponsor</a>
-                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
-                    style="height: 80%; background-color: white; border-radius: 10px">
-                <a href=""
-                    style="position: absolute; bottom: 0; transform: translateX(0) translateY(90%); color: #FFD700;right: 0; text-decoration: none; font-weight: normal;">Co-Title<br>
-                    Sponsor</a> -->
             </div>
-        </div>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
-            id="hamburger">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-                <path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
-                <path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
-                <path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
-            </g>
-        </svg>
-    </header>
 
-    <main id="main-content" section="">
-        <div class="hero section-event">
-            <img class="left-horse horse" src="assets/img/horse.png" alt="Decorative horse image">
-            <img class="cloud-background" src="assets/img/bg clouds.png" alt="Cloud background">
-            <div class="cloud-overlay"></div>
-            <div class="middle">
-                <img src="assets/img/ashv-theraceoftalent.png" style="z-index: 3;" alt="ASHV The Race of Talent Logo" class="ashv">
-                <div class="contacts">
-                    <h2 class="coming-soon-title"><span class="highlight">ASHV2K26</span> <br> is Coming Soon!</h2>
-                    <p class="coming-soon-subtitle">Get ready for an unforgettable experience. Stay tuned for updates!</p>
-                    <div class="social-media">
-                        <ul class="social-links">
-                            <li>
-                                <a href="https://maps.app.goo.gl/8b5u4CSQtCRUWxvTA" class="map-link" target="_blank"
-                                    aria-label="View MadanaPalle Institute of Technology and Science on Google Maps">
-                                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                                    <!-- <span style="font-size: 1rem;">MITS</span> -->
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/ashv2K26?igsh=NXp2djdvZHV4eHYy" aria-label="Follow ASHV on Instagram">
-                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/" aria-label="Visit MadanaPalle Institute of Technology and Science on LinkedIn">
-                                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <a href="https://fb.me/e/wH5oN1IyV" aria-label="Like ASHV on Facebook">
-                                    <i class="fab fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="https://wa.me/916304038756" aria-label="Contact ASHV on WhatsApp">
-                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/" class="selected">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="committee.html">Committee</a></li>
+				<li class="event-hover"><a href="eventTiles.html">Events <svg xmlns="http://www.w3.org/2000/svg"
+							width="16" height="16" style="font-weight: 700;" fill="currentColor"
+							class="bi bi-chevron-down" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+						</svg></a>
+					<ul class="sub-menu">
+						<li><a href="eventTiles.html#technical">Technical</a></li>
+						<li><a href="eventTiles.html#theatre">Theatre</a></li>
+						<li><a href="eventTiles.html#cultural">Cultural</a></li>
+						<li><a href="eventTiles.html#sports">Sports</a></li>
+						<li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
+					</ul>
+				</li>
+				<!-- <li><a href="registrations.html">Registrations</a></li> -->
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="sponsors.html">Sponsors</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div style="height: 100%; display: flex;">
+			<div class="two6-years-logo"
+				style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
+				<img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;"
+					loading="eager">
+				<img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+					style="height: 80%; background-color: white; border-radius: 10px;">
+				<!-- <a href=""
+					style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-105%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
+					class="title-sponser">Title<br>
+					Sponsor</a> -->
+				<!-- <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+					style="height: 80%; background-color: white; border-radius: 10px">
+				<a href=""
+					style="position: absolute; bottom: 0; transform: translateX(15%) translateY(90%); color: #FFD700;right: 0; text-decoration: none;">Co-Title<br>
+					Sponsor</a> -->
+			</div>
+		</div>
+		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
+			id="hamburger">
+			<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+			<g id="SVGRepo_iconCarrier">
+				<path d="M4 18L20 18" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+				<path d="M4 12L20 12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+				<path d="M4 6L20 6" stroke="#FFD700" stroke-width="2" stroke-linecap="round"></path>
+			</g>
+		</svg>
+	</header>
 
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script src="./assets/js/pre-loader.js"></script>
-    </main>
-    <script>
-        document
-            .querySelector(".event-hover")
-            .addEventListener("mouseover", function () {
-                document.querySelector(".sub-menu").style.display = "flex";
-            });
-        document
-            .querySelector(".event-hover")
-            .addEventListener("mouseout", function () {
-                document.querySelector(".sub-menu").style.display = "none";
-            });
-        let width = screen.width;
-        if (width < 600) document.querySelector("nav").style.transform = "translateY(-100%)";
+	<main class="main">
 
-        document.querySelector("#hamburger").addEventListener("click", function () {
-            console.log(document.querySelector("nav").style.transform);
-            if (document.querySelector("nav").style.transform === "translateY(-100%)") {
-                document.querySelector("nav").style.transform = "translateY(0%)";
-            }
-            else {
-                document.querySelector("nav").style.transform = "translateY(-100%)";
-            }
-        });
-    </script>
+		<!-- Hero Section -->
+		<div class="hero">
+			<!-- <div class="timer-container">
+				<div class="timer-div">
+					<div class="timer" id="days">0</div>
+					<div class="timer-label">Days</div>
+				</div>
+				<div class="timer-div">
+					<div class="timer" id="hours">0</div>
+					<div class="timer-label">Hours</div>
+				</div>
+				<div class="timer-div">
+					<div class="timer" id="minutes">0</div>
+					<div class="timer-label">Minutes</div>
+				</div>
+				<div class="timer-div">
+					<div class="timer" id="seconds">0</div>
+					<div class="timer-label">Seconds</div>
+				</div>
+			</div>	 -->
+			<img src="assets/ashv.png" alt="" class="ashv" loading="eager">
+			<!-- <p style="color: white;" class="association-text">Association with</p>
+			<img src="assets/images/sponsors/The_Times_of_India_Logo_full.png" alt="" class="association-sponsor"
+				style="height: 8%; background-color: white; margin-bottom: 2rem; z-index: 10000000000;"> -->
+			<h2 class="ashv-title">2K26 </h2>
+			<p class="ashv-tagline">A new era begins</p>
+			<h3 style="font-size: 3rem; z-index: 10;" >March 25 , 26 </h3>
+			<div class="countdown-timer" id="ashv-countdown">
+				<div class="timer-box">
+					<div class="timer-value" id="days">00</div>
+					<div class="timer-label">Days</div>
+				</div>
+				<div class="timer-separator">:</div>
+				<div class="timer-box">
+					<div class="timer-value" id="hours">00</div>
+					<div class="timer-label">Hours</div>
+				</div>
+				<div class="timer-separator">:</div>
+				<div class="timer-box">
+					<div class="timer-value" id="minutes">00</div>
+					<div class="timer-label">Mins</div>
+				</div>
+				<div class="timer-separator">:</div>
+				<div class="timer-box">
+					<div class="timer-value" id="seconds">00</div>
+					<div class="timer-label">Secs</div>
+				</div>
+			</div>
+			<a href="eventTiles.html" class="explore-events">Explore Events</a>
+			<img class="left-horse horse" src="assets/img/horse.png" alt="" loading="eager">
+			<img class="right-horse horse" src="assets/img/horse.png" alt="" loading="eager">
+			<img class="cloud-background" src="assets/img/bg clouds.png" alt="" loading="eager">
+			<div class="cloud-overlay" style="background: none;"></div>
+		</div>
+
+
+
+		<!-- Gallery -->
+
+		<!-- <section class="gallery-section">
+			<h1 class="gallery-title">Notices</h1>
+			<div class="gallery-slider">
+				<button class="nav-btn galprev-btn" id="prev"><i class="bi bi-arrow-left-circle-fill"></i></button>
+				<div class="gallery-container">
+					<div class="gallery">
+						<img src="assets/img/n1.jpg" alt="Image 1">
+						<img src="assets/img/n2.jpg" alt="Image 2">
+						<img src="assets/img/n3.jpg" alt="Image 3">
+						<img src="assets/img/n4.jpg" alt="Image 4">
+						<img src="assets/img/n5.jpg" alt="Image 5">
+						<img src="assets/img/n6.jpg" alt="Image 6">
+					</div>
+				</div>
+				<button class="nav-btn galnext-btn" id="next"><i class="bi bi-arrow-right-circle-fill"></i></button>
+			</div>
+			<h1 class="gallery-title">Gallery</h1>
+			<div class="gallery-slider">
+				<button class="nav-btn galprev-btn" id="prev"><i class="bi bi-arrow-left-circle-fill"></i></button>
+				<div class="gallery-container">
+					<div class="gallery">
+						<img src="assets/img/2k191.jpg" alt="Image 1">
+						<img src="assets/img/2k195.jpg" alt="Image 2">
+						<img src="assets/img/main3.jpg" alt="Image 3">
+						<img src="assets/img/main4.jpg" alt="Image 4">
+						<img src="assets/img/main5.jpg" alt="Image 5">
+						<img src="assets/img/main6.jpg" alt="Image 6">
+					</div>
+				</div>
+				<button class="nav-btn galnext-btn" id="next"><i class="bi bi-arrow-right-circle-fill"></i></button>
+			</div>
+		</section> -->
+
+		<!-- Album -->
+		<section class="album-section">
+			<h1 class="album-title">Album</h1>
+			<div class="album-slider">
+				<button class="nav-btn albprev-btn"><i class="bi bi-arrow-left-circle"></i></button>
+				<div class="book" id="flipbook">
+
+				</div>
+				<button class="nav-btn albnext-btn"><i class="bi bi-arrow-right-circle"></i></button>
+			</div>
+		</section>
+
+		<!-- notices and galary section -->
+		<div class="notices-galary-section">
+			<div class="notices-new">
+				<div class="notice-item" data-index="0" role="button" tabindex="0">
+					<div class="notice-content">
+						<h3>Media Coverage</h3>
+						<p>ASHV 2K26 Sponsor Video Launch Covered .</p>
+						<button class="notice-btn" data-index="0">View Notice</button>
+					</div>
+				</div>
+
+				<div class="notice-item" data-index="1" role="button" tabindex="0">
+					<div class="notice-content">
+						<h3>Fest Announcement</h3>
+						<p>MITS Announces ASHV 2026 Techno-Cultural Sports Fest</p>
+						<button class="notice-btn" data-index="1">View Notice</button>
+					</div>
+				</div>
+
+				<div class="notice-item" data-index="2" role="button" tabindex="0">
+					<div class="notice-content">
+						<h3>Press Highlight</h3>
+						<p>ASHV 2K26 Featured in Skyline English Daily.</p>
+						<button class="notice-btn" data-index="2">View Notice</button>
+					</div>
+				</div>
+			</div>
+			<div class="gallery-new">
+
+				<img src="assets/img/2k191.jpg" alt="Image 1">
+				<img src="assets/img/2k195.jpg" alt="Image 2">
+				<img src="assets/img/main3.jpg" alt="Image 3">
+				<img src="assets/img/main4.jpg" alt="Image 4">
+				<img src="assets/img/main5.jpg" alt="Image 5">
+				<img src="assets/img/main6.jpg" alt="Image 6">
+
+			</div>
+		</div>
+
+
+		 
+		<section class="shows-section">
+			<h1 class="shows-title">Shows</h1>
+			<div class="shows-grid">
+				<div class="show">
+					<img src="assets/img/celebrity-night.jpeg" alt="Celebrity Night" class="show-image">
+					<div class="show-content">
+						<h2 class="show-title">Celebrity Night</h2> 
+						 <button class="know-more-btn">Know More</button> 
+					 </div>
+				</div>
+
+				<div class="show">
+					<img src="assets/img/musical-night.jpeg" alt="Comming soon" class="show-image">
+
+					<div class="show-content">
+						<h2 class="show-title">Musical Night</h2> 
+						 <button class="know-more-btn">Know More</button> 
+					</div>
+				</div>
+
+				<div class="show">
+					<img src="assets/img/influencer-meetup.jpeg" alt="Theatre" class="show-image">
+					<div class="show-content">
+						<h2 class="show-title">Influencer MeetUp</h2>
+						 <button class="know-more-btn">Know More</button> 
+					 </div>
+				</div>
+			</div>
+		</section>
+
+
+  <section class="shows-new">
+	<div class="shows-new-heading">
+		<h1 class="shows-title">Shows</h1>
+	</div>
+	<div class="shows-new-content">
+		<div class="shows-new-div">
+			<div class="show-new-data">
+				<h1>Celebrity Night</h1>
+			</div>
+			<div class="show-new-image">
+				<img src="assets/img/celebrity-night.jpeg" alt="">
+			</div>
+		</div>
+		<div class="shows-new-div" id="show-2-new" >
+
+			<div class="show-new-image">
+				<img src="assets/img/musical-night.jpeg" alt="">
+			</div>
+
+			<div class="show-new-data">
+				<h1>Musical Night</h1>
+			</div>
+			
+		</div>
+		<div class="shows-new-div" >
+			<div class="show-new-data">
+				<h1>Influencer MeetUp</h1>
+			</div>
+			<div class="show-new-image">
+				<img src="assets/img/influencer-meetup.jpeg" alt="">
+			</div>
+		</div>
+	</div>
+  </section>
+
+
+		<!-- Events -->
+		<section class="events-section">
+			<div class="container-event">
+				<div class="carousel-wrapper-event">
+					<button class="nav-btn-event prev-event">←</button>
+					<div class="carousel-event">
+						<div class="card">
+							<img src="assets/images/badges/technical.jpeg" alt="Technical">
+							<h3>Technical</h3>
+						</div>
+						<div class="card">
+							<img src="assets/images/badges/cultrals.jpeg" alt="Cultural">
+							<h3>Cultural</h3>
+						</div>
+						<div class="card">
+							<img src="assets/images/badges/Thearte.jpeg" alt="Theatre">
+							<h3>Theatre</h3>
+						</div>
+						<div class="card">
+							<img src="assets/images/badges/ATHLETICS1.jpeg" alt="Athletics">
+							<h3>Athletics</h3>
+						</div>
+						<div class="card">
+							<img src="assets/images/badges/sports.jpeg" alt="Sports">
+							<h3>Sports</h3>
+						</div>
+						<div class="card">
+							<img src="assets/images/badges/Bonus Bonanza.jpeg" alt="Bonus Bananza">
+							<h3>Bonus Bananza</h3>
+						</div>
+					</div>
+					<button class="nav-btn-event next-event">→</button>
+					<button class="auto-scroll-toggle">Auto Scroll: Off</button>
+				</div>
+				<a href="eventTiles.html" class="explore-btn">Explore Events</a>
+			</div>
+		</section>
+
+		<!-- About Ashv -->
+		<section class="ashv-section">
+			<div class="ashv-card">
+				<div class="ashv-content">
+					<div class="left-content">
+						<h2 style="color: rgb(21, 4, 82);">About Ashv 2k26</h2>
+						<p class="ashv-subtitle">The race of talent</p>
+						<p class="ashv-desc">
+							"Experience the enormous excitement at 'Ashv: The Race of Talent', our vibrant two-day
+							Techno-Cultural-Sports Fest! Witness the talents soar in technical and non-technical realms,
+							alongside spirited sports showdowns. Delight your taste buds at diverse food stalls and
+							engage in thrilling fun games. Don't forget to capture the magic with our exciting photo
+							opportunities. Join us for an enriching event filled with talent, camaraderie, and boundless
+							fun! Mark your calendars for an unforgettable experience!"
+						</p>
+					</div>
+
+					<div class="right-content">
+						<h3 class="visit-title">Visit Us</h3>
+						<div class="clg-ad">
+							<p>Madanapalle Institute of Technology & Science</p>
+							<p>Angallu, Madanapalle</p>
+							<p>Andhra Pradesh</p>
+						</div>
+						<button class="directions-btn">
+							Need Directions? <span>→</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="bottom-button">
+					<button class="conclave-btn">Conclave</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<h2 class="footer-heading">Contact Us!</h2>
+		<div class="footer-container">
+			<div class="footer-left">
+				<div class="social-and-contacts">
+					<ul class="social-links">
+						<li>
+							<a href="https://www.instagram.com/mits_ashv?igsh=MXhmOW01eTljc3lvOQ==">
+								<i class="fab fa-instagram"></i> Instagram
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/school/madanapalle-institute-of-technology-&-science/">
+								<i class="fab fa-linkedin"></i> LinkedIn
+							</a>
+						</li>
+						<li>
+							<a href="https://fb.me/e/wH5oN1IyV">
+								<i class="fab fa-facebook"></i> Facebook
+							</a>
+						</li>
+						<li>
+							<a href="https://wa.me/916304038756">
+								<i class="fab fa-whatsapp"></i> WhatsApp
+							</a>
+						</li>
+					</ul>
+
+					<div class="technical-contacts">
+						<p><strong>Technical: </strong>8867462790</p>
+						<p><strong>Cultural: </strong> 8143767320</p>
+						<p><strong>Sports: </strong> 8247432448</p>
+						<p><strong>Theatre: </strong>6309713619</p>
+						<p><strong>Bonus Bonanza: </strong> 7013005304</p>
+						<p><strong>Registrations: </strong> 6304038756</p>
+					</div>
+				</div>
+
+				<button onclick="document.location='creators.html'" class="cta-button">
+					Meet the Creators <i class="fas fa-arrow-right"></i>
+				</button>
+			</div>
+
+
+			<!-- Map and Reach Us (visible only on desktop) -->
+			<div class="map-and-reach-us">
+				<div class="map-container">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31865.074342890974!2d78.49422682941045!3d13.617042201220594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2677c83886ad7%3A0xad73159e2bddda33!2sMadanapalle%20institute%20of%20technology%20and%20Sciences!5e0!3m2!1sen!2sin!4v1735365545296!5m2!1sen!2sin"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="reach-us">
+					<h3>Reach Us</h3>
+					<p>Madanapalle Institute of Technology & Science <br>(Deemed to be University)</p>
+					<p>Post Box No: 14, Kadiri Road</p>
+					<p>Angallu (V), Madanapalle-517325</p>
+					<p>Annamayya District, Andhra Pradesh, India.</p>
+				</div>
+			</div>
+
+			<!-- Reach Us Button (visible only on mobile) -->
+			<button id="reach-us-button" class="cta-button">
+				Reach Us <i class="fas fa-map-marker-alt"></i>
+			</button>
+		</div>
+	</footer>
+
+	<div id="popup" class="popup">
+		<div class="popup-content">
+			<span class="close">&times;</span>
+			<img id="popup-image" src="" alt="Show Image">
+			<h1 id="popup-title"></h1>
+			<p id="popup-description"></p>
+		</div>
+	</div>
+
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/album.js"></script>
+	<script src="./assets/js/pre-loader.js"></script>
+	<script>
+		const shows = [
+			{
+				title: "Celebrity Night",
+				description: "Join us for a star-studded evening with celebrities from various fields. Enjoy performances, interactions, and much more.",
+				image: "https://img.freepik.com/premium-photo/exclamation-mark-among-question-marksaffirmation-concept-3d-render_507676-2268.jpg"
+			},
+			{
+				title: "Musical Night",
+				description: "Experience an enchanting night filled with melodious tunes and captivating performances by renowned artists.",
+				image: "assets/images/cropped-musicalnight.jpg"
+			},
+			{
+				title: "Amusement Stalls",
+				description: "Explore a variety of amusement stalls offering fun games, delicious food, and exciting activities for all ages.",
+				image: "old/assets/images/theatre.jpg"
+			}
+		];
+
+		const popup = document.getElementById('popup');
+		const popupImage = document.getElementById('popup-image');
+		const popupTitle = document.getElementById('popup-title');
+		const popupDescription = document.getElementById('popup-description');
+		const closeBtn = document.querySelector('.close');
+
+		closeBtn.addEventListener('click', () => {
+			popup.classList.remove('active');
+		});
+
+		window.addEventListener('click', (event) => {
+			if (event.target === popup) {
+				popup.classList.remove('active');
+			}
+		});
+
+		document.querySelectorAll('.know-more-btn').forEach((button, index) => {
+			button.addEventListener('click', () => {
+				const show = shows[index];
+				popupImage.src = show.image;
+				popupTitle.textContent = show.title;
+				popupDescription.textContent = show.description;
+				popup.classList.add('active');
+			});
+		});
+
+		// Notices data and handlers
+		const notices = [
+			{
+				title: 'Media Coverage',
+				description: 'ASHV 2K26 Sponsor Video Launch Covered ',
+				image: 'assets/img/n1.jpg'
+			},
+			{
+				title: 'Fest Announcement',
+				description: 'Registrations for technical and cultural events are now open. Visit the registrations page to apply.',
+				image: 'assets/img/n2.jpg'
+			},
+			{
+				title: 'Press Highlight',
+				description: 'ASHV 2K26 Featured in Skyline English Daily.',
+				image: 'assets/img/n5.jpg'
+			}
+		];
+
+		document.querySelectorAll('.notice-btn').forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				e.stopPropagation();
+				const i = Number(btn.dataset.index);
+				const n = notices[i];
+				if (n) {
+					popupImage.src = n.image;
+					popupTitle.textContent = n.title;
+					popupDescription.textContent = n.description;
+					popup.classList.add('active');
+				}
+			});
+		});
+
+		document.querySelectorAll('.notice-item').forEach(item => {
+			item.addEventListener('click', () => {
+				const i = Number(item.dataset.index);
+				const n = notices[i];
+				if (n) {
+					popupImage.src = n.image;
+					popupTitle.textContent = n.title;
+					popupDescription.textContent = n.description;
+					popup.classList.add('active');
+				}
+			});
+
+			item.addEventListener('keydown', (ev) => {
+				if (ev.key === 'Enter' || ev.key === ' ') item.click();
+			});
+		});
+	</script>
+	<script>
+		// Countdown to March 25, 2026
+		const countdownDate = new Date("March 25, 2026 00:00:00").getTime();
+
+		const x = setInterval(function () {
+			const now = new Date().getTime();
+			const distance = countdownDate - now;
+
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("ashv-countdown").innerHTML = "Event Started";
+				return;
+			}
+
+			const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+			document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+			document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+			document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+		}, 1000);
+
+	</script>
+
+	<script>
+		const images = document.querySelectorAll(".gallery-new img");
+
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("show");
+					}
+				});
+			},
+			{
+				threshold: 0.3
+			}
+		);
+
+		images.forEach(img => observer.observe(img));
+	</script>
+
+	<script>
+  AOS.init();
+</script>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </body>
 
 </html>
