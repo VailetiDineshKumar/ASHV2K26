@@ -251,15 +251,9 @@ button {
 	
 	.two6-years-logo img{
 		height: 5.5rem ;
-		width: 3rem;
+		width: 5rem;
 	}
-	.two6-years-logo{
-		display: flex;
-		flex-direction: column;
-		margin-top: 40px;
-		margin-left: 160px;
-	}
-	
+
 }
 
 
@@ -388,7 +382,7 @@ header {
 	
 	.two6-years-logo img{
 		height: 5.5rem;
-		width: 3rem;
+		width: 5rem;
 	}
 	nav {
 		position: absolute;
