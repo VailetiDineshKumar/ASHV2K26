@@ -1745,6 +1745,10 @@ h3 {
 		color: var(--color-primary);
 		border: 1px solid var(--color-accent);
 	}
+	.ashv-section{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
 
 .sidebar-toggle {
