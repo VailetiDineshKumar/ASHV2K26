@@ -779,7 +779,7 @@
                                     <strong class="comit"><br>&emsp;&emsp; Chief Patron</strong>
                                 </div>
                                 <div id="nan">
-                                    <h3 id="nann">Dr. N. Vijaya Bhaskar Choudary, Ph.D</h3><br>
+                                    <h3 id="nann">Dr. N. Vijaya Bhaskar Choudary</h3><br>
                                     <p>Founder & Chancellor</p>
                                     <p style="text-align: center;"> <b style="font-weight: 700;">“The arts and culture
                                             play a vital role in society, shaping our understanding of the world around
@@ -885,11 +885,11 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="old/assets/images/new_principal.jpeg" alt="principal" id="imgg">
-                                    <strong class="comit"><br>&emsp;&emsp;Program</strong>
-                                    <strong class="comit"><br>&emsp;&emsp; Chair</strong>
+                                    <strong class="comit"><br>&emsp;&emsp;Chief</strong>
+                                    <strong class="comit"><br>&emsp;&emsp;Coordinator</strong>
                                 </div>
                                 <div id="nan">
-                                    <h3 id="nann">Dr. C. Yuvaraj, Ph.D</h3><br>
+                                    <h3 id="nann">Dr. C. Yuvaraj</h3><br>
                                     <p>Vice Chancellor</p>
                                     <p style="text-align: center;"> <b style="font-weight: 700;">“MITS fosters student
                                             versatility, preserving
@@ -910,7 +910,7 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="assets/images/faculty/registrar.jfif" alt="registrar" id="imgg">
-                                    <strong class="comit"><br>&emsp;&emsp; Co-Chair</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Coordinator</strong>
                                 </div><br>
                                 <div id="nan">
                                     <h3 id="nann">Dr. D. Pradeep Kumar</h3><br>
@@ -928,10 +928,10 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                              <div class="team-member">
                                 <div class="sir">
                                     <img src="assets/images/faculty/ramanathan.jpeg" alt="basha sir" id="imgg">
-                                    <strong class="comit"><br>&emsp;&emsp; Co-Chair</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Coordinator</strong>
                                 </div><br>
                                 <div id="nan">
-                                    <h3 id="nann">Dr.P.Ramanathan</h3><br>
+                                    <h3 id="nann">Dr. P. Ramanathan</h3><br>
                                     <p>Principal</p>
                                     <p style="text-align: center;"> <b style="font-weight: 700;">“MITS encourages student versatility and cultural enrichment through its ASHV events.” </b></p><br>
                                     <p style="text-align: justify;">
@@ -970,7 +970,7 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                                 </div><br>
                                 <div id="nan">
                                     <h3 id="nann">Dr. C. Kamal Basha</h3><br>
-                                    <p>Vice Principal</p>
+                                    <p>Vice Principal - Administration</p>
                                     <p style="text-align: center;font-weight: 700;">
                                         "The arts and culture sector plays a crucial role in shaping our society,
                                         fostering
@@ -1088,6 +1088,12 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                             </div>
                         </div> --> 
 
+                        <div class="dropdown">Ashv Core Committee Members</div>
+                        <div class="dropdown-content" id="co-com">
+                            <div class="text json-grid" id="core-committee-members">
+                            </div>
+                        </div>
+
                          <div class="dropdown">Co-Conveners</div>
                         <div class="dropdown-content" id="co-con">
                             <div class="text json-grid" id="Co-Conveners">
@@ -1159,10 +1165,14 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
     <script>
 
         const json_object = {
+            "Ashv Core Committee Members": [
+                {"name": "Dr. V. Maruthi Prasad","role": "Senior Asst. Director (Admissions)","image": "assets/images/faculty/maruthi_prasad.jpg"},
+                {"name": "Mr. K. Md. Riyaz Ali","role": "Manager - Parents & Student Affairs","image": "assets/images/faculty/riyaz_ali.jpg"},
+                {"name": "Mr. Syed Ismail","role": "Administrative Officer - P & D","image": "assets/images/faculty/syed_ismail.jpg"}],
             "Co-Conveners": [
                 { "name": "Dr. C. Damodharan", "role": "Physical Director", "image": "assets/images/faculty/damodharan.jpg" },
-                { "name": "Mr. Y. Pradeep Kumar", "role": "Asst.Professor-ECE", "image": "assets/images/faculty/pradeep_kumar.jpg" },
-                { "name": "Mr. V. Naveen", "role": "Asst.Professor-CST", "image": "assets/images/faculty/naveen.jpeg" },
+                { "name": "Mr. Y. Pradeep Kumar", "role": "Manager - Transport", "image": "assets/images/faculty/pradeep_kumar.jpg" },
+                // { "name": "Mr. V. Naveen", "role": "Asst.Professor-CST", "image": "assets/images/faculty/naveen.jpeg" },
                 { "name": "Mrs. M. Sri Lakshmi Preethi", "role": "Asst.Professor-CSC", "image": "assets/images/faculty/sri_lakshmi_preethi.jpeg" },
                 { "name": "Mr. B.S.H Shayeez Ahamed", "role": "Asst.Professor-AI & ML", "image": "assets/images/faculty/shayeezsir.jpeg" }
             ],
@@ -1299,6 +1309,24 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
             /* ] */
         }
 
+        const core_commit = document.getElementById('core-committee-members');
+        json_object["Ashv Core Committee Members"].forEach(member => {
+            const person = document.createElement('div');
+            person.classList.add('person');
+            person.innerHTML = `
+                <div class="image">
+                    <img src="${member.image}" onerror="javascript:this.src='assets/img/avatar.webp'" width=200 height=200 alt="">
+                </div>
+                <div class="details">
+                    <p class="name-role">
+                        <span class="name">${member.name}</span><br>
+                        <span class="role">${member.role}</span>
+                    </p>
+                </div>
+            `;
+            core_commit.appendChild(person);
+        });
+        core_commit.innerHTML += "<div></div><div></div><div></div>"
 
         const co_conveners = document.getElementById('Co-Conveners');
         json_object["Co-Conveners"].forEach(member => {
