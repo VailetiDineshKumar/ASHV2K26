@@ -582,7 +582,7 @@
 			height: auto;
 			padding: 20px 60px;
 			display: flex;
-			background: linear-gradient(to  top, #bebe4f, #59159d);
+			background: linear-gradient(to  top, #8360c3 ,#2ebf91 );
 
 		}
 
@@ -973,7 +973,27 @@
 	.shows-section{
 		display:none
 	}
+	.title-sponser-logo{
+		
+	}
 	
+}
+
+.title-sponser-logo{
+	position: absolute;
+	top:5%;
+	left:33%;
+	transform: translateX(-100%) translateY(90%);
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	gap:10px;
+	height: 85px;
+	width: 85px;
+
 }
 
 		
@@ -1075,10 +1095,10 @@
 		<div style="height: 100%; display: flex;">
 			<div class="two6-years-logo"
 				style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
-				<img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;"
+				<img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;margin-left:120px;margin-top:0px;width:50px;"
 					loading="eager">
-				<img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
-					style="height: 80%; background-color: white; border-radius: 10px;">
+				<!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+					style="height: 80%; background-color: white; border-radius: 10px;"> -->
 				<!-- <a href=""
 					style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-105%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
 					class="title-sponser">Title<br>
@@ -1106,6 +1126,12 @@
 
 		<!-- Hero Section -->
 		<div class="hero">
+			<!-- sponsers logo-->
+			 <div class="title-sponser-logo">
+				
+				<img src="assets/images/sponsors/arva-removebg-preview.png" alt="" style=" background-color: white; border-radius: 10px;height: 6rem;width: 6rem;">
+				<h4 style="text-align: center;">Title <br>sponser</h4>
+			 </div>
 			<!-- <div class="timer-container">
 				<div class="timer-div">
 					<div class="timer" id="days">0</div>
