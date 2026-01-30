@@ -13,7 +13,176 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 
   <style>
-    main {
+   
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===================== MAIN ===================== */
+main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #d63131, #3984a6);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ===================== HEADING ===================== */
+.heading {
+  margin-top: 80px;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f4f6ef;
+  letter-spacing: 1px;
+}
+
+/* ===================== CARD GRID ===================== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+/* ===================== PROFILE CARD ===================== */
+.profile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 240px;
+  padding: 25px 15px 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ===================== IMAGE ===================== */
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #003366;
+  margin-bottom: 10px;
+}
+
+/* ===================== TEXT ===================== */
+.profile-card h2 {
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+.profile-card p {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+/* ===================== SOCIAL LINKS ===================== */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.links a {
+  width: 36px;
+  height: 36px;
+  background: #ffd700;
+  color: #003366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.links a:hover {
+  background: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* ===================== NAV MOBILE ===================== */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(#003366, #003366cc);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    padding: 2rem 0;
+  }
+
+  nav.active {
+    transform: translateY(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  .ashv-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .event-hover ul {
+    display: none;
+  }
+
+  .event-hover:hover ul {
+    display: block;
+  }
+}
+
+/* ===================== TABLET ===================== */
+@media (max-width: 600px) {
+  .profile-card {
+    width: 200px;
+  }
+
+  .heading h1 {
+    font-size: 2.1rem;
+  }
+ 
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 420px) {
+  .profile-card {
+    width: 90%;
+  }
+
+  .heading h1 {
+    font-size: 1.9rem;
+  }
+  
+}
+</style>
+
+    <!-- main {
       background: linear-gradient(to bottom, #d63131, #3984a6);
       padding: 40px 20px;
       text-align: center;
@@ -99,8 +268,8 @@
 
     @media (max-width: 600px) {
       .profile-card { min-width:180px; }
-    }
-  </style>
+    } -->
+  <!-- </style> -->
 </head>
 
 <body>
@@ -160,6 +329,8 @@
     <div class="two6-years-logo"
       style="position: relative; display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
       <img src="assets/27years.png" alt="" class="year-logo" style="height: 80%; scale: 1.5;" loading="eager">
+       <!-- <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
+                    style="height: 90%; background-color: white; border-radius: 10px;"> -->
     </div>
 
     <svg viewBox="0 0 24 24" height="7vh" class="ashv-hamburger" id="hamburger">
@@ -188,7 +359,7 @@
       </div>
 
       <div class="profile-card">
-        <img src="assets/images/creators/Teacher.jpg" alt="R Divya Sree">
+        <img src="assets/images/creators/divyasree.jpg" alt="R Divya Sree">
         <h2>R. Divya Sree</h2>
         <p>III CSE - 23691A0542</p>
         <div class="links">
@@ -198,7 +369,7 @@
       </div>
 
       <div class="profile-card">
-        <img src="assets/images/creators/Chaitra.jpg" alt="A Chaithragna">
+        <img src="assets/images/creators/chaithraa.jpeg" alt="A Chaithragna">
         <h2>A. Chaithragna</h2>
         <p>III CSE - 23691A0526</p>
         <div class="links">
