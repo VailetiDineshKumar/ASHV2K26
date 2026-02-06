@@ -11,6 +11,7 @@
 body {
 	/* background: linear-gradient(#2A2C8D, #A53897); */
 	background-color: #a53897;
+	
 }
 
 ::-webkit-scrollbar {
@@ -502,13 +503,13 @@ main {
 #technical,
 #theatre,
 #sports {
-	background: linear-gradient(#a244dc, #c54baf, #983dad, #b404cb);
+	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 #cultural,
 #athletics,
 #bonus {
-	background: linear-gradient(#b404cb, #983dad, #c54baf, #af2d68);
+	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 /* #technical, #cultural, #theatre, #sports, #athletics, #bonus{
 	

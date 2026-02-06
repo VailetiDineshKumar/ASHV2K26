@@ -904,7 +904,8 @@ header {
 	justify-content: center;
 	padding: 20px;
 	flex-grow: 1;
-background: linear-gradient(to  bottom, #6c3fbe, #51a188);	
+	/* background: linear-gradient(to right, #BF953F, #B9B9B9, #B38728); */ 
+     background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 	
 }
 
@@ -912,7 +913,7 @@ background: linear-gradient(to  bottom, #6c3fbe, #51a188);
 	margin-bottom: 20px;
 	text-align: center;
 	font-size: 3rem;
-	color: rgb(228, 237, 55);
+	color: rgb(43, 5, 149);
 	font-weight: 700;
 }
 
@@ -1027,7 +1028,7 @@ background: linear-gradient(to  bottom, #6c3fbe, #51a188);
 .shows-section {
 	width: 100%;
 	margin: 0 auto;
-	background: linear-gradient(180deg, #0a4c92,#bebe4f);
+	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 .shows-grid {
@@ -1098,7 +1099,8 @@ background: linear-gradient(to  bottom, #6c3fbe, #51a188);
 }
 /* Events */
 .events-section {
-	background: linear-gradient(to top ,#bebe4f,rgb(23, 168, 190));
+	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+
 	padding: 80px 0 20px 0;
 }
 .container-event {
@@ -1107,9 +1109,8 @@ background: linear-gradient(to  bottom, #6c3fbe, #51a188);
 	margin: auto;
 	border-radius: 18px;
 	padding: 20px;
-	background: linear-gradient(135deg, #d610c9, #8f94fb);
+	background: linear-gradient(to right, #BF953F, #B9B9B9, #b1872d);
 }
-
 .carousel-wrapper-event {
 	position: relative;
 	display: flex;
@@ -1245,7 +1246,7 @@ background: linear-gradient(to  bottom, #6c3fbe, #51a188);
 .ashv-section {
 	min-height: 80vh;
 	background-color: #f8feff;
-	background: linear-gradient(to top, #80393d, #072a6d);
+	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 	/* padding: 2rem; */
 	display: flex;
 	align-items: center;
@@ -1253,7 +1254,7 @@ background: linear-gradient(to  bottom, #6c3fbe, #51a188);
 }
 
 .ashv-card {
-	background: linear-gradient(to bottom right, #f5f5dc, #ffd700);
+	background: linear-gradient(to bottom right, #f5f5dc);
 	border-radius: 1.5rem;
 	padding: 3.5rem 3.5rem 2.5rem 5rem;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
