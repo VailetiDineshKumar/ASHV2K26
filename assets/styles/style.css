@@ -905,10 +905,10 @@ header {
 	justify-content: center;
 	padding: 20px;
 	flex-grow: 1;
-	background-image:url(../../backgrounds/image.png) ;
+	/* background-image:url(../../backgrounds/image.png) ;
 	background-size: cover;
-	background-repeat: no-repeat;
-	/* background: linear-gradient(to right, #BF953F, #B9B9B9, #B38728);  */
+	background-repeat: no-repeat; */
+	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
   
 	
 }
