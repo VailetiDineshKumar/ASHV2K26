@@ -908,7 +908,8 @@ header {
 	/* background-image:url(../../backgrounds/image.png) ;
 	background-size: cover;
 	background-repeat: no-repeat; */
-	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+	background: linear-gradient(to right, #3c3c3d, #BF953F, #3c3c3d, #BF953F, #3c3c3d);
+	/* background:linear-gradient(to bottom, #B38728, #1a1a40); */
   
 	
 }
