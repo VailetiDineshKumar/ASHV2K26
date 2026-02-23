@@ -15,57 +15,57 @@
     <style>
 
         .footer {
-            width: 100%;
-            overflow-x: hidden;
-        }
+			width: 100%;
+			overflow-x: hidden;
+		}
 
-        .footer p,
-        .footer a {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            white-space: normal;
-        }
+		.footer p,
+		.footer a {
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			white-space: normal;
+		}
 
-        .social-links {
-            padding: 0;
-            margin: 0;
-        }
+		.social-links {
+			padding: 0;
+			margin: 0;
+		}
 
-        .social-links li {
-            list-style: none;
-            max-width: 100%;
-        }
+		.social-links li {
+			list-style: none;
+			max-width: 100%;
+		}
 
-        .social-links a {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            max-width: 100%;
-            white-space: normal;
-        }
-        @media screen and (max-width: 400px) {
+		.social-links a {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			max-width: 100%;
+			white-space: normal;
+		}
+@media screen and (max-width: 400px) {
 
-            .footer-container {
+			.footer-container {
 
-                flex-direction: column;
-                width: 100%;
-                padding: 1rem;
-                box-sizing: border-box;
-            }
+				flex-direction: column;
+				width: 100%;
+				padding: 1rem;
+				box-sizing: border-box;
+			}
 
-            .footer-left {
-                width: 100%;
-            }
+			.footer-left {
+				width: 100%;
+			}
 
-            .technical-contacts p {
-                font-size: 0.9rem;
-            }
+			.technical-contacts p {
+				font-size: 0.9rem;
+			}
 
-            .cta-button {
-                width: 100%;
-                text-align: center;
-            }
-        }
+			.cta-button {
+				width: 100%;
+				text-align: center;
+			}
+		}
         html {
             scroll-behavior: smooth;
         }
@@ -676,6 +676,7 @@
 </head>
 
 <body>
+    <!-- Preloader -->
     <div class="loader">
         <div id="preloader-container">
             <div id="preloader_1">
@@ -688,8 +689,15 @@
             <img src="./assets/ashv.png" alt="Loader Image">
         </div>
     </div>
+    <!-- Header -->
     <header>
         <div class="mits-logo" style="height: 100%;">
+            <!-- <div class="logo" -->
+				<!-- style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;"> -->
+				<!-- <img src="assets/new-collage-log.PNG" alt="" loading="eager"> -->
+				<!-- <a href="https://www.mits.ac.in/"
+					style="font-size: 0.7rem; color: white; position: absolute;bottom: 0; transform: translateY(100%);">www.mits.ac.in</a> -->
+			<!-- </div> -->
             <div class="title">
                 <div class="upper">MITS</div>
                 <hr>
@@ -715,6 +723,7 @@
                         <li><a href="eventTiles.html#bonus">Bonus Bonanza</a></li>
                     </ul>
                 </li>
+                <!-- <li><a href="registrations.html">Registrations</a></li> -->
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="sponsors.html">Sponsors</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
@@ -727,7 +736,16 @@
                     loading="eager">
                 <img src="assets/images/sponsors/arva-removebg-preview.png" class="year-logo" loading="eager"
                     style="height: 80%; background-color: white; border-radius: 10px;">
-                </div> 
+                <!-- <a href=""
+                    style="position: absolute; bottom: 0; transform: translateY(90%) translateX(-105%); color: #FFD700;right: 0; text-decoration: none; text-align: center;"
+                    class="title-sponser">Title<br>
+                    Sponsor</a>
+                <img src="assets/images/sponsors/aja.jpeg" class="year-logo" loading="eager"
+                    style="height: 80%; background-color: white; border-radius: 10px">
+                <a href=""
+                    style="position: absolute; bottom: 0; transform: translateX(15%) translateY(90%); color: #FFD700;right: 0; text-decoration: none;">Co-Title<br>
+                    Sponsor</a>-->
+            </div> 
         </div>
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="7vh" class="ashv-hamburger"
             id="hamburger">
@@ -758,7 +776,7 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="old/assets/images/correspondentsir.jpg" alt="correspondent" id="imgg">
-                                    <strong class="comit"><br>   Chief Patron</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Chief Patron</strong>
                                 </div>
                                 <div id="nan">
                                     <h3 id="nann">Dr. N. Vijaya Bhaskar Choudary</h3><br>
@@ -795,7 +813,7 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="old/assets/images/keerthimam.jpg" alt="" id="imgg">
-                                    <strong class="comit"><br>   Patron</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Patron</strong>
                                 </div>
                                 <div id="nan">
                                     <h3 id="nann">Mrs. Keerthi Nadella</h3><br>
@@ -833,7 +851,7 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="old/assets/images/dwarakasir.jpg" alt="president" id="imgg">
-                                    <strong class="comit"><br>   Patron</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Patron</strong>
                                 </div>
                                 <div id="nan">
                                     <h3 id="nann">Sri. N. Dwarakanath</h3><br>
@@ -867,8 +885,8 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="old/assets/images/new_principal.jpeg" alt="principal" id="imgg">
-                                    <strong class="comit"><br>  Chief</strong>
-                                    <strong class="comit"><br>  Coordinator</strong>
+                                    <strong class="comit"><br>&emsp;&emsp;Chief</strong>
+                                    <strong class="comit"><br>&emsp;&emsp;Coordinator</strong>
                                 </div>
                                 <div id="nan">
                                     <h3 id="nann">Dr. C. Yuvaraj</h3><br>
@@ -892,7 +910,7 @@
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="assets/images/faculty/registrar.jfif" alt="registrar" id="imgg">
-                                    <strong class="comit"><br>   Coordinator</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Coordinator</strong>
                                 </div><br>
                                 <div id="nan">
                                     <h3 id="nann">Dr. D. Pradeep Kumar</h3><br>
@@ -910,7 +928,7 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                              <div class="team-member">
                                 <div class="sir">
                                     <img src="assets/images/faculty/ramanathan.jpeg" alt="basha sir" id="imgg">
-                                    <strong class="comit"><br>   Coordinator</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Coordinator</strong>
                                 </div><br>
                                 <div id="nan">
                                     <h3 id="nann">Dr. P. Ramanathan</h3><br>
@@ -948,7 +966,7 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                             <div class="team-member">
                                 <div class="sir">
                                     <img src="assets/images/faculty/bashasir.jpg" alt="basha sir" id="imgg">
-                                    <strong class="comit"><br>   Convener</strong>
+                                    <strong class="comit"><br>&emsp;&emsp; Convener</strong>
                                 </div><br>
                                 <div id="nan">
                                     <h3 id="nann">Dr. C. Kamal Basha</h3><br>
@@ -989,7 +1007,88 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                             </div>
                         </div>
                     </div>
-                    <div class="dropdown">Ashv Core Committee Members</div>
+                    <!-- <div class="section">
+                        <div class="dropdown">Co-Conveners</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">Dr.C.Damodharan,</span> <span
+                                        class="role">Physical Director</span></p>
+                                <p class="name-role"><span class="name">Y.Pradeep Kumar,</span> <span
+                                        class="role">Asst.Professor-ECE</span></p>
+                                <p class="name-role"><span class="name">Mr.V.Naveen,</span> <span class="role">Asst.
+                                        Professor-CST</span></p>
+                                <p class="name-role"><span class="name">Mrs.M.Sri Lakshmi Preethi,</span> <span
+                                        class="role">Asst. Professor-CSC</span></p>
+                                <p class="name-role"><span class="name">Mr.B.S.H Shayeez Ahamed,</span> <span
+                                        class="role">Asst. Professor-AI & ML</span></p>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">Faculty Advisors</div>
+                        <div class="dropdown-content">
+                            <div class="text">
+                                <p class="name-role"><span class="name">Dr.P.Ramanathan,</span> <span class="role">Vice
+                                        Principal-Academics</span></p>
+                                <p class="name-role"><span class="name">Dr.R.Kalpana,</span> <span class="role">Vice
+                                        Principal-PG Programmes</span></p>
+                                <p class="name-role"><span class="name">Prof.Goutam Chakraborty,</span> <span
+                                        class="role">Dean-CSE</span></p>
+                                <p class="name-role"><span class="name">Dr.Basabi Chakraborty,</span> <span
+                                        class="role">Dean-CST</span></p>
+                                <p class="name-role"><span class="name">Dr.Sremmant Basu,</span> <span
+                                        class="role">Dean-Admin & IRO</span></p>
+                                <p class="name-role"><span class="name">Mrs.M.Prathibha,</span> <span class="role">
+                                        Sr.Administrative Officer(G.A.D)</span></p>
+                                <p class="name-role"><span class="name">Dr.P.Athahar,</span> <span
+                                        class="role">Sr.Administrative Officer(Students Welfare)</span></p>
+                                <p class="name-role"><span class="name">Dr.B.V.Krishna Roa,</span> <span
+                                        class="role">Advisor-Academics</span></p>
+                                <p class="name-role"><span class="name">Mr.Sathish Hegde,</span> <span
+                                        class="role">Advisor</span></p>
+                                <p class="name-role"><span class="name">Dr.R.Thulasiram Naidu,</span> <span
+                                        class="role">Advisor R & D</span></p>
+                                <p class="name-role"><span class="name">Mr.D.Venugopal Chowdary,</span> <span
+                                        class="role">Head-T & P</span></p>
+                                <p class="name-role"><span class="name">Dr.Dipankar Roy,</span> <span
+                                        class="role">HOD-Civil</span></p>
+                                <p class="name-role"><span class="name">Dr.M.Sreedevi,</span> <span
+                                        class="role">HOD-CSE</span></p>
+                                <p class="name-role"><span class="name">Dr.K.Dinesh,</span> <span
+                                        class="role">HOD-CST</span></p>
+                                <p class="name-role"><span class="name">Dr.K.Chokkanathan,</span> <span
+                                        class="role">HOD-AI</span></p>
+                                <p class="name-role"><span class="name">Dr.S.Kusuma,</span> <span
+                                        class="role">HOD-DS</span></p>
+                                <p class="name-role"><span class="name">Dr.S V S Gangadevi,</span> <span
+                                        class="role">HOD-CSE-CS</span></p>
+                                <p class="name-role"><span class="name">Dr.S.Rajasekaran,</span> <span
+                                        class="role">HOD-ECE</span></p>
+                                <p class="name-role"><span class="name">Dr.A.V.Pavan Kumar,</span> <span
+                                        class="role">HOD-EEE</span></p>
+                                <p class="name-role"><span class="name">Dr.S.Baskaran,</span> <span
+                                        class="role">HOD-ME</span></p>
+                                <p class="name-role"><span class="name">Dr. S. Padma,</span> <span class="role">HOD-AI &
+                                        ML</span></p>
+                                <p class="name-role"><span class="name">Dr.N.Naveen Kumar,</span> <span
+                                        class="role">HOD-MCA</span></p>
+                                <p class="name-role"><span class="name">Dr.K.V.Geetha Devi,</span> <span
+                                        class="role">HOD-MBA</span></p>
+                                <p class="name-role"><span class="name">Dr.P.Ramesh Reddy,</span> <span
+                                        class="role">HOD-Maths</span></p>
+                                <p class="name-role"><span class="name">Dr.M.Chandra Sekhar,</span> <span
+                                        class="role">HOD-Physics</span></p>
+                                <p class="name-role"><span class="name">Dr.Renjith Bhaskaran,</span> <span
+                                        class="role">HOD-Chemistry</span></p>
+                                <p class="name-role"><span class="name">Dr.P.Athahar,</span> <span
+                                        class="role">HOD-English & Foreign Lang</span></p>
+                                <p class="name-role"><span class="name">Mr.V.Maruthi Prasad,</span> <span
+                                        class="role">SMC</span></p>
+                                <p class="name-role"><span class="name">Mrs.M.Prathiba,</span> <span
+                                        class="role">SAO-Admin (GEN)</span></p>
+                            </div>
+                        </div> --> 
+
+                        <div class="dropdown">Ashv Core Committee Members</div>
                         <div class="dropdown-content" id="co-com">
                             <div class="text json-grid" id="core-committee-members">
                             </div>
@@ -1001,11 +1100,24 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                             </div>
                         </div>
 
-<div class="dropdown">Student Members</div>
+<!-- 
+                        <div class="dropdown">Faculty Advisors</div>
+                        <div class="dropdown-content">
+                            <div class="text json-grid" id="faculty-advisors">
+                            </div>
+                        </div> -->
+
+                        <div class="dropdown">Student Members</div>
                         <div class="dropdown-content">
                             <div class="text json-grid" id="student-committee">
                             </div>
                         </div>
+                        <!-- <div class="dropdown">Student Advisors</div>
+                        <div class="dropdown-content">
+                            <div class="text json-grid" id="student-advisors">
+                            </div>
+                        </div> -->
+
                         <style>
                             .person {
                                 width: 100%;
@@ -1034,7 +1146,18 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                             <div class="text json-grid" id="event-heads">
                             </div>
                         </div>
-                        </div> 
+                        <!-- <div class="dropdown">Student Sponsorship Team</div>
+                        <div class="dropdown-content">
+                            <div class="text json-grid" id="student-sponsors">
+                            </div>
+                        </div> -->
+
+                    </div> 
+
+                </div> 
+            </div>
+            </div>
+            </div>
             </div>
         </section>
 
@@ -1110,7 +1233,7 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                 { "name": "J. Shiva Kumar", "dept": "ME", "comi": "Advisor", "image": "assets/images/member/shiva.jpeg" },
                 { "name": "G. Lepakshi", "dept": "CSE", "comi": "Advisor", "image": "assets/images/leepakshi.png" },
                 { "name": "V. Udaya Sree", "dept": "CSE", "comi": "Advisor", "image": "assets/images/member/udaya.jpg" },
-                { "name": "P. Jaya Prakash", "dept": "CAI", "comi": "Advisor", "image": "assets/images/member/jp.jpeg" }
+                { "name": "P. Jaya Prakash", "dept": "CAI", "comi": "Advisor", "image": "assets/images/member/jp.jpeg" },
                 ],
                 "VICE PRESIDENTS": [
                 { "name": "B.VENKATESWARA", "dept": "EEE", "comi": "Vice President", "image": "assets/images/VPs/EEE VP.jpeg" },
@@ -1130,7 +1253,7 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                 { "name": "G. NAGARJUNA", "dept": "M.Tech - ECE", "comi": "Vice President", "image": "assets/images/VPs/1767492409030 - Nagarjuna Guni.jpg" }
                 ],
             "Events Heads": [
-                { "name": "Amrutha.BS", "dept": "", "comi": "Technical", "image":"assets/images/member/Amrutha.jpeg" },
+                { "name": "Amrutha. BS", "dept": "", "comi": "Technical", "image": "assets/images/member/Amrutha.jpeg" },
                 { "name": "V. Wazid", "dept": "", "comi": "Sports", "image": "assets/images/member/Wazid.jpeg" },
                 { "name": "M. Harshavardhan", "dept": "", "comi": "Cultural & Flasmobs", "image": "assets/images/member/harshavardhan.jpeg" },
                 { "name": "P. Meghana", "dept": "", "comi": "Theatre", "image": "assets/images/member/meghana.jpeg" },
@@ -1219,9 +1342,12 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
 
                 { "name": "Jithendra", "dept": "CSN", "comi": "Discipline", "image": "assets/images/member/jitendra.jpeg" },
 
-                { "name": "S. Aji valli", "dept": "ECE", "comi": "Gallery Management", "image": "assets/images/member/aji_valli.jpeg" }
+                { "name": "S. Aji valli", "dept": "ECE", "comi": "Gallery Management", "image": "assets/images/member/aji_valli.jpeg" },
                 // { "name": "Nikhelesh", "dept": "MECH", "comi": "Gallery Management", "image": "" }
-],
+
+
+
+                ],
             /* "STUDENT SPONSORS": [
                 { "name": "D. Manasa", "dept": "MBA", "comi": "", "image": "assets/images/member/manasa.jpg" } */
                 /* { "name": "G. Krupanjali", "dept": "MBA", "comi": "", "image": "assets/images/member/krupanjali.jpg" },
@@ -1422,6 +1548,7 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
             </div>
 
 
+            <!-- Map and Reach Us (visible only on desktop) -->
             <div class="map-and-reach-us">
                 <div class="map-container">
                     <iframe
@@ -1493,7 +1620,6 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // First loop: Ensure initial state based on id
             const dropdownContents = document.querySelectorAll('.dropdown-content');
             dropdownContents.forEach(content => {
                 if (content.id !== 'co-con') {
@@ -1503,43 +1629,54 @@ Over the years, ASHV has continuously expanded in vision and scale, reinforcing 
                 }
             });
 
-            // Second loop: Setup classes and add listeners 
             const dropdowns = document.querySelectorAll('.dropdown');
             dropdowns.forEach(dropdown => {
                 const content = dropdown.nextElementSibling;
-                const isActive = content.id === 'co-con';
+                const isActive = dropdown.classList.contains('active') || content.id === 'co-con';
 
-                // Apply initial active styles directly
+                // Apply initial styles
                 if (isActive) {
                     dropdown.classList.add('active');
                     dropdown.style.borderRadius = '10px 10px 0 0';
                     dropdown.style.marginBottom = '0';
+                    content.style.display = 'flex';
                 } else {
-                    dropdown.classList.remove('active');
                     dropdown.style.borderRadius = '10px';
                     dropdown.style.marginBottom = '2px';
+                    content.style.display = 'none';
                 }
-
-                // Attach listener to toggle on click
-                dropdown.addEventListener('click', () => {
-                    const currentlyActive = dropdown.classList.contains('active');
-                    
-                    dropdown.classList.toggle('active');
-                    content.style.display = currentlyActive ? 'none' : 'flex';
-
-                    // Apply styles directly based on the new state
-                    if (currentlyActive) {
-                        dropdown.style.borderRadius = '10px';
-                        dropdown.style.marginBottom = '2px';
-                    } else {
-                        dropdown.style.borderRadius = '10px 10px 0 0';
-                        dropdown.style.marginBottom = '0';
-                    }
-                });
             });
+        });
+
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', () => {
+                const content = dropdown.nextElementSibling;
+                const isActive = dropdown.classList.contains('active');
+
+                // Toggle active class
+                dropdown.classList.toggle('active');
+
+                // Show content when active, hide when inactive
+                content.style.display = isActive ? 'none' : 'flex';
+
+                // Apply styles directly
+                if (isActive) {
+                    dropdown.style.borderRadius = '10px';
+                    dropdown.style.marginBottom = '2px';
+                } else {
+                    dropdown.style.borderRadius = '10px 10px 0 0';
+                    dropdown.style.marginBottom = '0';
+                }
+            });
+            dropdown.click();
         });
     </script>
     <script src="./assets/js/pre-loader.js"></script>
+</body>
+
+</html>
+<script src="./assets/js/pre-loader.js"></script>
 </body>
 
 </html>
