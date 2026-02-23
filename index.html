@@ -767,7 +767,7 @@
 }
 
 .notice-content:hover {
-  background: linear-gradient(135deg,#e01f2d);
+  background: linear-gradient(135deg,rgb(66, 8, 66));
   transform: scale(1.05) rotate(-1deg);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
@@ -791,24 +791,27 @@
 }
 
 .notice-btn {
-   background: linear-gradient(135deg, #e4da46);
-  border: none;
-  color: #1e1717;
-  padding: 10px 18px;
-  font-weight: bold;
-  border-radius: 50px;
-  cursor: pointer;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	color: var(--color-hover);
+	text-decoration: none;
+	font-weight: 700;
+	
+	font-family: "Poppins";
+	font-size: 1rem;
+	background: linear-gradient(
+		91.53deg,
+		var(--color-accent) 0%,
+		var(--color-secondary) 98.5%
+	);
+	padding: 10px 10px;
+	border-radius: 10px;
+	border: 2px solid var(--color-hover);
 }
 
+.notice-btn:focus,
 .notice-btn:hover {
-  background: linear-gradient(135deg, #9d06a2);
-  color: #dae2e2;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+	outline: 2px solid var(--color-accent);
+	background: var(--color-hover);
+	color: var(--color-text);
 }
 
 
