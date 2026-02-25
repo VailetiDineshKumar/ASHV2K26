@@ -499,25 +499,26 @@ main {
 .section-event {
 	padding: 40px 0 40px 0;
 }
-
+/* 
 #technical,
 #theatre,
 #sports {
-	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+	background: linear-gradient(to right, #4753a9,purple,#4753a9);
 }
 
 #cultural,
 #athletics,
 #bonus {
-	background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-}
-/* #technical, #cultural, #theatre, #sports, #athletics, #bonus{
+	background: linear-gradient(to right,purple,#040c48,purple);
+} */
+#technical, #cultural, #theatre, #sports, #athletics, #bonus{
 	
 	background-color: #8304CB;
-} */
-/* background: linear-gradient(
-		#003366,#8304CB
-	); */
+	background: linear-gradient(
+		brown,#4c0874
+	);
+}
+
 #technical {
 	box-shadow: 0 -15px 10px 10px #aa2f5f;
 	z-index: 2;
