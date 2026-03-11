@@ -18,6 +18,21 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<style>
+		/* Hide button by default (Laptop/Desktop) */
+.mobile-only{
+    display:none;
+}
+
+/* Show only on mobile screens */
+@media (max-width:768px){
+    .mobile-only{
+        display:inline-block;
+        padding:12px 25px;
+        font-size:1rem;
+        margin-top:10px;
+        cursor:pointer;
+    }
+}
 		.carousel-event {
 			display: flex;
 			overflow-x: auto;
@@ -517,9 +532,7 @@
 				gap: 0.2rem;
 			}
 
-			.album-section {
-				background-color: ;
-			}
+			
 
 			.timer-box {
 				padding: 0.5rem 0.6rem;
@@ -1305,39 +1318,7 @@
 		</div>
 	</div>
 	<!-- Notification -->
-	<div class="notifications">
-		<div class="notification notification-1">
-			<div class="short">
-				<h3>
-					<!-- <img src="assets/images/kiran-abbavaramNotification.jpg" alt=""
-						style=" height: 70px;aspect-ratio:1; border-radius: 50vw;object-fit: cover;"> -->
-					<div class="notification-content">
-						<marquee behavior="" direction="" style="font-size: 1.5rem;cursor: pointer;">Ashv teaser
-							<!-- launch by <strong>Actor
-								Kiran Abbavaram's Dilruba
-								Team</strong> -->
-						</marquee>
-						<!-- <p>18<sup>th</sup> Jan 2025</p> -->
-					</div>
-				</h3>
-			</div>
-			<div class="content" style="height: 100%; flex-direction: column; align-items: flex-start;">
-				<marquee behavior="" direction="">Ashv teaser
-					<!-- launch byActor Kiran Abbavaram's Dilruba Team -->
-				</marquee>
-				</h1>
-				<!-- <p>18 Jan 2025</p> -->
-				<video src="assets/images/ashv2k25.mp4"
-					style="width: 90%; max-height: 80%; aspect-ratio: 16/9; margin-inline: auto; align-self: center;"
-					controls></video>
-			</div>
-			<div class="close-button">
-				<button>
-					<i class="bi bi-x"></i>
-				</button>
-			</div>
-		</div>
-	</div>
+	
 	<!-- Header -->
 	<header style="background: none; box-shadow: none;">
 		<div class="mits-logo" style="height: 100%;">
@@ -1377,6 +1358,83 @@
 				<li><a href="gallery.html">Gallery</a></li>
 				<li><a href="sponsors.html">Sponsors</a></li>
 				<li><a href="contactus.html">Contact Us</a></li>
+				<button class="teaser-btn" onclick="openVideo()">Ashv Teaser</button>
+
+<div id="videoPopup" class="video-popup" onclick="outsideClick(event)">
+    <div class="video-box">
+        <span class="close-btn" onclick="closeVideo()">✖</span>
+        <video id="teaserVideo" src="assets/images/ashv2k25.mp4" controls></video>
+    </div>
+</div>
+
+<style>
+.teaser-btn{
+	background: linear-gradient(91.53deg, #ffd700 0%, #ffefa9 98.5%);
+	color:#084f96;
+	font-weight: bold;
+	border-radius: 30px;
+    padding:5px 20px;
+    font-size:1.2rem;
+    cursor:pointer;
+}
+
+.video-popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.video-box{
+    position:relative;
+    width:90%;
+    max-width:800px;
+}
+
+.video-box video{
+    width:100%;
+    border-radius:10px;
+}
+
+.close-btn{
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    background:white;
+    color:black;
+    font-size:18px;
+    width:35px;
+    height:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    cursor:pointer;
+    font-weight:bold;
+}
+</style>
+
+<script>
+function openVideo(){
+    document.getElementById("videoPopup").style.display = "flex";
+}
+
+function closeVideo(){
+    const video = document.getElementById("teaserVideo");
+    video.pause();
+    video.currentTime = 0;
+    document.getElementById("videoPopup").style.display = "none";
+}
+
+function outsideClick(event){
+    if(event.target.id === "videoPopup"){
+        closeVideo();
+    }
+}
+</script>
 			</ul>
 		</nav>
 		<div style="height: 100%; display: flex;">
@@ -1467,10 +1525,14 @@
 				</div>
 			</div>
 			<a href="eventTiles.html" class="explore-events">Explore Events</a>
-			<img class="left-horse horse" src="assets/img/horse.png" alt="" loading="eager">
-			<img class="right-horse horse" src="assets/img/horse.png" alt="" loading="eager">
-			<img class="cloud-background" src="assets/img/bg clouds.png" alt="" loading="eager">
-			<div class="cloud-overlay" style="background: none;"></div>
+
+<button class="teaser-btn mobile-only" onclick="openVideo()">Ashv Teaser</button>
+
+<img class="left-horse horse" src="assets/img/horse.png" alt="" loading="eager">
+<img class="right-horse horse" src="assets/img/horse.png" alt="" loading="eager">
+<img class="cloud-background" src="assets/img/bg clouds.png" alt="" loading="eager">
+<div class="cloud-overlay" style="background: none;"></div>
+
 		</div>
 
 		<!-- Guests -->
@@ -1718,7 +1780,7 @@
 				</div>
 
 				<div class="bottom-button">
-					<button class="conclave-btn">Conclave</button>
+					<button class="conclave-btn">Visit  MITS  Website</button>
 				</div>
 			</div>
 		</section>

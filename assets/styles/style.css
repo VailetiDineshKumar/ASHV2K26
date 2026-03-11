@@ -811,8 +811,8 @@ header {
 		var(--color-accent) 0%,
 		var(--color-secondary) 98.5%
 	);
-	padding: 0.5rem 2.75rem;
-	border-radius: 10px;
+	padding: 1rem 1rem;
+	border-radius: 30px;
 	border: 2px solid var(--color-hover);
 }
 
