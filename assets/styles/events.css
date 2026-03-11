@@ -499,25 +499,27 @@ main {
 .section-event {
 	padding: 40px 0 40px 0;
 }
-/* 
+
 #technical,
 #theatre,
 #sports {
-	background: linear-gradient(to right, #4753a9,purple,#4753a9);
+	background: linear-gradient(
+		rgb(186, 28, 120),#3dabca);
 }
 
 #cultural,
 #athletics,
 #bonus {
-	background: linear-gradient(to right,purple,#040c48,purple);
-} */
-#technical, #cultural, #theatre, #sports, #athletics, #bonus{
+	background: linear-gradient(
+		rgb(186, 28, 120),#3dabca);
+}
+/* #technical, #cultural, #theatre, #sports, #athletics, #bonus{
 	
 	background-color: #8304CB;
 	background: linear-gradient(
-		brown,#4c0874
+		rgb(186, 28, 120),#3dabca
 	);
-}
+} */
 
 #technical {
 	box-shadow: 0 -15px 10px 10px #aa2f5f;
