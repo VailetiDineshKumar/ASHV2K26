@@ -1300,7 +1300,104 @@
 				width: 15px;
 			}
 		}
-	</style>
+
+		/* Singer Section */
+/* Singer Card */
+
+/* SECTION */
+
+.singers-section{
+	padding:100px 20px;
+	background:#070b14;
+	text-align:center;
+}
+
+/* TITLE */
+
+.singers-title{
+	font-size:3rem;
+	color:#00ffff;
+	letter-spacing:4px;
+	margin-bottom:60px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+/* GRID */
+
+.singers-grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+	gap:40px;
+	max-width:1100px;
+	margin:auto;
+}
+
+/* CARD */
+
+.singer-card{
+	position:relative;
+	border-radius:18px;
+	overflow:hidden;
+	cursor:pointer;
+	transform:scale(1);
+	transition:0.4s;
+}
+
+/* IMAGE */
+
+.singer-img{
+	width:100%;
+	height:320px;
+	object-fit:cover;
+	display:block;
+}
+
+/* NEON BORDER */
+
+.singer-card::before{
+	content:"";
+	position:absolute;
+	inset:-2px;
+	border-radius:20px;
+	background:linear-gradient(45deg,#00ffff,#ff00ff,#00ffff);
+	z-index:-1;
+	filter:blur(8px);
+	opacity:0;
+	transition:0.4s;
+}
+
+/* HOVER */
+
+.singer-card:hover{
+	transform:translateY(-12px) scale(1.03);
+}
+
+.singer-card:hover::before{
+	opacity:1;
+}
+
+/* OVERLAY */
+
+.singer-overlay{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	background:linear-gradient(transparent,rgba(0,0,0,0.9));
+	padding:25px;
+	text-align:left;
+}
+
+.singer-overlay h3{
+	color:#fff;
+	font-size:1.4rem;
+}
+
+.singer-overlay p{
+	color:#00ffff;
+	font-size:0.9rem;
+	letter-spacing:2px;
+}
+</style>
 </head>
 
 <body>
@@ -1556,6 +1653,50 @@ function outsideClick(event){
 			</div>
 		</section>
 
+
+		<!-- Singer Section -->
+		 <!-- <section class="singers-section">
+	<div class="singers-wrapper">
+
+		<h1 class="singers-title">Live Performers</h1>
+
+		<div class="singers-grid">
+
+			<div class="singer-card">
+				<img src="assets/images/celebrities/s1.jpg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Singer 1</h3>
+					<p>Live Performance</p>
+				</div>
+			</div>
+
+			<div class="singer-card">
+				<img src="assets/images/celebrities/s2.jpg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Singer 2</h3>
+					<p>Live Performance</p>
+				</div>
+			</div>
+
+			<div class="singer-card">
+				<img src="assets/images/celebrities/s3.jpg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Singer 3</h3>
+					<p>Live Performance</p>
+				</div>
+			</div>
+
+			<div class="singer-card">
+				<img src="assets/images/celebrities/s4.jpg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Singer 4</h3>
+					<p>Live Performance</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section> -->
 		<!-- Gallery -->
 
 		<!-- <section class="gallery-section">
