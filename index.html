@@ -300,22 +300,19 @@
 
 		@media (max-width: 600px) {
 			.notices-galary-section {
-				background: linear-gradient(to right, #581dc4, #B38728, #581dc4) !important;
+				background: linear-gradient(135deg, #000428, #004e92);
 			}
 
 		}
 
 		@media (max-width: 600px) {
-			.album-section {
-				background: linear-gradient(to right, #3c3c3d, #BF953F, #3c3c3d);
-			}
-
+			
 			.events-section {
 				background: linear-gradient(to right, #7b2d0d, #B38728, #7b2d0d);
 			}
 
 			.shows-new {
-				background: linear-gradient(to right, #541067, #B38728, #541067);
+				background: linear-gradient(135deg,#6A0DAD,#1F3A93,#FFD700);
 
 			}
 
@@ -583,7 +580,8 @@
 			height: auto; */
 			/* padding: 20px 60px; */
 			/* display: flex; */
-			background: linear-gradient(to right, #581dc4, #BF953F, #581dc4, #B38728, #581dc4);
+			background: linear-gradient(135deg, #000428, #004e92);
+			/* background: linear-gradient(to right, #581dc4, #BF953F, #581dc4, #B38728, #581dc4); */
 			/* background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); */
 		}
 
@@ -630,6 +628,7 @@
 			height: auto; */
 			padding: 20px 60px;
 			display: flex;
+			height: 70vh;
 			/* background: linear-gradient(to right,#581dc4, #BF953F,#581dc4, #B38728, #581dc4); */
 			/* background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); */
 		}
@@ -637,19 +636,19 @@
 
 
 		/* Notices column */
-		.notices-new {
-			display: flex;
-			flex-direction: column;
-			gap: 16px;
-			min-width: 30%;
-			margin: 20px 0px;
-		}
+		.notices-new{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:nowrap;
+margin:auto;
+}
 
 		.notice-item {
 			display: flex;
 			align-items: center;
 			gap: 12px;
-
 			padding: 12px;
 			border-radius: 8px;
 			cursor: pointer;
@@ -664,6 +663,10 @@
 			opacity: 0;
 			transform: rotate(0deg) scale(0.9);
 			transition: all 0.9s ease;
+		}
+		.gallery-new{
+			height: 70vh;
+			background: linear-gradient(135deg,#254e60,#203A43,#00C9FF);
 		}
 
 		/* When image becomes visible */
@@ -717,7 +720,7 @@
 				flex-direction: column;
 				flex-wrap: nowrap;
 				overflow-x: auto;
-				max-height: 200px;
+				
 				border: 5px solid whitesmoke;
 				padding: 20px;
 				overflow-y: hidden;
@@ -766,7 +769,7 @@
 
 
 		.notice-content {
-			background: #12243f;
+			background: linear-gradient(135deg, #BF953F, #B38728, #AA771C);
 			border-radius: 16px;
 			padding: 1rem 2rem;
 			backdrop-filter: blur(8px) saturate(150%);
@@ -805,18 +808,16 @@
 		}
 
 		.notice-btn {
-			color: var(--color-hover);
+			color: white ;
 			text-decoration: none;
 			font-weight: 700;
 
 			font-family: "Poppins";
 			font-size: 1rem;
-			background: linear-gradient(91.53deg,
-					var(--color-accent) 0%,
-					var(--color-secondary) 98.5%);
+			background: rgb(7, 50, 49);
 			padding: 10px 10px;
-			border-radius: 10px;
-			border: 2px solid var(--color-hover);
+			border-radius: 20px;
+			border: 2px solid white;
 		}
 
 		.notice-btn:focus,
@@ -1305,7 +1306,17 @@
 	<!-- Notification -->
 	
 	<!-- Header -->
-	<header style="background: none; box-shadow: none;">
+	<header style="background: linear-gradient(
+90deg,
+rgba(92,83,70,0.85),
+rgba(92,83,70,0.75),
+rgba(92,83,70,0.65),
+rgba(92,83,70,0.75),
+rgba(92,83,70,0.85)
+);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+box-shadow: 0 4px 20px rgba(0,0,0,0.4);; box-shadow: none;">
 		<div class="mits-logo" style="height: 100%;">
 			<!-- <div class="logo"
 				style="display: flex; flex-direction: column; align-items: center;justify-content: center; position: relative;"> -->
@@ -1574,14 +1585,32 @@ function outsideClick(event){
 		</section> -->
 
 		<!-- Album -->
-		<section class="album-section">
-			<!-- <h1 class="album-title">Album</h1> -->
+		 
+		<!-- <section class="album-section">
+			
 			<div class="album-slider">
 				<button class="nav-btn albprev-btn"><i class="bi bi-arrow-left-circle"></i></button>
 				<div class="book" id="flipbook">
 
 				</div>
 				<button class="nav-btn albnext-btn"><i class="bi bi-arrow-right-circle"></i></button>
+			</div>
+			<style>
+				
+			</style>
+		</section> -->
+		<section>
+		
+			<div class="gallery-new">
+				
+
+				<img src="assets/img/2k191.jpg" alt="Image 1">
+				<img src="assets/img/2k195.jpg" alt="Image 2">
+				<img src="assets/img/main3.jpg" alt="Image 3">
+				<img src="assets/img/main4.jpg" alt="Image 4">
+				<img src="assets/img/main5.jpg" alt="Image 5">
+				<img src="assets/img/main6.jpg" alt="Image 6">
+
 			</div>
 		</section>
 
@@ -1612,16 +1641,7 @@ function outsideClick(event){
 					</div>
 				</div>
 			</div>
-			<div class="gallery-new">
-
-				<img src="assets/img/2k191.jpg" alt="Image 1">
-				<img src="assets/img/2k195.jpg" alt="Image 2">
-				<img src="assets/img/main3.jpg" alt="Image 3">
-				<img src="assets/img/main4.jpg" alt="Image 4">
-				<img src="assets/img/main5.jpg" alt="Image 5">
-				<img src="assets/img/main6.jpg" alt="Image 6">
-
-			</div>
+			
 		</div>
 
 
