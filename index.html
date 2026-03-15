@@ -1682,6 +1682,19 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.4);; box-shadow: none;">
     cursor:pointer;
     font-weight:bold;
 }
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .teaser-btn{
+        display: none;
+    }
+}
+
+/* Show on laptop / desktop */
+@media (min-width: 769px) {
+    .teaser-btn{
+        display: inline-block;
+    }
+}
 
 </style>
 
@@ -1793,13 +1806,92 @@ function outsideClick(event){
 				</div>
 			</div>
 			<a href="eventTiles.html" class="explore-events">Explore Events</a>
+			
 			<img class="left-horse horse" src="assets/img/horse.png" alt="" loading="eager">
 			<img class="right-horse horse" src="assets/img/horse.png" alt="" loading="eager">
 			<img class="cloud-background" src="assets/img/bg clouds.png" alt="" loading="eager">
 			<div class="cloud-overlay" style="background: none;"></div>
 			
 			
+			<button class="teaser-btn" onclick="openVideo()">Ashv Teaser</button>
+
+<div id="videoPopup" class="video-popup" onclick="outsideClick(event)">
+    <div class="video-box">
+        <span class="close-btn" onclick="closeVideo()">✖</span>
+        <video id="teaserVideo" src="assets/images/ashv2k25.mp4" controls></video>
+    </div>
+</div>
+<style>
+	
+/* Hidden by default */
+.video-popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.video-box{
+    position:relative;
+    width:90%;
+    max-width:800px;
+}
+
+.video-box video{
+    width:100%;
+    border-radius:10px;
+}
+
+.close-btn{
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    background:white;
+    color:black;
+    font-size:18px;
+    width:35px;
+    height:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    cursor:pointer;
+    font-weight:bold;
+}
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .teaser-btn{
+        display: none;
+    }
+}
+
+/* Show on laptop / desktop */
+
+.teaser-btn{
+    display: none;
+    background: linear-gradient(91.53deg, #ffd700 0%, #ffefa9 98.5%);
+    font-weight: bold;
+    border-radius: 30px;
+    padding:5px 20px;
+    font-size:1.2rem;
+    cursor:pointer;
+}
+
+/* Show button only on mobile screens */
+@media (max-width: 768px){
+    .teaser-btn{
+        display: inline-block;
+    }
+}
+</style>
 		</div>
+		
 
 		<!-- Guests -->
 		<section class="guests-section">
