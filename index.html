@@ -308,17 +308,16 @@
 		@media (max-width: 600px) {
 			
 			.events-section {
-				background: linear-gradient(to right, #7b2d0d, #B38728, #7b2d0d);
+				background: linear-gradient(to right,#4f1b06,#4f1b06, #552411);
 			}
 
 			.shows-new {
-				background: linear-gradient(135deg,#6A0DAD,#1F3A93,#FFD700);
-
+					background: linear-gradient(to right,#30033c, #30033c,#541067);
 			}
 
 
 			.ashv-section {
-				background: linear-gradient(to right, #660a49, #B38728, #660a49);
+				background: linear-gradient(to right, #320323, #320323,#3b082b);
 			}
 
 			.ashv-tagline {
@@ -665,8 +664,9 @@ margin:auto;
 			transition: all 0.9s ease;
 		}
 		.gallery-new{
-			height: 80vh;
-			background: linear-gradient(135deg,#254e60,#203A43,#00C9FF);
+			/* background: linear-gradient(135deg,#254e60,#203A43,#00C9FF); */
+			height: 100vh;
+			
 		}
 
 		/* When image becomes visible */
@@ -1098,7 +1098,7 @@ margin:auto;
 		}
 
 		.guests-title {
-			color: #FFB300;
+			color: gold;
 			font-size: 3.5rem;
 			margin-bottom: 70px;
 			text-transform: uppercase;
@@ -1633,6 +1633,7 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.4);; box-shadow: none;">
 </div>
 <style>
 	.teaser-btn{
+	color: #084f96;
     background: linear-gradient(91.53deg, #ffd700 0%, #ffefa9 98.5%);
     font-weight: bold;
     border-radius: 30px;
@@ -1813,18 +1814,18 @@ function outsideClick(event){
 			<div class="cloud-overlay" style="background: none;"></div>
 			
 			
-			<button class="teaser-btn" onclick="openVideo()">Ashv Teaser</button>
+			<button class="teaser-btnn" onclick="openVideo()">Ashv Teaser</button>
 
-<div id="videoPopup" class="video-popup" onclick="outsideClick(event)">
-    <div class="video-box">
-        <span class="close-btn" onclick="closeVideo()">✖</span>
-        <video id="teaserVideo" src="assets/images/ashv2k25.mp4" controls></video>
+<div id="videoPopupp" class="video-popupp" onclick="outsideClick(event)">
+    <div class="video-boxx">
+        <span class="close-btnn" onclick="closeVideo()">✖</span>
+        <video id="teaserVideoo" src="assets/images/ashv2k25.mp4" controls></video>
     </div>
 </div>
 <style>
 	
 /* Hidden by default */
-.video-popup{
+.video-popupp{
     display:none;
     position:fixed;
     top:0;
@@ -1837,18 +1838,24 @@ function outsideClick(event){
     z-index:9999;
 }
 
-.video-box{
+.video-boxx{
     position:relative;
     width:90%;
-    max-width:800px;
+    max-width:700px;
 }
 
-.video-box video{
+.video-boxx video{
     width:100%;
     border-radius:10px;
 }
 
-.close-btn{
+.teaser-wrapper{
+    position:relative;
+    display:inline-block;
+}
+
+
+.close-btnn{
     position:absolute;
     top:-12px;
     right:-12px;
@@ -1866,30 +1873,52 @@ function outsideClick(event){
 }
 /* Hide on mobile */
 @media (max-width: 768px) {
-    .teaser-btn{
+    .teaser-btnn{
         display: none;
     }
 }
 
 /* Show on laptop / desktop */
 
-.teaser-btn{
-    display: none;
+.teaser-btnn{
+    display:none;
+	color: #084f96;
     background: linear-gradient(91.53deg, #ffd700 0%, #ffefa9 98.5%);
-    font-weight: bold;
-    border-radius: 30px;
+    font-weight:bold;
+    border-radius:30px;
     padding:5px 20px;
     font-size:1.2rem;
     cursor:pointer;
 }
 
 /* Show button only on mobile screens */
-@media (max-width: 768px){
-    .teaser-btn{
-        display: inline-block;
+@media (max-width:768px){
+.teaser-btnn{
+    display:inline-block;
+}
+}
+
+</style>
+<script>
+
+function openVideo(){
+    document.getElementById("videoPopupp").style.display="flex";
+}
+
+function closeVideo(){
+    const video=document.getElementById("teaserVideoo");
+    video.pause();
+    video.currentTime=0;
+    document.getElementById("videoPopupp").style.display="none";
+}
+
+function outsideClick(event){
+    if(event.target.id==="videoPopupp"){
+        closeVideo();
     }
 }
-</style>
+
+</script>
 		</div>
 		
 
@@ -2008,23 +2037,108 @@ function outsideClick(event){
 				
 			</style>
 		</section> -->
-		<section>
-		
-			<div class="gallery-new">
-				
+		<section class="gal" style="background: linear-gradient(135deg,#254e60,#203A43,#00C9FF); ">
+			<center>
 
-				<img src="assets/img/2k191.jpg" alt="Image 1">
-				<img src="assets/img/2k195.jpg" alt="Image 2">
-				<img src="assets/img/main3.jpg" alt="Image 3">
-				<img src="assets/img/main4.jpg" alt="Image 4">
-				<img src="assets/img/main5.jpg" alt="Image 5">
-				<img src="assets/img/main6.jpg" alt="Image 6">
+  <h1 class="singers-title" style="padding-top: 50px;" >Event Gallery</h1>
+  </center>
 
-			</div>
-		</section>
+  <div class="gallery-new">
+    <img src="assets/img/2k191.jpg" onclick="openImage(this)">
+    <img src="assets/img/2k195.jpg" onclick="openImage(this)">
+    <img src="assets/img/main3.jpg" onclick="openImage(this)">
+    <img src="assets/img/main4.jpg" onclick="openImage(this)">
+    <img src="assets/img/main5.jpg" onclick="openImage(this)">
+    <img src="assets/img/main6.jpg" onclick="openImage(this)">
+  </div>
+
+</section>
+
+<div id="imgPopup" class="img-popup">
+    <span class="popup-close" onclick="closeImage()">✖</span>
+    <img id="popupImg">
+</div>
+<style>
+
+	.gallery-new{
+    display:grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content:center;   /* centers the images horizontally */
+    gap:20px;
+}
+
+.gallery-new img{
+    width:100%;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery-new img:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Mobile */
+@media (max-width:768px){
+.gallery-new{
+    grid-template-columns: repeat(2,1fr);
+}
+}
+
+/* Popup */
+.img-popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.img-popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+/* Close button */
+.popup-close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+/* Mobile */
+@media (max-width:768px){
+.gallery-new{
+  grid-template-columns:repeat(2,1fr);
+}
+}
+</style>
+<script>
+function openImage(img){
+  document.getElementById("imgPopup").style.display="flex";
+  document.getElementById("popupImg").src = img.src;
+}
+
+function closeImage(){
+  document.getElementById("imgPopup").style.display="none";
+}
+</script>
 
 		<!-- notices and galary section -->
 		<div class="notices-galary-section">
+			<center>
+			<h1 class="singers-title">Notices</h1>
+			</center>
 			<div class="notices-new">
 				<div class="notice-item" data-index="0" role="button" tabindex="0">
 					<div class="notice-content">
@@ -2137,7 +2251,9 @@ function outsideClick(event){
 
 
 		<section class="shows-section">
-			<!-- <h1 class="shows-title" style="color: navy;">Shows</h1> -->
+			<center>
+			<h1 class="singers-title" style="padding-top:30px" >Shows</h1>
+			</center>
 			<div class="shows-grid">
 				<div class="show">
 					<img src="assets/img/celebrity-night.jpeg" alt="Celebrity Night" class="show-image">
@@ -2169,7 +2285,7 @@ function outsideClick(event){
 
 		<section class="shows-new">
 			<div class="shows-new-heading">
-				<!-- <h1 class="shows-title">Shows</h1> -->
+				<h1 class="singers-title" style="padding-top:60px">Shows</h1>
 			</div>
 			<div class="shows-new-content">
 				<div class="shows-new-div">
@@ -2205,9 +2321,12 @@ function outsideClick(event){
 
 		<!-- Events -->
 		<section class="events-section">
+			<center>
+			<h1 class="singers-title">Events section</h1>
+			</center>
 			<div class="container-event">
 				<div class="carousel-wrapper-event">
-					<button class="nav-btn-event prev-event">←</button>
+					
 					<div class="carousel-event">
 						<div class="card">
 							<img src="assets/images/badges/technical.jpeg" alt="Technical">
@@ -2234,7 +2353,7 @@ function outsideClick(event){
 							<h3>Bonus Bananza</h3>
 						</div>
 					</div>
-					<button class="nav-btn-event next-event">→</button>
+					
 					<button class="auto-scroll-toggle">Auto Scroll: Off</button>
 				</div>
 				<a href="eventTiles.html" class="explore-btn">Explore Events</a>
@@ -2243,6 +2362,8 @@ function outsideClick(event){
 
 		<!-- About Ashv -->
 		<section class="ashv-section">
+			<center>
+			<h1 class="singers-title" > About Ashv 2k26</h1>
 			<div class="ashv-card">
 				<div class="ashv-content">
 					<div class="left-content">
