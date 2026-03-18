@@ -964,6 +964,7 @@ margin:auto;
 		}
 
 		.shows-new {
+			height: 130vh;
 			width: 100%;
 			display: none;
 			/* hidden by default (desktop) */
@@ -1931,7 +1932,7 @@ function outsideClick(event){
 						<div class="guest-img-wrapper">
 							<div class="guest-ring-gold"></div>
 							<div class="guest-ring-dark"></div>
-							<img src="assets/images/celebrities/Sharwanand.webp" alt="Actor Sharwanand" class="guest-img"
+							<img src="assets/images/celebrities/SHARWANAND.jpeg" alt="Actor Sharwanand" class="guest-img"
 								loading="lazy">
 						</div>
 						<div class="guest-info">
@@ -1963,7 +1964,7 @@ function outsideClick(event){
 				<img src="assets/images/celebrities/s2.jpg" class="singer-img">
 				<div class="singer-overlay">
 					<h3>Lipsika Bhashyam</h3>
-					<p >Live Performance</p>
+				
 				</div>
 			</div>
 
@@ -1979,14 +1980,101 @@ function outsideClick(event){
 				<img src="assets/images/celebrities/sagar.png" class="singer-img">
 				<div class="singer-overlay">
 					<h3>Vidya Sagar</h3>
-					<p>Live Performance</p>
+				
 				</div>
 			</div>
-
+			
+			
 		</div>
 	</div>
 </section> 
+<div class="div">
+	<h1 class="singers-title">Comedian</h1>
+		<div class="comedian-card">
+			<img src="assets/images/celebrities/saddam.png" class="comedian-img">
+			<div class="comedian-overlay">
+			</div>
+		</div>
+		<h3 class="fontt">Saddam Hussain</h3>
+</div>
+	<style>
+	.div{
+		background: linear-gradient(to right,rgb(122, 21, 100),rgb(122, 21, 60),rgb(122, 21, 100));
+		height: 80vh;
+		padding-top: 100px;
+	}
+    .fontt{
+	font-size:2rem;
+	color:white;
+	font-family: 'Orbitron', sans-serif;
+	font-weight:700;
+	text-transform:uppercase;
+	
+	}
+	body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f5f5;
+}
+.comedian-card {
+    position: relative;
+    width: 90%;
+    max-width: 320px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: white;
+}
 
+.comedian-img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.comedian-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.comedian-card:hover .comedian-overlay {
+    background: rgba(0,0,0,0.3);
+}
+
+h3 {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Mobile 📱 */
+@media (max-width: 768px) {
+    
+    h3 {
+        font-size: 18px;
+    }
+}
+
+/* Laptop 💻 */
+@media (min-width: 769px) {
+	.div{
+		padding-top: 50px;
+	}
+    .comedian-card {
+        max-width: 380px;
+    }
+
+  
+    h3 {
+        font-size: 22px;
+    }
+}
+	</style>
 		<!-- Gallery -->
 
 		<!-- <section class="gallery-section">
