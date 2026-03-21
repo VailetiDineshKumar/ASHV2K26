@@ -739,7 +739,7 @@
                 "events": [
                     {
                         "name": "100m Race - Men",
-                        "price": 200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/cd55wLxiDRW68MSS9",
                         "image": "assets/images/100m_men.jpeg",
                         "description": "Race to glory in the 100m sprint. A thrilling competition for speed enthusiasts."
@@ -760,7 +760,7 @@
                     // },
                     {
                         "name": "100m Race - Women",
-                        "price": 200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/cd55wLxiDRW68MSS9",
                         "image": "assets/images/100m_women.jpeg",
                         "description": "Sprint to victory in the 100m race. A high-energy competition for women athletes."
@@ -786,21 +786,21 @@
                 "events": [
                     {
                         "name": "Cricket - Men",
-                        "price": 3000,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/58oV8QZULSMMbUwD8",
                         "image": "assets/images/cricket_men.jpeg",
                         "description": "Showcase teamwork and skill in the ultimate cricket match. Compete with the best in an action-packed game."
                     },
                     {
                         "name": "Volleyball - Men",
-                        "price": 1500,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/huYyoSmfnTMPVXJ1A",
                         "image": "assets/images/volleyball_men.jpeg",
                         "description": "Hit, spike, and score in the men’s volleyball tournament. Bring your A-game to the court."
                     },
                     {
                         "name": "Kabaddi - Men",
-                        "price": 2000,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/i6Fz6evx5yi18NHeA",
                         "image": "assets/images/kabaddi_men.jpeg",
                         "description": "Strength, strategy, and agility combine in this kabaddi event. Compete in the traditional sport with a modern twist."
@@ -814,35 +814,35 @@
                     // },
                     {
                         "name": "Chess - Men",
-                        "price": 200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/RpcF2sxJAbs4wpgo6",
                         "image": "assets/images/chess.png",
                         "description": "Engage in a battle of wits in the chess tournament. A competition for strategic thinkers and planners."
                     },
                     {
                         "name": "Carrom - Men",
-                        "price": 200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/jZaMXnrwxAgKoGpq5",
                         "image": "assets/images/carrom_men.jpeg",
                         "description": "Show off your precision and aim in the carrom competition. A classic game for skillful players."
                     },
                     {
                         "name": "Cricket - Women",
-                        "price": 2000,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/58oV8QZULSMMbUwD8",
                         "image": "assets/images/cricket_women.jpeg",
                         "description": "Join the action in the women’s cricket tournament. Display your batting, bowling, and fielding prowess."
                     },
                     {
                         "name": "Volleyball - Women",
-                        "price": 1200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/huYyoSmfnTMPVXJ1A",
                         "image": "assets/images/volleyball_women.jpeg",
                         "description": "Unleash your volleyball skills in this thrilling women’s tournament. Compete with the best teams."
                     },
                     {
                         "name": "Kabaddi - Women",
-                        "price": 1200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/i6Fz6evx5yi18NHeA",
                         "image": "assets/images/kabaddi_women.jpeg",
                         "description": "Bring your strength and strategy to the women’s kabaddi event. A showcase of agility and teamwork."
@@ -856,21 +856,21 @@
                     // },
                     {
                         "name": "Throw ball - Women",
-                        "price": 1500,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/cYNKcvQLkSrABfEf7",
                         "image": "assets/images/throwball_women.jpeg",
                         "description": "Display your throw ball skills in this exciting competition. Teamwork and strategy take center stage."
                     },
                     {
                         "name": "Chess - Women",
-                        "price": 200,
+                        "price":"Registrations closed" ,
                         "link": "https://forms.gle/RpcF2sxJAbs4wpgo6",
                         "image": "assets/images/chess_women.jpeg",
                         "description": "Showcase your tactical brilliance in the women’s chess competition. Think ahead and plan your moves."
                     },
                     {
                         "name": "Carrom - Women",
-                        "price": 200,
+                        "price": "Registrations closed",
                         "link": "https://forms.gle/jZaMXnrwxAgKoGpq5",
                         "image": "assets/images/carrom_women.jpeg",
                         "description": "Compete in the carrom tournament with precision and skill. A fun and engaging event for women."
@@ -945,34 +945,48 @@
         });
 
         all_events.forEach((item) => {
-            const category = item.category;
-            const events = item.events;
-            const tiles = document.querySelector(`#${category.toLowerCase()} .tiles`);
-            console.log()
-            events.forEach((event) => {
-                const tile = document.createElement('div');
-                tile.classList.add('tile');
-                tile.innerHTML = `
-                <img src="${event.image}" alt="Event 1">
-                <div class="event-details">
-                    <h3 class="event-title">${event.name}</h3>
-                    <p class="event-description">${event.description}</p>
-                    <a href="${event.link}" class="register">
-                        <button>Register<span class='price'><span>₹${event.price ? `${event.price}` : 'Free'}</span></span></button>
-                    </div>`;
-                tiles.appendChild(tile);
+    const category = item.category;
+    const events = item.events;
+    const tiles = document.querySelector(`#${category.toLowerCase()} .tiles`);
 
-                tile.addEventListener('click', () => {
-                    popupImage.src = event.image;
-                    popupTitle.textContent = event.name;
-                    popupDescription.innerHTML = event.description;
-                    popupLink.href = event.link;
-                    popupPrice.textContent = `₹${event.price ? `${event.price}` : 'Free'}`;
-                    popup.style.display = 'flex';
-                });
-            });
+    events.forEach((event) => {
+        const tile = document.createElement('div');
+        tile.classList.add('tile');
+
+        // check if category is athletics or sports
+        const isSports = ["athletics", "sports"].includes(category.toLowerCase());
+
+        tile.innerHTML = `
+        <img src="${event.image}" alt="Event 1">
+        <div class="event-details">
+            <h3 class="event-title">${event.name}</h3>
+            <p class="event-description">${event.description}</p>
+            <a href="${event.link}" class="register">
+                <button>
+                    Register
+                    <span class='price'>
+                        <span>${event.price ? `${isSports ? '' : '₹'}${event.price}` : 'Free'}</span>
+                    </span>
+                </button>
+            </a>
+        </div>`;
+        
+        tiles.appendChild(tile);
+
+        tile.addEventListener('click', () => {
+            popupImage.src = event.image;
+            popupTitle.textContent = event.name;
+            popupDescription.innerHTML = event.description;
+            popupLink.href = event.link;
+
+            popupPrice.textContent = event.price 
+                ? `${isSports ? '' : '₹'}${event.price}` 
+                : 'Free';
+
+            popup.style.display = 'flex';
         });
-
+    });
+});
         document.getElementById("reach-us-button").addEventListener("click", function () {
             window.location.href =
                 "https://www.google.com/maps/place/Madanapalle+Institute+of+Technology+%26+Sciences/@13.6170422,78.4942268,17z";
