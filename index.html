@@ -1291,272 +1291,159 @@ margin:auto;
 		/* Singers Section */
 		/* SECTION */
 
-.singers-section{
-	padding:100px 20px;
-	background:linear-gradient(to right, #1a0f2e, #2d1b4e, #1a0f2e, #253455, #1a0f2e);
-	text-align:center;
-	position:relative;
-	overflow:hidden;
-}
-
-.singers-section::before {
-	content:"";
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	height:2px;
-	
-}
-
-.singers-section::after {
-	content:"";
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	height:2px;
-
+/* SECTION */
+.singers-section {
+    padding: 100px 20px;
+    background: linear-gradient(to right, #1a0f2e, #2d1b4e, #1a0f2e, #253455, #1a0f2e);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 /* TITLE */
-
-.singers-title{
-	font-size:3.2rem;
-	color:gold;
-	letter-spacing:4px;
-	margin-bottom:60px;
-	font-family: 'Orbitron', sans-serif;
-	font-weight:700;
-	text-transform:uppercase;
-	text-shadow:0 0 20px rgba(0,255,255,0.5), 0 0 40px rgba(0,255,255,0.2);
-	position:relative;
-	z-index:1;
+.singers-title {
+    font-size: 3rem;
+    color: gold;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0,255,255,0.5);
 }
 
-/* GRID */
-
-.singers-grid{
-	display:grid;
-	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-	gap:50px;
-	max-width:1200px;
-	margin:auto;
-	position:relative;
-	z-index:1;
+/* GRID - 3 PER ROW */
+.singers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 per row */
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    /* align-items: stretch; */
+	 justify-items: center;
 }
-
+@media (min-width: 993px) {
+    .singers-grid .singer-card:last-child {
+        justify-self: center;
+        transform: translateX(130%);
+    }
+}
 /* CARD */
-
-.singer-card{
-	position:relative;
-	border-radius:20px;
-	overflow:visible;
-	cursor:pointer;
-	transform:scale(1);
-	transition:all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-	perspective:1000px;
+.singer-card {
+	 width: 100%;
+    max-width: 320px;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
 }
 
 /* IMAGE */
-
-.singer-img{
-	width:100%;
-	height:340px;
-	object-fit:cover;
-	display:block;
-	border-radius:20px;
-	transition:all 0.5s ease;
-	filter:brightness(0.9);
+.singer-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: 0.4s ease;
 }
 
-/* NEON BORDER */
-
-.singer-card::before{
-	content:"";
-	position:absolute;
-	inset:-3px;
-	border-radius:22px;
-	background:linear-gradient(135deg, #00ffff, #ff00ff, #00ffff);
-	z-index:-1;
-	filter:blur(10px);
-	opacity:0;
-	transition:all 0.5s ease;
-	animation:none;
+/* GLOW BORDER */
+.singer-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #00ffff, #ff00ff);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.4s ease;
 }
 
-.singer-card::after{
-	content:"";
-	position:absolute;
-	inset:-3px;
-	border-radius:22px;
-	border:2px solid transparent;
-	background:linear-gradient(135deg, #00ffff, #ff00ff) border-box;
-	-webkit-mask:linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-	-webkit-mask-composite:xor;
-	mask-composite:exclude;
-	opacity:0;
-	transition:all 0.5s ease;
-	z-index:10;
-	pointer-events:none;
+/* HOVER EFFECT */
+.singer-card:hover {
+    transform: translateY(-10px) scale(1.03);
 }
 
-/* HOVER */
-
-.singer-card:hover{
-	transform:translateY(-18px) scale(1.05) rotateX(5deg);
-	z-index:5;
+.singer-card:hover::before {
+    opacity: 1;
 }
 
-.singer-card:hover::before{
-	opacity:1;
-	inset:-5px;
-	filter:blur(15px);
-}
-
-.singer-card:hover::after{
-	opacity:1;
-	inset:-3px;
-}
-
-.singer-card:hover .singer-img{
-	filter:brightness(1.1) saturate(1.2);
-	transform:scale(1.1);
+/* IMAGE HOVER */
+.singer-card:hover .singer-img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
 }
 
 /* OVERLAY */
-
-.singer-overlay{
-	position:absolute;
-	bottom:0;
-	width:100%;
-	background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.85), rgba(0,0,0,0.95));
-	padding:35px 25px;
-	text-align:center;
-	border-radius:20px;
-	transition:all 0.5s ease;
-	backdrop-filter:blur(5px);
+.singer-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    text-align: center;
 }
 
-.singer-overlay h3{
-	color:#ffffff;
-	font-size:1.5rem;
-	font-weight:600;
-	margin:0 0 8px 0;
-	text-transform:uppercase;
-	letter-spacing:2px;
-	font-family:'Orbitron', sans-serif;
-	transition:all 0.3s ease;
+/* TEXT */
+.singer-overlay h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
 }
 
-.singer-overlay p{
-	color:gold;
-	font-size:0.95rem;
-	letter-spacing:1px;
-	margin:0;
-	transition:all 0.3s ease;
+.singer-overlay p {
+    color: gold;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
-/* ANIMATIONS */
+/* ================= RESPONSIVE ================= */
 
-@keyframes glow {
-	0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); }
-	50% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.3); }
+/* TABLET → 2 per row */
+@media (max-width: 992px) {
+    .singers-title {
+        font-size: 2.2rem;
+    }
+
+    .singers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .singer-img {
+        height: 260px;
+    }
 }
 
-/* RESPONSIVE */
+/* MOBILE → 1 per row */
+@media (max-width: 576px) {
+    .singers-section {
+        padding: 60px 15px;
+    }
 
-@media (max-width: 1024px) {
-	.singers-title {
-		font-size: 2.5rem;
-	}
-	
-	.singers-grid {
-		gap: 35px;
-	}
-}
+    .singers-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
 
-@media (max-width: 768px) {
-	.singers-section {
-		padding: 60px 15px;
-	}
-	
-	.singers-title {
-		font-size: 2rem;
-		margin-bottom: 40px;
-		letter-spacing: 2px;
-	}
-	
-	.singers-grid {
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 25px;
-		max-width: 100%;
-	}
-	
-	.singer-img {
-		height: 260px !important;
-	}
-	
-	.singer-card {
-		transition: all 0.3s ease;
-	}
-	
-	.singer-card:hover {
-		transform: translateY(-10px) scale(1.02);
-	}
-	
-	.singer-overlay {
-		padding: 20px 15px;
-	}
-	
-	.singer-overlay h3 {
-		font-size: 1.1rem;
-		letter-spacing: 1px;
-	}
-	
-	.singer-overlay p {
-		font-size: 0.85rem;
-	}
-}
+    .singers-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-@media (max-width: 480px) {
-	.singers-section {
-		padding: 40px 10px;
-	}
-	
-	.singers-title {
-		font-size: 1.5rem;
-		margin-bottom: 25px;
-		letter-spacing: 1px;
-		text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-	}
-	
-	.singers-grid {
-		grid-template-columns: 1fr;
-		gap: 20px;
-	}
-	
-	.singer-img {
-		height: 220px !important;
-	}
-	
-	.singer-card:hover {
-		transform: translateY(-8px) scale(1.01);
-	}
-	
-	.singer-overlay {
-		padding: 15px 12px;
-	}
-	
-	.singer-overlay h3 {
-		font-size: 1rem;
-	}
-	
-	.singer-overlay p {
-		font-size: 0.8rem;
-	}
+    .singer-img {
+        height: 220px;
+    }
+
+    .singer-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
 }
-	</style>
+</style>
 </head>
 
 <body>
@@ -1926,7 +1813,7 @@ function outsideClick(event){
 		<!-- Guests -->
 		<section class="guests-section">
 			<div class="guests-content-wrapper">
-				<h1 class="guests-title">Chief Guest</h1>
+				<h1 class="guests-title">Guest Appearance</h1>
 				<div class="guests-container">
 					<div class="guest-royal-card">
 						<div class="guest-img-wrapper">
@@ -1948,7 +1835,7 @@ function outsideClick(event){
 		  <section class="singers-section">
 	<div class="singers-wrapper">
 
-		<h1 class="singers-title">Live Performers</h1>
+		<h1 class="singers-title">Co-Guests</h1>
 
 		<div class="singers-grid">
 <!-- 
@@ -1959,6 +1846,13 @@ function outsideClick(event){
 					<p>Live Performance</p>
 				</div>
 			</div> -->
+			<div class="singer-card">
+				<img src="assets/images/celebrities/sagar.png" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Vidya Sagar</h3>
+				
+				</div>
+			</div>
 
 			<div class="singer-card">
 				<img src="assets/images/celebrities/s2.jpg" class="singer-img">
@@ -1977,9 +1871,40 @@ function outsideClick(event){
 			</div> -->
 
 			<div class="singer-card">
-				<img src="assets/images/celebrities/sagar.png" class="singer-img">
+				<img src="assets/images/celebrities/mounika.jpeg" class="singer-img">
 				<div class="singer-overlay">
-					<h3>Vidya Sagar</h3>
+					<h3>Mounika Yadav</h3>
+				
+				</div>
+			
+			</div>
+
+			<div class="singer-card">
+				<img src="assets/images/celebrities/niharika.jpeg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Niharika Konidela</h3>
+				
+				</div>
+			</div>
+			<div class="singer-card">
+				<img src="assets/images/celebrities/sangeeth.jpeg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Sangeeth Shoban</h3>
+				
+				</div>
+			</div>
+			<div class="singer-card">
+				<img src="assets/images/celebrities/srinu.png" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Getup Srinu</h3>
+				
+				</div>
+			</div>
+			
+			<div class="singer-card" style="">
+				<img src="assets/images/celebrities/saddam.jpeg" class="singer-img">
+				<div class="singer-overlay">
+					<h3>Saddam Hussain</h3>
 				
 				</div>
 			</div>
@@ -1987,94 +1912,87 @@ function outsideClick(event){
 			
 		</div>
 	</div>
+				
+					<style>
+					.div{
+						background: linear-gradient(to right,rgb(122, 21, 100),rgb(122, 21, 60),rgb(122, 21, 100));
+						height: 85vh;
+						padding-top: 100px;
+					}
+					.fontt{
+					font-size:2rem;
+					color:white;
+					font-family: 'Orbitron',sans-serif;
+					font-weight:700;
+					text-transform:uppercase;
+					
+					}
+					body {
+					margin: 0;
+					padding: 0;
+					font-family: Arial, sans-serif;
+					text-align: center;
+					background: #f5f5f5;
+				}
+				.comedian-card {
+					position: relative;
+					width: 90%;
+					max-width: 320px;
+					margin: auto;
+					border-radius: 12px;
+					overflow: hidden;
+					box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+					background: white;
+				}
+				
+				.comedian-img {
+					width: 100%;
+					display: block;
+					border-radius: 12px;
+				}
+				
+				.comedian-overlay {
+					position: absolute;
+					inset: 0;
+					background: rgba(0,0,0,0.15);
+					transition: 0.3s ease;
+				}
+				
+				.comedian-card:hover .comedian-overlay {
+					background: rgba(0,0,0,0.3);
+				}
+				
+				h3 {
+					margin-top: 12px;
+					font-size: 20px;
+					font-weight: 600;
+				}
+				
+				/* Mobile 📱 */
+				@media (max-width: 768px) {
+					
+					h3 {
+						font-size: 18px;
+					}
+				}
+				
+				/* Laptop 💻 */
+				@media (min-width: 769px) {
+					.div{
+						padding-top: 50px;
+					}
+					.comedian-card {
+						max-width: 380px;
+					}
+				
+				  
+					h3 {
+						font-size: 22px;
+					}
+				}
+					</style>
 </section> 
-<div class="div">
-	<h1 class="singers-title">Comedian</h1>
-		<div class="comedian-card">
-			<img src="assets/images/celebrities/saddam.png" class="comedian-img">
-			<div class="comedian-overlay">
-			</div>
-		</div>
-		<h3 class="fontt">Saddam Hussain</h3>
-</div>
-	<style>
-	.div{
-		background: linear-gradient(to right,rgb(122, 21, 100),rgb(122, 21, 60),rgb(122, 21, 100));
-		height: 85vh;
-		padding-top: 100px;
-	}
-    .fontt{
-	font-size:2rem;
-	color:white;
-	font-family: 'Orbitron',sans-serif;
-	font-weight:700;
-	text-transform:uppercase;
-	
-	}
-	body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f5f5f5;
-}
-.comedian-card {
-    position: relative;
-    width: 90%;
-    max-width: 320px;
-    margin: auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    background: white;
-}
 
-.comedian-img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-}
-
-.comedian-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.15);
-    transition: 0.3s ease;
-}
-
-.comedian-card:hover .comedian-overlay {
-    background: rgba(0,0,0,0.3);
-}
-
-h3 {
-    margin-top: 12px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-/* Mobile 📱 */
-@media (max-width: 768px) {
-    
-    h3 {
-        font-size: 18px;
-    }
-}
-
-/* Laptop 💻 */
-@media (min-width: 769px) {
-	.div{
-		padding-top: 50px;
-	}
-    .comedian-card {
-        max-width: 380px;
-    }
-
-  
-    h3 {
-        font-size: 22px;
-    }
-}
-	</style>
 		<!-- Gallery -->
 
 		<!-- <section class="gallery-section">
