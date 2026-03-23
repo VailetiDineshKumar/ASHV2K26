@@ -354,7 +354,7 @@ h1 {
 header {
 	background: linear-gradient(#003366, #0033669f);
 	box-shadow: 0 0 10px 10px #0033669f;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
