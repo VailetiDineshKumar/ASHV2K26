@@ -953,8 +953,8 @@
         const tile = document.createElement('div');
         tile.classList.add('tile');
 
-        // check if category is athletics or sports
-        const isSports = ["athletics", "sports","bonus","technical"].includes(category.toLowerCase());
+        // check if the category is closed for registrations
+        const isClosed = ["athletics", "sports","bonus","technical"].includes(category.toLowerCase());
 
         tile.innerHTML = `
         <img src="${event.image}" alt="Event 1">
@@ -965,7 +965,7 @@
                 <button>
                     Register
                     <span class='price'>
-                        <span>${event.price ? `${isSports ? '' : '₹'}${event.price}` : 'Free'}</span>
+                        <span>${event.price ? `${isClosed ? '' : '₹'}${event.price}` : 'Free'}</span>
                     </span>
                 </button>
             </a>
